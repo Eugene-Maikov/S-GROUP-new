@@ -293,3 +293,62 @@
 
 
 //---------------------------- end Mobile menu -------------------------------
+
+
+
+.location{
+  position: fixed;
+  top: 20px;
+  z-index: 99999999;
+  transform: translateY(-120%);
+  transition: transform 0.4s ease-in-out;
+}
+.location__list{
+  width: 500px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.location__item{
+  padding: 5px;
+}
+.location__item:hover{
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.visible{
+  transform: translateY(0);
+  padding-right: 0 !important;
+}
+.no-scroll{
+  overflow-y: hidden;
+  pmargin-right: 17px;
+}
+.mr-scroll{
+  margin-right: -17px;
+  overflow: hidden;
+  width: 100vw;
+}
+.pr-scroll{
+  padding-right: 17px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

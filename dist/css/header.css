@@ -311,4 +311,54 @@
     line-height: 140%;
   }
 }
+.location {
+  position: fixed;
+  top: 20px;
+  z-index: 99999999;
+  -webkit-transform: translateY(-120%);
+  -ms-transform: translateY(-120%);
+  transform: translateY(-120%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.location__list {
+  width: 500px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.location__item {
+  padding: 5px;
+}
+
+.location__item:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.visible {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  padding-right: 0 !important;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+  pmargin-right: 17px;
+}
+
+.mr-scroll {
+  margin-right: -17px;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.pr-scroll {
+  padding-right: 17px;
+}
 /*# sourceMappingURL=header.css.map */
