@@ -14,7 +14,7 @@
   width: 100%;
   z-index: 2;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header {
     height: 90px;
   }
@@ -61,7 +61,7 @@
 .header__location {
   margin-bottom: 8px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__location {
     margin-bottom: 3px;
   }
@@ -74,7 +74,7 @@
   color: var(--text-color-light);
   padding: 5px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__location a {
     font-size: 12px;
   }
@@ -83,7 +83,7 @@
   position: relative;
   padding-right: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__location a.arrow {
     padding-right: 15px;
   }
@@ -99,9 +99,9 @@
   right: 5px;
   top: 12px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__location a.arrow:after {
-    background-image: url("../assets/img/small-down-arrow-1200px.svg");
+    background-image: url("../assets/img/small-down-arrow-1250px.svg");
     width: 5px;
     height: 5px;
   }
@@ -129,7 +129,7 @@
   white-space: nowrap;
   color: var(--text-color-light);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header .nav__link {
     font-size: 12px;
   }
@@ -138,7 +138,7 @@
   position: relative;
   padding-right: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header .nav .arrow {
     padding-right: 15px;
   }
@@ -154,9 +154,9 @@
   right: 5px;
   top: 12px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header .nav .arrow:after {
-    background-image: url("../assets/img/small-down-arrow-1200px.svg");
+    background-image: url("../assets/img/small-down-arrow-1250px.svg");
     width: 5px;
     height: 5px;
   }
@@ -190,7 +190,7 @@
   height: 36px;
   padding: 5px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__burger {
     width: 41px;
     height: 26px;
@@ -203,7 +203,7 @@
   height: 2px;
   background-color: #fff;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__burger span {
     width: 31px;
     height: 1px;
@@ -222,7 +222,7 @@
   background-color: #fff;
   top: 10px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__burger span:before {
     width: 31px;
     height: 1px;
@@ -237,7 +237,7 @@
   background-color: #fff;
   bottom: 10px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__burger span:after {
     width: 31px;
     height: 1px;
