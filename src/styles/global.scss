@@ -19,6 +19,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Orbitron";
+  src: url("fonts/Orbitron-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
 
 //---------------------------- end Fonts -------------------------------
 //---------------------------- Variables -------------------------------
@@ -30,7 +36,10 @@
   @media (max-width: 1200px) {
     --content-width: 945px;
   }
-  --container-offset: 15px;
+  --container-offset: 42px;
+  @media (max-width: 990px) {
+    --container-offset: 20px;
+  }
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   --light-color: #F5F6F7;
