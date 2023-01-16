@@ -1,0 +1,327 @@
+.header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary-color);
+
+  @media (max-width: 1200px) {
+    height: 90px;
+  }
+  @media (max-width: 990px) {
+    height: 70px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-right: 20px;
+    display: flex;
+
+  }
+
+  &__center {}
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media (max-width: 990px) {
+      display: none;
+    }
+  }
+
+  &__location {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-light);
+    padding: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__location.arrow {
+    position: relative;
+    padding-right: 20px;
+
+    @media (max-width: 1200px) {
+      padding-right: 15px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url('../assets/img/small-down-arrow.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      right: 5px;
+      top: 12px;
+
+      @media (max-width: 1200px) {
+        background-image: url('../assets/img/small-down-arrow-1200px.svg');
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+  .cities{
+    display: none;
+  }
+
+  //---------------------------- Nav -------------------------------
+  .nav {
+    margin-right: 20px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &__link {
+      padding: 5px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      color: var(--text-color-light);
+
+      @media (max-width: 1200px) {
+        font-size: 12px;
+      }
+    }
+
+    .arrow {
+      position: relative;
+      padding-right: 20px;
+
+      @media (max-width: 1200px) {
+        padding-right: 15px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        background-image: url('../assets/img/small-down-arrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 5px;
+        top: 12px;
+
+        @media (max-width: 1200px) {
+          background-image: url('../assets/img/small-down-arrow-1200px.svg');
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+  }
+
+  //---------------------------- end Nav -------------------------------
+  //---------------------------- Icons -------------------------------
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -5px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    width: 60px;
+    height: 36px;
+    padding: 5px;
+
+    @media (max-width: 1200px) {
+      width: 41px;
+      height: 26px;
+    }
+    @media (max-width: 990px) {
+
+    }
+
+    span {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background-color: #fff;
+
+      @media (max-width: 1200px) {
+        width: 31px;
+        height: 1px;
+      }
+      @media (max-width: 990px) {
+        width: 30px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: #fff;
+        top: 10px;
+
+        @media (max-width: 1200px) {
+          width: 31px;
+          height: 1px;
+          top: 8px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: #fff;
+        bottom: 10px;
+
+        @media (max-width: 1200px) {
+          width: 31px;
+          height: 1px;
+          bottom: 8px;
+        }
+      }
+    }
+  }
+
+  //---------------------------- end Icons -------------------------------
+}
+
+//---------------------------- Mobile menu -------------------------------
+@media (max-width: 990px) {
+  .header {
+    &__center {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    &__wrapper{
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      width: 100%;
+      height: 100%;
+
+      z-index: 1000;
+    }
+    //---------------------------- Cities -------------------------------
+    &__location {
+      font-size: 11px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+      padding: 0;
+      width: 100%;
+    }
+    &__location.arrow:after {
+      top: 28px;
+    }
+    .cities__mask{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1002;
+      backdrop-filter: blur(5px);
+    }
+    .cities{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1003;
+      background-color: #ccc;
+
+      &__list{
+        margin: 40px 20px;
+        background-color: #fff;
+      }
+
+      li{
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #262728;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    //---------------------------- end Cities -------------------------------
+    //---------------------------- Nav -------------------------------
+    .nav{
+      border-top: 1px solid #000;
+      margin: 0;
+      padding: 10px 0;
+      width: 100%;
+
+      ul{
+        flex-direction: column;
+        align-items: center;
+      }
+      li:not(:last-child) {
+        margin: 0 0 3px 0;
+      }
+
+      &__link{
+        font-size: 11px;
+        line-height: 140%;
+      }
+    }
+
+    //---------------------------- end Nav -------------------------------
+  }
+}
+
+
+
+//---------------------------- end Mobile menu -------------------------------

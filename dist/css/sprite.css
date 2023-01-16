@@ -1,0 +1,57 @@
+.logo {
+  width: 230px;
+  height: 80px;
+}
+@media (max-width: 1200px) {
+  .logo {
+    width: 144px;
+    height: 50px;
+  }
+}
+@media (max-width: 990px) {
+  .logo {
+    width: 127px;
+    height: 44px;
+  }
+}
+
+.header__icons .header__icon svg {
+  fill: #fff;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+@media (max-width: 1200px) {
+  .header__icons .header__icon svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+@media (max-width: 990px) {
+  .header__icons .header__icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.mobile__close {
+  display: none;
+}
+@media (max-width: 990px) {
+  .mobile__close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+  }
+}
+.mobile__close svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+/*# sourceMappingURL=sprite.css.map */
