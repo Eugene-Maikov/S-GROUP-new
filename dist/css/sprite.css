@@ -2,13 +2,13 @@
   width: 230px;
   height: 80px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1330px) {
   .logo {
     width: 144px;
     height: 50px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .logo {
     width: 127px;
     height: 44px;
@@ -21,13 +21,13 @@
   height: 40px;
   padding: 5px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1330px) {
   .header__icons .header__icon svg {
     width: 34px;
     height: 34px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .header__icons .header__icon svg {
     width: 30px;
     height: 30px;
@@ -37,7 +37,7 @@
 .mobile__close {
   display: none;
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .mobile__close {
     display: -webkit-box;
     display: -ms-flexbox;
