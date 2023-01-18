@@ -24,7 +24,7 @@
       width: 34px;
       height: 34px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 990px) {
       width: 30px;
       height: 30px;
     }
@@ -33,7 +33,7 @@
 .mobile__close{
   display: none;
 
-  @media (max-width: 767px) {
+  @media (max-width: 990px) {
     display: flex;
     position: absolute;
     top: 15px;

@@ -1,83 +1,36 @@
 /* eslint-disable no-undef */
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
-  // slider big projects
-  const sliderProjectsBig = new Swiper(".projects__slider-big", {
-    slidesPerView: 1,
-    speed: 500,
-    loopedSlides: 1,
-    loop: false,
-    navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
-    },
-    thumbs: {
-      swiper: sliderProjectsMini,
-    },
-  });
-
-  // slider mini projects
-  const sliderProjectsMini = new Swiper(".projects__slider-mini", {
-    slidesPerView: 4,
-    loopedSlides: 4,
-    loop: false,
-    breakpoints: {
-      320: {
-        slidesPerView: 1.4,
-      },
-      480: {
-        slidesPerView: 2.1,
-      },
-      768: {
-        slidesPerView: 2.6,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  // slider news
-  const sliderNews = new Swiper(".news__item-wrap", {
+  const swiperNews1 = new Swiper(".news__slider-first", {
     slidesPerView: 3,
-    loopedSlides: 4,
-    loop: false,
+    spaceBetween: 30,
+
     navigation: {
-      nextEl: ".nav-next",
-      prevEl: ".nav-prev",
+      nextEl: ".news__btn-next-1",
+      prevEl: ".news__btn-prev-1",
     },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      draggable: true,
+    clickable: true,
+
+    pagination: {
+      el: ".news-pagination-1",
     },
+
     breakpoints: {
       320: {
-        slidesPerView: 1.3,
-      },
-      375: {
-        slidesPerView: 1.4,
-      },
-      385: {
-        slidesPerView: 1.5,
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
       400: {
-        slidesPerView: 1.6,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
-      420: {
-        slidesPerView: 1.7,
-      },
-      480: {
-        slidesPerView: 1.8,
-      },
-      768: {
-        slidesPerView: 2.6,
-      },
-      1024: {
+      770: {
         slidesPerView: 3,
-      },
-      1440: {
-        slidesPerView: 3.1,
+        spaceBetween: 30,
       },
     },
   });
 });
+
+// ---------------Tabs---------------
+const newsTabs = new GraphTabs("newsTabs");
