@@ -78,7 +78,9 @@
 }
 
 .partners__prev,
-.partners__next {
+.partners__next,
+.reviews__prev,
+.reviews__next {
   width: 40px;
   height: 56px;
   fill: var(--secondary-color);
@@ -87,14 +89,18 @@
 }
 @media (max-width: 1330px) {
   .partners__prev,
-.partners__next {
+.partners__next,
+.reviews__prev,
+.reviews__next {
     width: 30px;
     height: 45px;
   }
 }
 @media (max-width: 767px) {
   .partners__prev,
-.partners__next {
+.partners__next,
+.reviews__prev,
+.reviews__next {
     display: none;
   }
 }
@@ -122,5 +128,23 @@
     height: 10px;
     right: -15.29px;
   }
+}
+
+.contacts__location {
+  width: 16px;
+  height: 20px;
+  fill: #262728;
+}
+
+.contacts__phone {
+  width: 20px;
+  height: 20px;
+  fill: #262728;
+}
+
+.contacts__email {
+  width: 20px;
+  height: 16px;
+  fill: #262728;
 }
 /*# sourceMappingURL=sprite.css.map */

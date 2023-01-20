@@ -499,4 +499,173 @@
     height: 5px;
   }
 }
+
+.line__border-4 .line__border-top,
+.line__border-4 .line__border-center,
+.line__border-4 .line__border-bottom {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+@media (max-width: 1330px) {
+  .line__border-4 .line__border-top,
+.line__border-4 .line__border-center,
+.line__border-4 .line__border-bottom {
+    height: 16px;
+  }
+}
+@media (max-width: 990px) {
+  .line__border-4 .line__border-top,
+.line__border-4 .line__border-center,
+.line__border-4 .line__border-bottom {
+    height: 5px;
+  }
+}
+.line__border-4 .line-primary-half-1 {
+  content: "";
+  width: 49%;
+  height: 30px;
+  background-color: var(--primary-color);
+  -webkit-transform: skew(-45deg, 0deg);
+  -ms-transform: skew(-45deg, 0deg);
+  transform: skew(-45deg, 0deg);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 1330px) {
+  .line__border-4 .line-primary-half-1 {
+    height: 16px;
+  }
+}
+@media (max-width: 990px) {
+  .line__border-4 .line-primary-half-1 {
+    height: 5px;
+  }
+}
+.line__border-4 .line-secondary-half-1 {
+  content: "";
+  width: 53%;
+  height: 30px;
+  background-color: var(--secondary-color);
+  -webkit-transform: skew(-45deg, 0deg);
+  -ms-transform: skew(-45deg, 0deg);
+  transform: skew(-45deg, 0deg);
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1330px) {
+  .line__border-4 .line-secondary-half-1 {
+    height: 16px;
+  }
+}
+@media (max-width: 990px) {
+  .line__border-4 .line-secondary-half-1 {
+    height: 5px;
+  }
+}
+.line__border-4 .line-primary-half-2 {
+  content: "";
+  width: 60%;
+  height: 30px;
+  background-color: var(--primary-color);
+  -webkit-transform: skew(-45deg, 0deg);
+  -ms-transform: skew(-45deg, 0deg);
+  transform: skew(-45deg, 0deg);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 1330px) {
+  .line__border-4 .line-primary-half-2 {
+    height: 16px;
+  }
+}
+@media (max-width: 990px) {
+  .line__border-4 .line-primary-half-2 {
+    height: 5px;
+  }
+}
+.line__border-4 .line-secondary-half-2 {
+  content: "";
+  width: 42%;
+  height: 30px;
+  background-color: var(--secondary-color);
+  -webkit-transform: skew(-45deg, 0deg);
+  -ms-transform: skew(-45deg, 0deg);
+  transform: skew(-45deg, 0deg);
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1330px) {
+  .line__border-4 .line-secondary-half-2 {
+    height: 16px;
+  }
+}
+@media (max-width: 990px) {
+  .line__border-4 .line-secondary-half-2 {
+    height: 5px;
+  }
+}
+.line__border-4 .line-transparent {
+  content: "";
+  width: 40%;
+  height: 30px;
+  background-color: transparent;
+  -webkit-transform: skew(-45deg, 0deg);
+  -ms-transform: skew(-45deg, 0deg);
+  transform: skew(-45deg, 0deg);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 1330px) {
+  .line__border-4 .line-transparent {
+    height: 16px;
+  }
+}
+@media (max-width: 990px) {
+  .line__border-4 .line-transparent {
+    height: 5px;
+  }
+}
+.line__border-4 .line-gray-half-3 {
+  content: "";
+  width: 62%;
+  height: 30px;
+  background-color: var(--light-color);
+  -webkit-transform: skew(-45deg, 0deg);
+  -ms-transform: skew(-45deg, 0deg);
+  transform: skew(-45deg, 0deg);
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1330px) {
+  .line__border-4 .line-gray-half-3 {
+    height: 16px;
+  }
+}
+@media (max-width: 990px) {
+  .line__border-4 .line-gray-half-3 {
+    height: 5px;
+  }
+}
 /*# sourceMappingURL=boundary.css.map */

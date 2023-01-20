@@ -62,7 +62,7 @@
 //---------------------------- end Line-main -------------------------------
 //---------------------------- Line-1 -------------------------------
 .line__border-1 {
-  &-light{
+  &-light {
     background-color: #fff;
   }
 
@@ -82,6 +82,7 @@
       height: 15px;
     }
   }
+
   .line-gray {
     content: "";
     width: 52%;
@@ -270,10 +271,10 @@
     }
   }
 }
+
 //---------------------------- end Line-2 -------------------------------
 //---------------------------- Line-3 -------------------------------
-
-.line__border-3{
+.line__border-3 {
   .line__border-top,
   .line__border-center,
   .line__border-bottom {
@@ -397,6 +398,136 @@
     }
   }
 }
+
+//---------------------------- end Line-3 -------------------------------
+//---------------------------- Line-4 -------------------------------
+.line__border-4 {
+  .line__border-top,
+  .line__border-center,
+  .line__border-bottom {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    background-color: #fff;
+
+    @media (max-width: 1330px) {
+      height: 16px;
+    }
+    @media (max-width: 990px) {
+      height: 5px;
+    }
+  }
+
+  .line-primary-half-1 {
+    content: "";
+    width: 49%;
+    height: 30px;
+    background-color: var(--primary-color);
+    transform: skew(-45deg, 0deg);
+    transform-origin: top;
+    position: absolute;
+    left: 0;
+
+    @media (max-width: 1330px) {
+      height: 16px;
+    }
+    @media (max-width: 990px) {
+      height: 5px;
+    }
+  }
+
+  .line-secondary-half-1 {
+    content: "";
+    width: 53%;
+    height: 30px;
+    background-color: var(--secondary-color);
+    transform: skew(-45deg, 0deg);
+    transform-origin: bottom;
+    position: absolute;
+    right: 0;
+
+    @media (max-width: 1330px) {
+      height: 16px;
+    }
+    @media (max-width: 990px) {
+      height: 5px;
+    }
+  }
+
+  .line-primary-half-2 {
+    content: "";
+    width: 60%;
+    height: 30px;
+    background-color: var(--primary-color);
+    transform: skew(-45deg, 0deg);
+    transform-origin: top;
+    position: absolute;
+    left: 0;
+
+    @media (max-width: 1330px) {
+      height: 16px;
+    }
+    @media (max-width: 990px) {
+      height: 5px;
+    }
+  }
+
+  .line-secondary-half-2 {
+    content: "";
+    width: 42%;
+    height: 30px;
+    background-color: var(--secondary-color);
+    transform: skew(-45deg, 0deg);
+    transform-origin: bottom;
+    position: absolute;
+    right: 0;
+
+    @media (max-width: 1330px) {
+      height: 16px;
+    }
+    @media (max-width: 990px) {
+      height: 5px;
+    }
+  }
+
+  .line-transparent {
+    content: "";
+    width: 40%;
+    height: 30px;
+    background-color: transparent;
+    transform: skew(-45deg, 0deg);
+    transform-origin: top;
+    position: absolute;
+    left: 0;
+
+    @media (max-width: 1330px) {
+      height: 16px;
+    }
+    @media (max-width: 990px) {
+      height: 5px;
+    }
+  }
+
+  .line-gray-half-3 {
+    content: "";
+    width: 62%;
+    height: 30px;
+    background-color: var(--light-color);
+    transform: skew(-45deg, 0deg);
+    transform-origin: bottom;
+    position: absolute;
+    right: 0;
+
+    @media (max-width: 1330px) {
+      height: 16px;
+    }
+    @media (max-width: 990px) {
+      height: 5px;
+    }
+  }
+}
+//---------------------------- end Line-4 -------------------------------
+
 
 
 

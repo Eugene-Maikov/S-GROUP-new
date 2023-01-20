@@ -68,7 +68,9 @@
 //---------------------------- end News-arrows -------------------------------
 // ---------------------------- Partners-arrows -------------------------------
 .partners__prev,
-.partners__next{
+.partners__next,
+.reviews__prev,
+.reviews__next{
   width: 40px;
   height: 56px;
   fill: var(--secondary-color);
@@ -84,7 +86,7 @@
   }
 }
 //---------------------------- end News-arrows -------------------------------
-
+//---------------------------- Read more -------------------------------
 .read__more{
   width: 25px;
   height: 16px;
@@ -104,3 +106,23 @@
     right: -15.29px;
   }
 }
+//---------------------------- end Read more -------------------------------
+// ---------------------------- Contacts icons -------------------------------
+
+.contacts__location{
+  width: 16px;
+  height: 20px;
+  fill: #262728;
+}
+.contacts__phone{
+  width: 20px;
+  height: 20px;
+  fill: #262728;
+}
+.contacts__email{
+  width: 20px;
+  height: 16px;
+  fill: #262728;
+}
+
+// ---------------------------- end Contacts icons -------------------------------

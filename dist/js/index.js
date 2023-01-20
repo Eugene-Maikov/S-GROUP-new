@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".news__next-first",
       prevEl: ".news__prev-first"
     },
-    clickable: true,
     pagination: {
-      el: ".news__pagination-first"
+      el: ".news__pagination-first",
+      clickable: true
     },
     breakpoints: {
       320: {
@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".news__next-second",
       prevEl: ".news__prev-second"
     },
-    clickable: true,
     pagination: {
-      el: ".news__pagination-second"
+      el: ".news__pagination-second",
+      clickable: true
     },
     breakpoints: {
       320: {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 3.5,
         spaceBetween: 10
       },
-      767: {
+      990: {
         spaceBetween: 37
       },
       1330: {
@@ -91,7 +91,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  var swiperReviews = new Swiper(".reviews__slider", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".reviews__next",
+      prevEl: ".reviews__prev"
+    },
+    pagination: {
+      el: ".reviews__pagination",
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 20
+      },
+      767: {
+        spaceBetween: 20
+      },
+      1330: {
+        spaceBetween: 30
+      }
+    }
+  });
 }); // ---------------Tabs---------------
 
 var newsTabs = new GraphTabs("newsTabs");
+var contactsTabs = new GraphTabs("contactsTabs");
 //# sourceMappingURL=index.js.map
