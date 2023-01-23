@@ -34,21 +34,16 @@
   }
 }
 
-.mobile__close {
-  display: none;
+.mobile-menu__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
 }
-@media (max-width: 990px) {
-  .mobile__close {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 1001;
-  }
-}
-.mobile__close svg {
+.mobile-menu__close svg {
   fill: #fff;
   width: 30px;
   height: 30px;

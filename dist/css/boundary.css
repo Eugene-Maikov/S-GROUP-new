@@ -11,7 +11,7 @@
   position: absolute;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border {
     display: none;
   }
@@ -84,7 +84,7 @@
     height: 48px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-1 .line-white {
     height: 15px;
   }
@@ -107,7 +107,7 @@
     height: 48px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-1 .line-gray {
     height: 15px;
   }
@@ -131,7 +131,7 @@
     top: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-1 .line-primary {
     height: 10px;
     top: 5px;
@@ -156,7 +156,7 @@
     top: 32px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-1 .line-secondary {
     height: 5px;
     top: 10px;
@@ -180,7 +180,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-2 .line__border-top,
 .line__border-2 .line__border-center,
 .line__border-2 .line__border-bottom {
@@ -206,7 +206,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-2 .line-primary-half-1 {
     height: 5px;
   }
@@ -230,7 +230,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-2 .line-primary-half-2 {
     height: 5px;
   }
@@ -254,7 +254,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-2 .line-secondary-half-1 {
     height: 5px;
   }
@@ -278,7 +278,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-2 .line-secondary-half-2 {
     height: 5px;
   }
@@ -302,7 +302,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-2 .line-secondary-half-3 {
     height: 5px;
   }
@@ -326,7 +326,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-2 .line-gray-half-3 {
     height: 5px;
   }
@@ -348,7 +348,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-3 .line__border-top,
 .line__border-3 .line__border-center,
 .line__border-3 .line__border-bottom {
@@ -374,7 +374,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-3 .line-secondary-half-1 {
     height: 5px;
   }
@@ -398,7 +398,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-3 .line-primary-half-1 {
     height: 5px;
   }
@@ -422,7 +422,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-3 .line-secondary-half-2 {
     height: 5px;
   }
@@ -446,7 +446,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-3 .line-primary-half-2 {
     height: 5px;
   }
@@ -470,7 +470,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-3 .line-transparent {
     height: 5px;
   }
@@ -494,7 +494,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-3 .line__border-3 .line-gray-half-3 {
     height: 5px;
   }
@@ -517,7 +517,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-4 .line__border-top,
 .line__border-4 .line__border-center,
 .line__border-4 .line__border-bottom {
@@ -543,7 +543,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-4 .line-primary-half-1 {
     height: 5px;
   }
@@ -567,7 +567,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-4 .line-secondary-half-1 {
     height: 5px;
   }
@@ -591,7 +591,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-4 .line-primary-half-2 {
     height: 5px;
   }
@@ -615,7 +615,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-4 .line-secondary-half-2 {
     height: 5px;
   }
@@ -639,7 +639,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-4 .line-transparent {
     height: 5px;
   }
@@ -663,7 +663,7 @@
     height: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 767px) {
   .line__border-4 .line-gray-half-3 {
     height: 5px;
   }

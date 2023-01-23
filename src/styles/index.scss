@@ -9,8 +9,8 @@
   background-size: cover;
   background-color: var(--light-color);
 
-  @media (max-width: 990px) {
-    margin-bottom: 140px;
+  @media (max-width: 767px) {
+    height: 50vh;
   }
 
   &:after {
@@ -42,8 +42,12 @@
   &__head {
     bottom: 60vh;
 
-    @media (max-width: 990px) {
+    @media (max-width: 767px) {
       position: absolute;
+      bottom: 25vh;
+    }
+    @media (max-width: 525px){
+      bottom: 30vh;
     }
   }
 
@@ -59,7 +63,7 @@
     @media (max-width: 1330px) {
       font-size: 70px;
     }
-    @media (max-width: 990px) {
+    @media (max-width: 767px) {
       font-size: 40px;
       line-height: 140%;
     }
@@ -76,7 +80,7 @@
     @media (max-width: 1330px) {
       font-size: 28px;
     }
-    @media (max-width: 990px) {
+    @media (max-width: 767px) {
       font-size: 16px;
     }
   }
@@ -92,7 +96,7 @@
       width: 421px;
       height: 187px;
     }
-    @media (max-width: 990px) {
+    @media (max-width: 767px) {
       width: 100%;
       height: 100%;
       background: var(--primary-color);
@@ -100,7 +104,7 @@
       border-bottom: 5px solid var(--secondary-color);
     }
 
-    @media (max-width: 990px) {
+    @media (max-width: 767px) {
       &:after {
         content: "";
         position: absolute;
@@ -124,7 +128,9 @@
         clip-path: polygon(2% 0, 100% 0, 100% 100%, 0 100%);
       }
     }
-
+    @media (max-width: 767px) {
+      margin-top: 50vh;
+    }
 
   }
 
@@ -134,7 +140,7 @@
     @media (max-width: 1330px) {
       padding: 16px 22px;
     }
-    @media (max-width: 990px) {
+    @media (max-width: 767px) {
       padding: 17px 20px;
     }
 
@@ -151,7 +157,7 @@
         font-size: 12px;
         width: 326px;
       }
-      @media (max-width: 990px) {
+      @media (max-width: 767px) {
         font-size: 11px;
         line-height: 140%;
         width: 100%;
@@ -183,6 +189,10 @@
 .catalog {
   padding-bottom: 60px;
   background-color: var(--light-color);
+
+  @media (max-width: 767px) {
+    padding-top: 70px;
+  }
 
   &__materials {
     margin: 50px 0 0 0;
@@ -1381,6 +1391,14 @@
   position: relative;
   height: 686px;
 
+  @media(max-width: 1330px){
+    height: 498px;
+  }
+
+  @media(max-width: 990px){
+    display: none;
+  }
+
   &__filter {
     display: flex;
     justify-content: space-between;
@@ -1398,6 +1416,11 @@
     display: flex;
     align-items: center;
 
+    @media(max-width: 1330px){
+      width: 232px;
+      height: 64px;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -1411,6 +1434,10 @@
 
   &__content {
     padding: 0 20px;
+
+    @media(max-width: 1330px){
+      padding: 0 12px;
+    }
   }
 
   &__title {
@@ -1421,6 +1448,10 @@
     text-transform: uppercase;
     color: var(--text-color-dark);
     opacity: 0.5;
+
+    @media(max-width: 1330px){
+      font-size: 14px;
+    }
   }
 
   &__subtitle {
@@ -1430,6 +1461,10 @@
     letter-spacing: 0.02em;
     color: var(--text-color-dark);
     opacity: 0.5;
+
+    @media(max-width: 1330px){
+      font-size: 9px;
+    }
   }
 
   &__body {
@@ -1439,6 +1474,11 @@
     z-index: 1;
     display: flex;
     align-items: center;
+
+    @media(max-width: 1330px){
+      width: 232px;
+      height: 153px;
+    }
 
     &:before {
       content: '';
@@ -1455,6 +1495,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 22px;
+
+    @media(max-width: 1330px){
+      margin-bottom: 14px;
+    }
   }
 
   &__info-inner {
@@ -1463,7 +1507,7 @@
   }
 
   a,
-  span {
+  span{
     display: block;
     font-weight: 400;
     font-size: 16px;
@@ -1471,6 +1515,22 @@
     letter-spacing: 0.02em;
     color: var(--text-color-dark);
     opacity: 0.5;
+
+    @media(max-width: 1330px){
+      font-size: 12px;
+    }
+  }
+  &__info-post{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    opacity: 0.5;
+
+    @media(max-width: 1330px){
+      font-size: 12px;
+    }
   }
 
   &__icon {
@@ -1489,6 +1549,11 @@
 
   &__tabs {
     padding-top: 300px;
+
+    @media(max-width: 1330px){
+      padding-top: 257px;
+    }
+
     .tabs__nav-btn--active {
       .contacts__head {
         &:before {
@@ -1532,7 +1597,8 @@
         width: 100%;
         height: 100%;
 
-        img{
+        img,
+        iframe{
           height: 100%;
           object-fit: cover;
         }
@@ -1543,17 +1609,8 @@
       display: none;
       height: 686px;
 
-      .border-1{
-        border: 2px solid #acfab4;
-      }
-      .border-2{
-        border: 2px solid #acb6fa;
-      }
-      .border-3{
-        border: 2px solid #f18aaa;
-      }
-      .border-4{
-        border: 2px solid #fae978;
+      @media(max-width: 1330px){
+        height: 498px;
       }
     }
 

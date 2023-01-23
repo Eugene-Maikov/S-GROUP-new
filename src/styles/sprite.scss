@@ -30,27 +30,26 @@
     }
   }
 }
-.mobile__close{
-  display: none;
 
-  @media (max-width: 990px) {
-    display: flex;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 1001;
-  }
-  svg{
+.mobile-menu__close {
+  display: flex;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
+
+  svg {
     fill: #fff;
     width: 30px;
     height: 30px;
     padding: 5px;
   }
 }
+
 //---------------------------- end header__icons -------------------------------
 //---------------------------- News-arrows -------------------------------
 .news__prev,
-.news__next{
+.news__next {
   width: 40px;
   height: 56px;
   fill: var(--primary-color);
@@ -65,12 +64,13 @@
     display: none;
   }
 }
+
 //---------------------------- end News-arrows -------------------------------
 // ---------------------------- Partners-arrows -------------------------------
 .partners__prev,
 .partners__next,
 .reviews__prev,
-.reviews__next{
+.reviews__next {
   width: 40px;
   height: 56px;
   fill: var(--secondary-color);
@@ -85,9 +85,10 @@
     display: none;
   }
 }
+
 //---------------------------- end News-arrows -------------------------------
 //---------------------------- Read more -------------------------------
-.read__more{
+.read__more {
   width: 25px;
   height: 16px;
   position: absolute;
@@ -106,20 +107,23 @@
     right: -15.29px;
   }
 }
+
 //---------------------------- end Read more -------------------------------
 // ---------------------------- Contacts icons -------------------------------
 
-.contacts__location{
+.contacts__location {
   width: 16px;
   height: 20px;
   fill: #262728;
 }
-.contacts__phone{
+
+.contacts__phone {
   width: 20px;
   height: 20px;
   fill: #262728;
 }
-.contacts__email{
+
+.contacts__email {
   width: 20px;
   height: 16px;
   fill: #262728;
