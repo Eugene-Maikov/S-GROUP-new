@@ -133,4 +133,8 @@ a {
 .main-title-light {
   color: var(--text-color-light);
 }
+
+.form__input.error {
+  border-color: red;
+}
 /*# sourceMappingURL=global.css.map */

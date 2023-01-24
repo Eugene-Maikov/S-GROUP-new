@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-
   const swiperPartners = new Swiper(".partners__slider", {
     slidesPerView: 6,
     spaceBetween: 50,
@@ -98,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-
   const swiperReviews = new Swiper(".reviews__slider", {
     slidesPerView: 2,
     spaceBetween: 30,

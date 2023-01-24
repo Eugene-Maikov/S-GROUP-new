@@ -1111,13 +1111,13 @@
 					<form action="/" class="questions__form">
 						<div class="questions__row">
 							<div class="questions__column">
-								<input id="questions-name" name="questions-name" placeholder="Ваше имя" type="text">
+								<input class="form__input" name="questions-name" placeholder="Ваше имя" type="text">
 							</div>
 							<div class="questions__column">
-								<input id="questions-phone" name="questions-phone" placeholder="Телефон" type="tel">
+								<input type="tel" data-tel-input class="form__input js-input-phone" name="questions-phone" placeholder="Телефон" maxlength="18">
 							</div>
 							<div class="questions__column">
-								<input id="questions-email" name="questions-email" placeholder="E-mail" type="email">
+								<input class="form__input js-input-email" name="questions-email" placeholder="E-mail" type="email">
 							</div>
 							<div class="questions__column">
 								<button class="questions__submit" type="submit">Отправить</button>
@@ -1136,6 +1136,7 @@
 		<section class="contacts">
 			<div class="container">
 
+
 				<div class="contacts__tabs" data-tabs="contactsTabs">
 					<ul class="contacts__filter tabs__nav">
 						<li class="tabs__nav-item">
@@ -1143,7 +1144,7 @@
 								<div class="contacts__head">
 									<div class="contacts__content">
 										<h3 class="contacts__title">Нижний Новгород</h3>
-										<span class="contacts__subtitle">розничные продажи и склад</span>
+										<span class="contacts__subtitle">оптовые/розничные продажи и cклад</span>
 									</div>
 								</div>
 								<div class="contacts__body">
@@ -1154,7 +1155,7 @@
 													<use href="assets/svg/sprite.svg#location"></use>
 												</svg>
 											</div>
-											<span>ул. Коминтерна, 39 лит С7</span>
+											<span>ул. Костина, 6к1</span>
 										</div>
 										<div class="contacts__info">
 											<div class="contacts__icon">
@@ -1163,8 +1164,8 @@
 												</svg>
 											</div>
 											<div class="contacts__info-inner">
-												<a href="tel:79302795343">+7 930 279-53-43</a>
-												<span>Юрлов Никита Романович</span>
+												<a href="tel:+79302795343">+7 930 279-53-43</a>
+												<span>Юрлов Никита</span>
 												<span class="contacts__info-post">коммерческий директор</span>
 											</div>
 										</div>
@@ -1205,7 +1206,7 @@
 												</svg>
 											</div>
 											<div class="contacts__info-inner">
-												<a href="tel:79302795343">+7 930 279-53-43</a>
+												<a href="tel:+79302795343">+7 930 279-53-43</a>
 												<span>Юрлов Никита Романович</span>
 												<span class="contacts__info-post">коммерческий директор</span>
 											</div>
@@ -1227,7 +1228,7 @@
 								<div class="contacts__head">
 									<div class="contacts__content">
 										<h3 class="contacts__title">Нижний Новгород</h3>
-										<span class="contacts__subtitle">розничные продажи и склад</span>
+										<span class="contacts__subtitle">оптовые/розничные продажи и склад</span>
 									</div>
 								</div>
 								<div class="contacts__body">
@@ -1238,7 +1239,7 @@
 													<use href="assets/svg/sprite.svg#location"></use>
 												</svg>
 											</div>
-											<span>ул. Коминтерна, 39 лит С7</span>
+											<span>ул. Ларина 27/4 (павильон 4/2)</span>
 										</div>
 										<div class="contacts__info">
 											<div class="contacts__icon">
@@ -1247,9 +1248,9 @@
 												</svg>
 											</div>
 											<div class="contacts__info-inner">
-												<a href="tel:79302795343">+7 930 279-53-43</a>
-												<span>Юрлов Никита Романович</span>
-												<span class="contacts__info-post">коммерческий директор</span>
+												<a href="tel:+79200040412">+7 920 004-04-12</a>
+												<span>Устроев Николай</span>
+												<span class="contacts__info-post">менеджер по продажам</span>
 											</div>
 										</div>
 										<div class="contacts__info">
@@ -1258,7 +1259,7 @@
 													<use href="assets/svg/sprite.svg#email"></use>
 												</svg>
 											</div>
-											<a href="mailto:n.yurlov@tdselena.ru">n.yurlov@tdselena.ru</a>
+											<a href="mailto:n.ustroev@sgroup-russia.ru">n.ustroev@sgroup-russia.ru</a>
 										</div>
 									</div>
 								</div>
@@ -1268,7 +1269,7 @@
 							<div class="contacts__item tabs__nav-btn">
 								<div class="contacts__head">
 									<div class="contacts__content">
-										<h3 class="contacts__title">Нижний Новгород</h3>
+										<h3 class="contacts__title">КРАСНОДАР</h3>
 										<span class="contacts__subtitle">розничные продажи и склад</span>
 									</div>
 								</div>
@@ -1280,7 +1281,7 @@
 													<use href="assets/svg/sprite.svg#location"></use>
 												</svg>
 											</div>
-											<span>ул. Коминтерна, 39 лит С7</span>
+											<span>ул. Новороссийская, 240 Ж</span>
 										</div>
 										<div class="contacts__info">
 											<div class="contacts__icon">
@@ -1289,9 +1290,9 @@
 												</svg>
 											</div>
 											<div class="contacts__info-inner">
-												<a href="tel:79302795343">+7 930 279-53-43</a>
-												<span>Юрлов Никита Романович</span>
-												<span class="contacts__info-post">коммерческий директор</span>
+												<a href="tel:+79384345325">+7 938 434-53-25</a>
+												<span>Масликов Александр</span>
+												<span class="contacts__info-post">руководитель отдела продаж</span>
 											</div>
 										</div>
 										<div class="contacts__info">
@@ -1300,7 +1301,7 @@
 													<use href="assets/svg/sprite.svg#email"></use>
 												</svg>
 											</div>
-											<a href="mailto:n.yurlov@tdselena.ru">n.yurlov@tdselena.ru</a>
+											<a href="mailto:a.maslikov@sgroup-russia.ru">a.maslikov@sgroup-russia.ru</a>
 										</div>
 									</div>
 								</div>
@@ -1312,16 +1313,192 @@
 
 					<div class="tabs__content">
 						<div class="tabs__panel">
-							<div class="map" id="map-1"></div>
+							<div class="map">
+								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac6d16b407422ff09ae266e4678164e53c9588ccaa6f6db466b58902446b18d11&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<div class="contacts__mobile">
+									<div class="contacts__item">
+										<div class="contacts__head">
+											<div class="contacts__content">
+												<h3 class="contacts__title">Нижний Новгород</h3>
+												<span class="contacts__subtitle">оптовые/розничные продажи и cклад</span>
+											</div>
+										</div>
+										<div class="contacts__body">
+											<div class="contacts__content">
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__location">
+															<use href="assets/svg/sprite.svg#location"></use>
+														</svg>
+													</div>
+													<span>ул. Костина, 6к1</span>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__phone">
+															<use href="assets/svg/sprite.svg#phone"></use>
+														</svg>
+													</div>
+													<div class="contacts__info-inner">
+														<a href="tel:+79302795343">+7 930 279-53-43</a>
+														<span>Юрлов Никита</span>
+														<span class="contacts__info-post">коммерческий директор</span>
+													</div>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__email">
+															<use href="assets/svg/sprite.svg#email"></use>
+														</svg>
+													</div>
+													<a href="mailto:n.yurlov@tdselena.ru">n.yurlov@tdselena.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="tabs__panel">
-							<div class="map" id="map-2"></div>
+							<div class="map">
+								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7d182c1d0d33fa7bd5dfa3d4e081eee3128b97b91b68803511cbd1cdb9ec267a&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<div class="contacts__mobile">
+									<div class="contacts__item tabs__nav-btn">
+										<div class="contacts__head">
+											<div class="contacts__content">
+												<h3 class="contacts__title">Нижний Новгород</h3>
+												<span class="contacts__subtitle">розничные продажи и склад</span>
+											</div>
+										</div>
+										<div class="contacts__body">
+											<div class="contacts__content">
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__location">
+															<use href="assets/svg/sprite.svg#location"></use>
+														</svg>
+													</div>
+													<span>ул. Коминтерна, 39 лит С7</span>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__phone">
+															<use href="assets/svg/sprite.svg#phone"></use>
+														</svg>
+													</div>
+													<div class="contacts__info-inner">
+														<a href="tel:+79302795343">+7 930 279-53-43</a>
+														<span>Юрлов Никита Романович</span>
+														<span class="contacts__info-post">коммерческий директор</span>
+													</div>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__email">
+															<use href="assets/svg/sprite.svg#email"></use>
+														</svg>
+													</div>
+													<a href="mailto:n.yurlov@tdselena.ru">n.yurlov@tdselena.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="tabs__panel">
-							<div class="map" id="map-3"></div>
+							<div class="map">
+								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab701327b80eb316b8220e35b965b187ee79db97ccf1d736590146b2483544c6b&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<div class="contacts__mobile">
+									<div class="contacts__item tabs__nav-btn">
+										<div class="contacts__head">
+											<div class="contacts__content">
+												<h3 class="contacts__title">Нижний Новгород</h3>
+												<span class="contacts__subtitle">оптовые/розничные продажи и склад</span>
+											</div>
+										</div>
+										<div class="contacts__body">
+											<div class="contacts__content">
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__location">
+															<use href="assets/svg/sprite.svg#location"></use>
+														</svg>
+													</div>
+													<span>ул. Ларина 27/4 (павильон 4/2)</span>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__phone">
+															<use href="assets/svg/sprite.svg#phone"></use>
+														</svg>
+													</div>
+													<div class="contacts__info-inner">
+														<a href="tel:+79200040412">+7 920 004-04-12</a>
+														<span>Устроев Николай</span>
+														<span class="contacts__info-post">менеджер по продажам</span>
+													</div>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__email">
+															<use href="assets/svg/sprite.svg#email"></use>
+														</svg>
+													</div>
+													<a href="mailto:n.ustroev@sgroup-russia.ru">n.ustroev@sgroup-russia.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="tabs__panel">
-							<div class="map" id="map-4"></div>
+							<div class="map">
+								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A04bca074cf1589c65cb3f4df04294288d1456b7b1c0f51662d75ecf56cf37ef4&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<div class="contacts__mobile">
+									<div class="contacts__item tabs__nav-btn">
+										<div class="contacts__head">
+											<div class="contacts__content">
+												<h3 class="contacts__title">КРАСНОДАР</h3>
+												<span class="contacts__subtitle">розничные продажи и склад</span>
+											</div>
+										</div>
+										<div class="contacts__body">
+											<div class="contacts__content">
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__location">
+															<use href="assets/svg/sprite.svg#location"></use>
+														</svg>
+													</div>
+													<span>ул. Новороссийская, 240 Ж</span>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__phone">
+															<use href="assets/svg/sprite.svg#phone"></use>
+														</svg>
+													</div>
+													<div class="contacts__info-inner">
+														<a href="tel:+79384345325">+7 938 434-53-25</a>
+														<span>Масликов Александр</span>
+														<span class="contacts__info-post">руководитель отдела продаж</span>
+													</div>
+												</div>
+												<div class="contacts__info">
+													<div class="contacts__icon">
+														<svg class="contacts__email">
+															<use href="assets/svg/sprite.svg#email"></use>
+														</svg>
+													</div>
+													<a href="mailto:a.maslikov@sgroup-russia.ru">a.maslikov@sgroup-russia.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

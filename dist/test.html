@@ -6,16 +6,16 @@
 	<title>Главная</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7959e9d9-2cc9-43a0-a28c-3360695fb8be"></script>
+<!--	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7959e9d9-2cc9-43a0-a28c-3360695fb8be"></script>-->
 
 	<link rel="stylesheet" type="text/css" href="assets/plugins/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/global.css">
-	<link rel="stylesheet" href="css/sprite.css">
-	<link rel="stylesheet" href="css/boundary.css">
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/sprite.css">
+	<link rel="stylesheet" type="text/css" href="css/boundary.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 
 <body>
@@ -35,13 +35,25 @@
 					<div class="header__location">
 						<a class="location__button arrow" href="javascript:void(0)">Нижний Новгород</a>
 					</div>
-					<nav class="nav">
-						<ul>
-							<li><a class="nav__link" href="javascript:void(0)">Интернет магазин</a></li>
-							<li><a class="nav__link arrow" href="javascript:void(0)">О компании</a></li>
-							<li><a class="nav__link arrow" href="javascript:void(0)">Новости</a></li>
-							<li><a class="nav__link" href="javascript:void(0)">Доставка и оплата</a></li>
-							<li><a class="nav__link" href="javascript:void(0)">Контакты</a></li>
+					<nav class="menu">
+						<ul class="topmenu">
+							<li><a class="menu__link" href="javascript:void(0)">Интернет магазин</a></li>
+							<li><a class="menu__link arrow" href="javascript:void(0)">О компании</a>
+								<ul class="submenu">
+									<li><a class="submenu__link" href="">Производство</a></li>
+									<li><a class="submenu__link" href="">Магазин</a></li>
+									<li><a class="submenu__link" href="">Сервис</a></li>
+								</ul>
+							</li>
+							<li><a class="menu__link arrow" href="javascript:void(0)">Новости</a>
+								<ul class="submenu">
+									<li><a class="submenu__link" href="">Производство</a></li>
+									<li><a class="submenu__link" href="">Магазин</a></li>
+									<li><a class="submenu__link" href="">Сервис</a></li>
+								</ul>
+							</li>
+							<li><a class="menu__link" href="javascript:void(0)">Доставка и оплата</a></li>
+							<li><a class="menu__link" href="javascript:void(0)">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -1126,8 +1138,9 @@
 </div>
 
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7959e9d9-2cc9-43a0-a28c-3360695fb8be"></script>
+<!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7959e9d9-2cc9-43a0-a28c-3360695fb8be"></script>-->
 <script src="assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="assets/plugins/validate/validate.js"></script>
 <script src="assets/plugins/GraphTabs/tabs.js"></script>
 <script src="js/main.js"></script>
 <script src="js/index.js"></script>

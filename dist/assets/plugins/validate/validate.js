@@ -88,7 +88,7 @@ for (i = 0; i < phoneInputs.length; i++) {
 }
 
 // ---------------Валидация---------------
-let form = document.querySelector(".form");
+let form = document.querySelector(".questions__form");
 let formInputs = document.querySelectorAll(".form__input");
 let inputEmail = document.querySelector(".js-input-email");
 let inputPhone = document.querySelector(".js-input-phone");
