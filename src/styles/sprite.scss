@@ -15,7 +15,7 @@
 //---------------------------- header__icons -------------------------------
 .header__icons {
   .header__icon svg {
-    fill: #fff;
+    fill: var(--text-color-dark);
     width: 40px;
     height: 40px;
     padding: 5px;
@@ -27,6 +27,13 @@
     @media (max-width: 990px) {
       width: 30px;
       height: 30px;
+    }
+  }
+}
+.header-home{
+  .header__icons {
+    .header__icon svg {
+      fill: var(--text-color-light);
     }
   }
 }

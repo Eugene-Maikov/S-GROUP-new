@@ -13,14 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("no-scroll")
   })
 
-// --------------- Выбор города ---------------
-//   const location = document.querySelector('.header__location')
-//   const locationModal = document.querySelector('.location__modal')
-//
-//   location.addEventListener("click" , () => {
-//     locationModal.classList.add('visible-location')
-//     document.body.classList.add("no-scroll")
-//   })
 
   // --------------- Mobile menu / выпадающий список ---------------
   // Выбор опций/сортировка
@@ -37,26 +29,53 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   document.addEventListener("click", handleOption);
 
+  // --------------- Выбор локации ---------------
+  const filter = document.querySelector('.contacts__filter')
+  const overlay = document.querySelector('.contacts__overlay')
+  const contactsMobile = document.querySelectorAll('.contacts__mobile')
+  const filterTabs = document.querySelectorAll('.tabs__nav-item')
+
+  contactsMobile.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      filter.classList.add('visible-filter')
+      overlay.classList.add('visible-filter')
+      document.body.classList.add("no-scroll")
+    })
+  })
+  filterTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      filter.classList.remove('visible-filter')
+      overlay.classList.remove('visible-filter')
+      document.body.classList.remove("no-scroll")
+    })
+  })
+
+  // --------------- Выбор города ---------------
+  const locationBtn = document.querySelector('.location__button')
+  const locationOverlay = document.querySelector('.location__overlay')
+  const locationMobileBtn = document.querySelector('.mobile-menu__button')
+  const locationModal = document.querySelector('.location__modal')
+  const locationItems = document.querySelectorAll('.location__modal-item')
+
+  locationBtn.addEventListener("click", () => {
+    locationModal.classList.toggle('visible-location')
+  })
+  locationMobileBtn.addEventListener("click", () => {
+    locationModal.classList.toggle('visible-location')
+    locationOverlay.classList.toggle('visible-location-overlay')
+  })
+
+  locationItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      locationBtn.innerHTML = item.innerHTML
+      locationMobileBtn.innerHTML = item.innerHTML
+      locationModal.classList.remove('visible-location')
+      locationOverlay.classList.remove('visible-location-overlay')
+    })
+  })
+
+
 })
 
-// --------------- Выбор локации ---------------
-const filter = document.querySelector('.contacts__filter')
-const overlay = document.querySelector('.contacts__overlay')
-const contactsMobile = document.querySelectorAll('.contacts__mobile')
-const filterTabs = document.querySelectorAll('.tabs__nav-item')
 
-contactsMobile.forEach((tab) => {
-  tab.addEventListener("click" , () =>{
-    filter.classList.add('visible-filter')
-    overlay.classList.add('visible-filter')
-    document.body.classList.add("no-scroll")
-  })
-});
-filterTabs.forEach((tab) => {
-  tab.addEventListener("click" , () => {
-    filter.classList.remove('visible-filter')
-    overlay.classList.remove('visible-filter')
-    document.body.classList.remove("no-scroll")
-  })
-});
 

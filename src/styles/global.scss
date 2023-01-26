@@ -147,3 +147,38 @@ a {
 .form__input.error {
   border-color: red;
 }
+
+.breadcrumbs-white{
+  padding: 24px 0;
+
+  &__list{
+    display: flex;
+  }
+  &-item{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+    &:not(:last-child){
+      margin-right: 20px;
+      position: relative;
+
+      &:after{
+        content: '»';
+        position: absolute;
+        right: -13px;
+        color: #a4abb3;
+      }
+    }
+  }
+  &-link{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
+}
