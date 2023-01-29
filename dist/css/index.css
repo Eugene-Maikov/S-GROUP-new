@@ -1696,7 +1696,7 @@
 }
 .questions__checkbox .checkbox:checked + label::before {
   border-color: #1B89C5;
-  background-image: url("../assets/img/questions-checked.svg");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='20' height='20' rx='3' fill='%231B89C5'/%3e%3cpath d='M14.5183 5L8.64823 10.8701L6.06498 8.28684L4 10.3519L8.64823 15L16.5833 7.06498L14.5183 5Z' fill='white'/%3e%3c/svg%3e");
 }
 .questions__checkbox .form__input.error {
   border-color: red;
@@ -1799,6 +1799,13 @@
   letter-spacing: 0.02em;
   color: var(--text-color-dark);
   opacity: 0.5;
+  /*Ограничение по кол-ву строк*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 @media (max-width: 1330px) {
   .contacts__subtitle {
@@ -1869,6 +1876,13 @@
   letter-spacing: 0.02em;
   color: var(--text-color-dark);
   opacity: 0.5;
+  /*Ограничение по кол-ву строк*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 @media (max-width: 1330px) {
   .contacts a,
@@ -2031,7 +2045,7 @@
 .contacts .contacts__mobile .contacts__head:after {
   content: "";
   position: absolute;
-  background-image: url("../assets/img/small-down-arrow.svg");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.05345 1.38021L4.52665 6L-2.01938e-07 1.38021L1.41332 -6.17781e-08L4.52665 3.17734L7.64014 -3.33961e-07L9.05345 1.38021Z' fill='white'/%3e%3c/svg%3e");
   background-position: center;
   background-repeat: no-repeat;
   width: 10px;
@@ -2058,6 +2072,13 @@
   letter-spacing: 0.02em;
   color: #fff;
   opacity: 1;
+  /*Ограничение по кол-ву строк*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 .contacts .contacts__mobile .contacts__body {
   width: 280px;
