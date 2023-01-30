@@ -75,8 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
   const swiperPartners = new Swiper(".partners__slider", {
-    slidesPerView: 6,
+    // slidesPerView: 6,
     spaceBetween: 50,
+    loop: true,
+    speed: 1000,
+    slidesPerView: 6,
+    autoplay: {
+      enabled: true,
+      delay: false,
+    },
 
     navigation: {
       nextEl: ".partners__next",

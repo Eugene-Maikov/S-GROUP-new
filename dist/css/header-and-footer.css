@@ -698,6 +698,7 @@
   color: var(--text-color-light);
   opacity: 0.5;
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 @media (max-width: 1330px) {
   .footer__copyright span {
