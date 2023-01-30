@@ -130,45 +130,92 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     centeredSlides: true,
     slidesPerView: "auto",
+    mousewheel: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
     coverflowEffect: {
       rotate: 0,
-      stretch: 0,
-      depth: 150,
-      modifier: 4.55,
       slideShadows: true,
+    },
+    navigation: {
+      nextEl: ".people__next",
+      prevEl: ".people__prev",
     },
     pagination: {
       el: ".people__pagination",
+      clickable: true,
     },
     breakpoints: {
       320: {
         coverflowEffect: {
-          modifier: 1,
+          modifier: 3,
+          depth: 100,
+          stretch: 0,
         },
       },
       525: {
         coverflowEffect: {
-          modifier: 2,
+          modifier: 4,
+          depth: 90,
+          stretch: 20,
         },
       },
-      767: {
+      700: {
         coverflowEffect: {
-          modifier: 5.70,
+          modifier: 5,
+          depth: 90,
+          stretch: 25,
         },
       },
-      1024: {
+      750: {
         coverflowEffect: {
-          modifier: 9.3,
+          modifier: 8,
+          depth: 34,
+          stretch: 19,
+        },
+      },
+      830: {
+        coverflowEffect: {
+          modifier: 11,
+          depth: 40,
+          stretch: 20,
+        },
+      },
+      860: {
+        coverflowEffect: {
+          modifier: 10,
+          depth: 30,
+          stretch: 25,
+        },
+      },
+      910: {
+        coverflowEffect: {
+          modifier: 10,
+          depth: 20,
+          stretch: 25,
+        },
+      },
+      990: {
+        coverflowEffect: {
+          modifier: 11,
+          depth: 20,
+          stretch: 21,
         },
       },
       1330: {
         coverflowEffect: {
-          modifier: 5.75,
+          modifier: 12.5,
+          depth: 30,
+          stretch: 21,
         },
       },
       1500: {
         coverflowEffect: {
-          modifier: 4.55,
+          modifier: 9.2,
+          depth: 40,
+          stretch: 21,
         },
       }
     },

@@ -151,34 +151,49 @@ a {
 .breadcrumbs-white{
   padding: 24px 0;
 
+  @media (max-width: 1330px) {
+    padding: 17px 0 14px 0;
+  }
+  @media (max-width: 990px) {
+    padding: 17px 0 9px 0;
+  }
+
   &__list{
     display: flex;
   }
-  &-item{
+  &__item{
     font-weight: 400;
     font-size: 12px;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #FFFFFF;
 
+    @media (max-width: 1330px) {
+      font-size: 9px;
+    }
+
     &:not(:last-child){
-      margin-right: 20px;
+      margin-right: 15px;
       position: relative;
 
       &:after{
         content: '»';
         position: absolute;
-        right: -13px;
+        right: -9px;
         color: #a4abb3;
       }
     }
   }
-  &-link{
+  &__link{
     font-weight: 400;
     font-size: 12px;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     opacity: 0.5;
+
+    @media (max-width: 1330px) {
+      font-size: 9px;
+    }
   }
 }

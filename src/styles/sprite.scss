@@ -93,7 +93,28 @@
   }
 }
 
-//---------------------------- end News-arrows -------------------------------
+//---------------------------- end Partners-arrows -------------------------------
+// ---------------------------- Company-history-arrows -------------------------------
+
+.people__prev,
+.people__next {
+  width: 40px;
+  height: 56px;
+  fill: #fff;
+  padding: 5px;
+  cursor: pointer;
+
+  @media (max-width: 1330px) {
+    width: 30px;
+    height: 40px;
+  }
+  @media (max-width: 767px) {
+    width: 20px;
+    height: 26px;
+  }
+}
+
+//---------------------------- end Company-history-arrows -------------------------------
 //---------------------------- Read more -------------------------------
 .read__more {
   width: 25px;

@@ -1971,8 +1971,6 @@
   width: 100%;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 .contacts__tabs .tabs__panel {
   display: none;
