@@ -909,6 +909,16 @@
   .swiper-wrapper {
     display: flex;
     align-items: center;
+    transition-timing-function: linear;
+  }
+
+  .slider {
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    width: auto;
+    margin-right: 20px;
   }
 
   &__prev {
@@ -1414,12 +1424,12 @@
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='20' height='20' rx='3' fill='%231B89C5'/%3e%3cpath d='M14.5183 5L8.64823 10.8701L6.06498 8.28684L4 10.3519L8.64823 15L16.5833 7.06498L14.5183 5Z' fill='white'/%3e%3c/svg%3e");
     }
 
-    .form__input.error {
-      border-color: red;
-    }
+
   }
 }
-
+.checkbox.error ~ label::before{
+  border: 1px solid red;
+}
 //---------------------------- end Questions -------------------------------
 //---------------------------- Contacts -------------------------------
 .contacts {

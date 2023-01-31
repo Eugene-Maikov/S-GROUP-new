@@ -71,13 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   var swiperPartners = new Swiper(".partners__slider", {
-    // slidesPerView: 6,
     spaceBetween: 50,
     loop: true,
-    speed: 1000,
+    speed: 7000,
     slidesPerView: 6,
     autoplay: {
-      enabled: true,
       delay: false
     },
     navigation: {

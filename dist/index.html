@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html class="page" lang="ru">
 
 <head>
 	<meta charset="utf-8">
 	<title>Главная</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
 
-	<link rel="stylesheet" type="text/css" href="assets/plugins/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<link rel="stylesheet" type="text/css" href="css/sprite.css">
-	<link rel="stylesheet" type="text/css" href="css/header-and-footer.css">
-	<link rel="stylesheet" type="text/css" href="css/boundary.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" type="text/css" href="css/company-history.css">
+	<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/sprite.css" rel="stylesheet" type="text/css">
+	<link href="css/header-and-footer.css" rel="stylesheet" type="text/css">
+	<link href="css/boundary.css" rel="stylesheet" type="text/css">
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<link href="css/company-history.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -1183,13 +1183,14 @@
 				<div class="questions__inner">
 					<h2 class="questions__title">Остались вопросы?</h2>
 					<div class="questions__subtitle">Оставьте свои контактные данные, и мы перезвоним вам в ближайшее время</div>
-					<form action="/" class="questions__form">
+					<form action="/" class="questions__form" method="get">
 						<div class="questions__row">
 							<div class="questions__column">
-								<input class="form__input" name="questions-name" placeholder="Ваше имя" type="text">
+								<input class="form__input js-input-name rrr" name="questions-name" placeholder="Ваше имя" type="text">
 							</div>
 							<div class="questions__column">
-								<input type="tel" data-tel-input class="form__input js-input-phone" name="questions-phone" placeholder="Телефон" maxlength="18">
+								<input class="form__input js-input-phone rrr" data-tel-input maxlength="18" name="questions-phone"
+								       placeholder="Телефон" type="tel">
 							</div>
 							<div class="questions__column">
 								<input class="form__input js-input-email" name="questions-email" placeholder="E-mail" type="email">
@@ -1199,7 +1200,7 @@
 							</div>
 						</div>
 						<div class="questions__checkbox">
-							<input class="checkbox js-input-checkbox" id="personalData" name="personalData" required
+							<input class="checkbox js-input-checkbox" id="personalData" name="personalData"
 							       type="checkbox" value="yes"/>
 							<label for="personalData"><span>Я согласен на обработку персональных данных, а также соглашаюсь с политикой конфиденциальности</span></label>
 						</div>
@@ -1389,7 +1390,9 @@
 					<div class="tabs__content">
 						<div class="tabs__panel">
 							<div class="map">
-								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac6d16b407422ff09ae266e4678164e53c9588ccaa6f6db466b58902446b18d11&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<iframe
+									frameborder="0"
+									height="686" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac6d16b407422ff09ae266e4678164e53c9588ccaa6f6db466b58902446b18d11&amp;source=constructor" width="100%"></iframe>
 								<div class="contacts__mobile">
 									<div class="contacts__item">
 										<div class="contacts__head">
@@ -1436,7 +1439,9 @@
 						</div>
 						<div class="tabs__panel">
 							<div class="map">
-								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7d182c1d0d33fa7bd5dfa3d4e081eee3128b97b91b68803511cbd1cdb9ec267a&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<iframe
+									frameborder="0"
+									height="686" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7d182c1d0d33fa7bd5dfa3d4e081eee3128b97b91b68803511cbd1cdb9ec267a&amp;source=constructor" width="100%"></iframe>
 								<div class="contacts__mobile">
 									<div class="contacts__item tabs__nav-btn">
 										<div class="contacts__head">
@@ -1483,7 +1488,9 @@
 						</div>
 						<div class="tabs__panel">
 							<div class="map">
-								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab701327b80eb316b8220e35b965b187ee79db97ccf1d736590146b2483544c6b&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<iframe
+									frameborder="0"
+									height="686" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab701327b80eb316b8220e35b965b187ee79db97ccf1d736590146b2483544c6b&amp;source=constructor" width="100%"></iframe>
 								<div class="contacts__mobile">
 									<div class="contacts__item tabs__nav-btn">
 										<div class="contacts__head">
@@ -1530,7 +1537,9 @@
 						</div>
 						<div class="tabs__panel">
 							<div class="map">
-								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A04bca074cf1589c65cb3f4df04294288d1456b7b1c0f51662d75ecf56cf37ef4&amp;source=constructor" width="100%" height="686" frameborder="0"></iframe>
+								<iframe
+									frameborder="0"
+									height="686" src="https://yandex.ru/map-widget/v1/?um=constructor%3A04bca074cf1589c65cb3f4df04294288d1456b7b1c0f51662d75ecf56cf37ef4&amp;source=constructor" width="100%"></iframe>
 								<div class="contacts__mobile">
 									<div class="contacts__item tabs__nav-btn">
 										<div class="contacts__head">
@@ -1675,6 +1684,7 @@
 
 </div>
 
+<script defer src="assets/plugins/smoothscroll/smoothscroll.min.js"></script>
 <script defer src="assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script defer src="assets/plugins/GraphTabs/tabs.js"></script>
 

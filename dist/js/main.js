@@ -162,67 +162,47 @@ document.addEventListener("DOMContentLoaded", function () {
   } // ---------------Валидация---------------
 
 
-  var form = document.querySelector(".questions__form");
-  var formInputs = document.querySelectorAll(".form__input");
-  var inputEmail = document.querySelector(".js-input-email");
-  var inputPhone = document.querySelector(".js-input-phone");
-  var inputCheckbox = document.querySelector(".js-input-checkbox");
-
-  function validateEmail(email) {
+  var validateEmail = function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
-  }
+  };
 
-  function validateCountry(country) {
-    var re = new RegExp(".co$");
-    return re.test(String(country).toLowerCase());
-  } // Проходит автоматически, тк маска не пропускает некорректные данные
+  var validateForm = function validateForm(blockForm, blockEmail, blockCheckbox, blockInputs) {
+    var form = document.querySelector(blockForm);
+    var inputEmail = document.querySelector(blockEmail);
+    var email = inputEmail.value;
+    var inputCheckbox = document.querySelector(blockCheckbox);
+    var inputs = document.querySelectorAll(blockInputs);
+    form.addEventListener('submit', function (evt) {
+      inputs.forEach(function (item) {
+        if (item.value === "") {
+          item.classList.add("error");
+          evt.preventDefault();
+        } else {
+          item.classList.remove("error");
+        }
+      });
 
-
-  function validatePhone(phone) {
-    return test(String(phone));
-  } // Условия отправки
-
-
-  form.onsubmit = function () {
-    var emailVal = inputEmail.value;
-    var phoneVal = inputPhone.value;
-    var emptyInputs = Array.from(formInputs).filter(function (input) {
-      return input.value === "";
-    });
-    formInputs.forEach(function (input) {
-      if (input.value === "") {
-        input.classList.add("error");
+      if (!validateEmail(email)) {
+        inputEmail.classList.add("error");
+        evt.preventDefault();
       } else {
-        input.classList.remove("error");
+        inputEmail.classList.remove("error");
+      }
+
+      if (!inputCheckbox.checked) {
+        inputCheckbox.classList.add("error");
+        evt.preventDefault();
+      } else {
+        inputCheckbox.classList.remove("error");
+      }
+
+      if (!inputs.value === "" && !inputEmail.value === "" && inputCheckbox.checked) {
+        form.submit();
       }
     });
-
-    if (emptyInputs.length !== 0) {
-      console.log("inputs not filled");
-      return false;
-    }
-
-    if (!validateEmail(emailVal)) {
-      inputEmail.classList.add("error");
-      return false;
-    } else {
-      inputEmail.classList.remove("error");
-    }
-
-    if (validateCountry(emailVal)) {
-      inputEmail.classList.add("error");
-      return false;
-    } else {
-      inputEmail.classList.remove("error");
-    }
-
-    if (!validatePhone(phoneVal)) {
-      inputPhone.classList.add("error");
-      return false;
-    } else {
-      inputPhone.classList.remove("error");
-    }
   };
+
+  validateForm(".questions__form", ".js-input-email", ".js-input-checkbox", ".rrr");
 });
 //# sourceMappingURL=main.js.map
