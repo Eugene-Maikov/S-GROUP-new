@@ -80,6 +80,21 @@
     @media (max-width: 1330px) {
       margin-left: 10px;
     }
+
+    .today__1,
+    .today__2,
+    .today__3,
+    .today__4,
+    .today__6{
+      width: 40px;
+      height: 40px;
+      fill: var(--secondary-color);
+    }
+    .today__5{
+      width: 30px;
+      height: 40px;
+      fill: var(--secondary-color);
+    }
   }
 
   &__number {
@@ -147,7 +162,6 @@
   }
 
 
-
   &__image {
     max-width: 100%;
     position: relative;
@@ -159,7 +173,7 @@
       position: relative;
     }
 
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -186,20 +200,37 @@
     }
   }
 
-  &__prev {
+  &__prev,
+  &__next {
+    width: 40px;
+    height: 56px;
+    fill: var(--secondary-color);
+    padding: 5px;
+    cursor: pointer;
+
     position: absolute;
-    left: 40px;
+
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+
+    @media (max-width: 1330px) {
+      width: 30px;
+      height: 45px;
+    }
+    @media (max-width: 767px) {
+      width: 20px;
+      height: 26px;
+    }
+  }
+
+  &__prev {
+    left: 40px;
   }
 
   &__next {
-    position: absolute;
     right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+
   }
 
   &__pagination {
