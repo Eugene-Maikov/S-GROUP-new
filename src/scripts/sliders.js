@@ -77,17 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiperPartners = new Swiper(".partners__slider", {
     spaceBetween: 50,
     loop: true,
-    speed: 7000,
+    speed: 5000,
     slidesPerView: 6,
     autoplay: {
       delay: false,
     },
-
-    navigation: {
-      nextEl: ".partners__next",
-      prevEl: ".partners__prev",
-    },
-
+    grabCursor: true,
     breakpoints: {
       320: {
         slidesPerView: 3.5,
@@ -223,6 +218,18 @@ document.addEventListener("DOMContentLoaded", () => {
           stretch: 21,
         },
       }
+    },
+  });
+
+  const swiperToday = new Swiper(".today__slider", {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".today__next",
+      prevEl: ".today__prev",
+    },
+    pagination: {
+      el: ".today__pagination",
+      clickable: true,
     },
   });
 });

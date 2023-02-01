@@ -891,21 +891,6 @@
   padding: 0 0 50px 0;
   background-color: #fff;
 
-  &__inner {
-    padding: 0 60px;
-    position: relative;
-
-    @media (max-width: 1330px) {
-      padding: 0 40px;
-    }
-    @media (max-width: 767px) {
-      padding: 0;
-    }
-    @media (max-width: 525px) {
-      margin-right: -20px;
-    }
-  }
-
   .swiper-wrapper {
     display: flex;
     align-items: center;
@@ -919,20 +904,6 @@
   .swiper-slide {
     width: auto;
     margin-right: 20px;
-  }
-
-  &__prev {
-    position: absolute;
-    left: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__next {
-    position: absolute;
-    right: -5px;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   &__img {

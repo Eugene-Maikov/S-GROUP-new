@@ -74,9 +74,7 @@
 }
 
 //---------------------------- end News-arrows -------------------------------
-// ---------------------------- Partners-arrows -------------------------------
-.partners__prev,
-.partners__next,
+// ---------------------------- Reviews/Today-arrows -------------------------------
 .reviews__prev,
 .reviews__next {
   width: 40px;
@@ -94,7 +92,7 @@
   }
 }
 
-//---------------------------- end Partners-arrows -------------------------------
+//---------------------------- end Reviews/Today-arrows -------------------------------
 // ---------------------------- Company-history-arrows -------------------------------
 
 .people__prev,
@@ -139,7 +137,6 @@
 
 //---------------------------- end Read more -------------------------------
 // ---------------------------- Contacts icons -------------------------------
-
 .contacts__location {
   width: 16px;
   height: 20px;
@@ -157,4 +154,46 @@
   height: 16px;
   fill: #262728;
 }
+//---------------------------- end Contacts icons -------------------------------
+// ---------------------------- Today icons -------------------------------
+.today__1,
+.today__2,
+.today__3,
+.today__4,
+.today__6{
+  width: 40px;
+  height: 40px;
+  fill: var(--secondary-color);
+}
+.today__5{
+  width: 30px;
+  height: 40px;
+  fill: var(--secondary-color);
+}
 
+.today__video-icon{
+  width: 80px;
+  height: 80px;
+  fill: #fff;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+}
+
+.today__prev,
+.today__next {
+  width: 40px;
+  height: 56px;
+  fill: var(--secondary-color);
+  padding: 5px;
+  cursor: pointer;
+
+  @media (max-width: 1330px) {
+    width: 30px;
+    height: 45px;
+  }
+  @media (max-width: 767px) {
+    width: 20px;
+    height: 26px;
+  }
+}
+// ---------------------------- end Today icons -------------------------------

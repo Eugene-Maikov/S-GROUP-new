@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>S group сегодня</title>
+	<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
+
+	<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/sprite.css" rel="stylesheet" type="text/css">
+	<link href="css/header-and-footer.css" rel="stylesheet" type="text/css">
+	<link href="css/today.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper">
+	@@include('_include/header.html')
+	<main class="main">
+		<div class="breadcrumbs breadcrumbs-black margin-top-header">
+			<div class="container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a>
+					</li>
+					<li class="breadcrumbs__item">ЛДСП</li>
+				</ul>
+			</div>
+		</div>
+
+		<section class="today">
+
+			<div class="today__content">
+				<div class="container">
+					<div class="today__body">
+						<h1 class="today__title">S group сегодня</h1>
+						<div class="today__statistics">
+							<div class="today__item">
+								<div class="today__icon">
+									<svg class="today__1">
+										<use href="assets/svg/sprite.svg#today-1"></use>
+									</svg>
+								</div>
+								<div class="today__info">
+									<span class="today__number">70</span>
+									<span class="today__description">сотрудников</span>
+								</div>
+							</div>
+							<div class="today__item">
+								<div class="today__icon">
+									<svg class="today__1">
+										<use href="assets/svg/sprite.svg#today-2"></use>
+									</svg>
+								</div>
+								<div class="today__info">
+									<span class="today__number">3</span>
+									<span class="today__description">складских комплекса</span>
+								</div>
+							</div>
+							<div class="today__item">
+								<div class="today__icon">
+									<svg class="today__1">
+										<use href="assets/svg/sprite.svg#today-3"></use>
+									</svg>
+								</div>
+								<div class="today__info">
+									<span class="today__number">4</span>
+									<span class="today__description">офиса</span>
+								</div>
+							</div>
+							<div class="today__item">
+								<div class="today__icon">
+									<svg class="today__1">
+										<use href="assets/svg/sprite.svg#today-4"></use>
+									</svg>
+								</div>
+								<div class="today__info">
+									<span class="today__number">1000</span>
+									<span class="today__description">наименований</span>
+								</div>
+							</div>
+							<div class="today__item">
+								<div class="today__icon">
+									<svg class="today__1">
+										<use href="assets/svg/sprite.svg#today-5"></use>
+									</svg>
+								</div>
+								<div class="today__info">
+									<span class="today__number">45</span>
+									<span class="today__description"> регионов России</span>
+								</div>
+							</div>
+							<div class="today__item">
+								<div class="today__icon">
+									<svg class="today__1">
+										<use href="assets/svg/sprite.svg#today-6"></use>
+									</svg>
+								</div>
+								<div class="today__info">
+									<span class="today__number">5000м2</span>
+									<span class="today__description">площадь складских комплексов</span>
+								</div>
+							</div>
+						</div>
+						<a class="today__video" href="javascript:void(0)">
+							<!-- <svg class="today__video-icon">-->
+							<!-- 	<use href="assets/svg/sprite.svg#today-video"></use>-->
+							<!-- </svg>-->
+							<div class="today__video-image">
+								<img alt="" src="assets/img/today-video.png">
+							</div>
+							<div class="today__video-link">Видео о компании</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="today__image">
+				<!-- Slider main container -->
+				<div class="swiper today__slider">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<picture>
+								<source srcset="assets/img/today-1.webp" type="image/webp">
+								<img alt="" src="assets/img/today-1.jpg">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture>
+								<source srcset="assets/img/today-1.webp" type="image/webp">
+								<img alt="" src="assets/img/today-1.jpg">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture>
+								<source srcset="assets/img/today-1.webp" type="image/webp">
+								<img alt="" src="assets/img/today-1.jpg">
+							</picture>
+						</div>
+					</div>
+					<svg class="today__prev">
+						<use href="assets/svg/sprite.svg#arrow-slider-prev"></use>
+					</svg>
+					<svg class="today__next">
+						<use href="assets/svg/sprite.svg#arrow-slider-next"></use>
+					</svg>
+					<div class="today__pagination"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	@@include('_include/footer.html')
+
+	@@include('_include/modals.html')
+</div>
+
+<script defer src="assets/plugins/swiper/swiper-bundle.min.js"></script>
+
+<script defer src="js/main.js"></script>
+<script defer src="js/sliders.js"></script>
+</body>
+
+</html>
