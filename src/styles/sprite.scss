@@ -155,29 +155,31 @@
   fill: #262728;
 }
 //---------------------------- end Contacts icons -------------------------------
+
 // ---------------------------- Today icons -------------------------------
 .today__1,
 .today__2,
 .today__3,
 .today__4,
-.today__6{
+.today__6 {
   width: 40px;
   height: 40px;
   fill: var(--secondary-color);
+
+  @media (max-width: 1330px) {
+    width: 30px;
+    height: 30px;
+  }
 }
-.today__5{
+
+.today__5 {
   width: 30px;
   height: 40px;
   fill: var(--secondary-color);
+
+  @media (max-width: 1330px) {
+    width: 23px;
+    height: 30px;
+  }
 }
-
-//.today__video-icon{
-//  width: 80px;
-//  height: 80px;
-//  fill: #fff;
-//  border-radius: 50%;
-//  border: 3px solid #FFFFFF;
-//}
-
-
 // ---------------------------- end Today icons -------------------------------

@@ -173,10 +173,26 @@
   height: 40px;
   fill: var(--secondary-color);
 }
+@media (max-width: 1330px) {
+  .today__1,
+.today__2,
+.today__3,
+.today__4,
+.today__6 {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 .today__5 {
   width: 30px;
   height: 40px;
   fill: var(--secondary-color);
+}
+@media (max-width: 1330px) {
+  .today__5 {
+    width: 23px;
+    height: 30px;
+  }
 }
 /*# sourceMappingURL=sprite.css.map */

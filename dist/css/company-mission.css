@@ -293,21 +293,21 @@
   }
 }
 
-.narration {
+.mission-text {
   background-color: var(--light-color);
   padding: 54px 0;
 }
 @media (max-width: 1330px) {
-  .narration {
+  .mission-text {
     padding: 35px 0;
   }
 }
 @media (max-width: 767px) {
-  .narration {
+  .mission-text {
     padding: 36px 0;
   }
 }
-.narration p {
+.mission-text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -315,49 +315,22 @@
   color: var(--text-color-dark);
 }
 @media (max-width: 1330px) {
-  .narration p {
+  .mission-text p {
     font-size: 12px;
   }
 }
 @media (max-width: 767px) {
-  .narration p {
+  .mission-text p {
     font-size: 11px;
   }
 }
 
 .strategy {
-  padding: 49px 0 60px 0;
+  padding-bottom: 60px;
 }
 @media (max-width: 1330px) {
   .strategy {
-    padding: 31px 0 40px 0;
-  }
-}
-@media (max-width: 767px) {
-  .strategy {
-    padding: 35px 0 20px 0;
-  }
-}
-.strategy__title {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text-color-dark);
-  margin-bottom: 16px;
-}
-@media (max-width: 1330px) {
-  .strategy__title {
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 767px) {
-  .strategy__title {
-    font-size: 20px;
-    line-height: 120%;
-    margin-bottom: 14px;
+    padding-bottom: 40px;
   }
 }
 .strategy__inner {
