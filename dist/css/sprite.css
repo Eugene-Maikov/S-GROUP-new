@@ -164,35 +164,50 @@
   fill: #262728;
 }
 
-.today__1,
-.today__2,
-.today__3,
-.today__4,
-.today__6 {
+.about__1,
+.about__2,
+.about__3,
+.about__4,
+.about__6 {
   width: 40px;
   height: 40px;
   fill: var(--secondary-color);
 }
 @media (max-width: 1330px) {
-  .today__1,
-.today__2,
-.today__3,
-.today__4,
-.today__6 {
+  .about__1,
+.about__2,
+.about__3,
+.about__4,
+.about__6 {
     width: 30px;
     height: 30px;
   }
 }
 
-.today__5 {
+.about__5 {
   width: 30px;
   height: 40px;
   fill: var(--secondary-color);
 }
 @media (max-width: 1330px) {
-  .today__5 {
+  .about__5 {
     width: 23px;
     height: 30px;
+  }
+}
+
+.pagination__prev,
+.pagination__next {
+  width: 20px;
+  height: 26px;
+  padding: 5px;
+  fill: var(--text-color-dark);
+}
+@media (max-width: 1330px) {
+  .pagination__prev,
+.pagination__next {
+    width: 18px;
+    height: 22px;
   }
 }
 /*# sourceMappingURL=sprite.css.map */

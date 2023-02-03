@@ -74,7 +74,7 @@
 }
 
 //---------------------------- end News-arrows -------------------------------
-// ---------------------------- Reviews/Today-arrows -------------------------------
+// ---------------------------- Reviews-arrows -------------------------------
 .reviews__prev,
 .reviews__next {
   width: 40px;
@@ -92,9 +92,8 @@
   }
 }
 
-//---------------------------- end Reviews/Today-arrows -------------------------------
+//---------------------------- end Reviews-arrows -------------------------------
 // ---------------------------- Company-history-arrows -------------------------------
-
 .people__prev,
 .people__next {
   width: 40px;
@@ -154,14 +153,15 @@
   height: 16px;
   fill: #262728;
 }
+
 //---------------------------- end Contacts icons -------------------------------
 
 // ---------------------------- Today icons -------------------------------
-.today__1,
-.today__2,
-.today__3,
-.today__4,
-.today__6 {
+.about__1,
+.about__2,
+.about__3,
+.about__4,
+.about__6 {
   width: 40px;
   height: 40px;
   fill: var(--secondary-color);
@@ -172,7 +172,7 @@
   }
 }
 
-.today__5 {
+.about__5 {
   width: 30px;
   height: 40px;
   fill: var(--secondary-color);
@@ -182,4 +182,21 @@
     height: 30px;
   }
 }
+
 // ---------------------------- end Today icons -------------------------------
+// ---------------------------- Pagination arrows -------------------------------
+.pagination__prev,
+.pagination__next{
+  width: 20px;
+  height: 26px;
+  padding: 5px;
+  fill: var(--text-color-dark);
+
+  @media (max-width: 1330px) {
+    width: 18px;
+    height: 22px;
+  }
+}
+// ---------------------------- eng Pagination arrows -------------------------------
+
+
