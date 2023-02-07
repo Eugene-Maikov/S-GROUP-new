@@ -16,70 +16,10 @@
 
 <body>
 <div class="wrapper">
-	
-<header class="header">
-	<div class="container">
-		<div class="header__inner">
-			<a class="header__logo" href="index.html">
-				<svg class="logo">
-					<use href="assets/svg/sprite.svg#logo"></use>
-				</svg>
-			</a>
-			<div class="header__center">
-				<div class="header__wrapper">
-
-					<div class="header__location">
-						<a class="location__button arrow" href="javascript:void(0)">Нижний Новгород</a>
-					</div>
-					<nav class="menu">
-						<ul class="topmenu">
-							<li><a class="menu__link" href="javascript:void(0)">Интернет магазин</a></li>
-							<li><a class="menu__link arrow" href="javascript:void(0)">О компании</a>
-								<ul class="submenu">
-									<li><a class="submenu__link" href="">Производство</a></li>
-									<li><a class="submenu__link" href="">Магазин</a></li>
-									<li><a class="submenu__link" href="">Сервис</a></li>
-								</ul>
-							</li>
-							<li><a class="menu__link arrow" href="javascript:void(0)">Новости</a>
-								<ul class="submenu">
-									<li><a class="submenu__link" href="">Производство</a></li>
-									<li><a class="submenu__link" href="">Магазин</a></li>
-									<li><a class="submenu__link" href="">Сервис</a></li>
-								</ul>
-							</li>
-							<li><a class="menu__link" href="javascript:void(0)">Доставка и оплата</a></li>
-							<li><a class="menu__link" href="javascript:void(0)">Контакты</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="header__icons">
-				<a class="header__icon header__search" href="javascript:void(0)">
-					<svg class="search">
-						<use href="assets/svg/sprite.svg#search"></use>
-					</svg>
-				</a>
-				<a class="header__icon header__whatsapp" href="javascript:void(0)">
-					<svg class="whatsapp">
-						<use href="assets/svg/sprite.svg#whatsapp"></use>
-					</svg>
-				</a>
-				<a class="header__icon header__basket" href="javascript:void(0)">
-					<svg class="basket">
-						<use href="assets/svg/sprite.svg#basket"></use>
-					</svg>
-				</a>
-				<a class="header__icon header__burger" href="javascript:void(0)">
-					<span></span>
-				</a>
-			</div>
-		</div>
-	</div>
-</header>
+	@@include('_include/header.html')
 	<main class="main">
 		<section class="preview"
-		         style="background: url('assets/img/corporate-life.webp') center no-repeat; background-size: cover;">
+		         style="background: url('assets/img/preview-marathon.webp') center no-repeat; background-size: cover;">
 			<div class="container">
 				<div class="breadcrumbs breadcrumbs-white">
 					<ul class="breadcrumbs__list">
@@ -88,7 +28,26 @@
 						<li class="breadcrumbs__item">ЛДСП</li>
 					</ul>
 				</div>
-				<h1 class="preview__title">Корпоративная жизнь</h1>
+				<h1 class="preview__title">Марафон добра</h1>
+			</div>
+		</section>
+
+		<section class="quote">
+			<div class="container">
+				<div class="quote__inner">
+					<div class="quote__head">
+						<h2 class="quote__title">Благотворительность — отличный фундамент для постройки чего бы то ни было</h2>
+						<span class="quote__author">Луиза Мэй Олкотт (с)</span>
+					</div>
+					<div class="quote__description">
+						<p>Наша компания приняла решение, что мы хотим делать добрые дела! Эту мысль в первую очередь исходит от
+							руководства компании и с радостью разделяется ее сотрудниками!</p>
+						<p>Марафон добра – это серия мероприятий
+							направленных на поддержку и помощь благотворительным организациям, а также участие в экологических акциях.
+							Первые проекты удалось реализовать в 2022 году и на этой странице вы можете следить за тем, что уже удалось
+							сделать.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -98,14 +57,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -124,14 +83,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -150,14 +109,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -176,14 +135,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -202,14 +161,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -228,14 +187,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -254,14 +213,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -280,14 +239,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -306,14 +265,14 @@
 					<div class="cards__item">
 						<div class="cards__image">
 							<picture>
-								<source srcset="assets/img/corporate-life-cards.webp" type="image/webp">
-								<img alt="" src="assets/img/corporate-life-cards.jpg">
+								<source srcset="assets/img/post-marathon.webp" type="image/webp">
+								<img alt="" src="assets/img/post-marathon.jpg">
 							</picture>
 						</div>
 						<div class="cards__content">
 							<div class="cards__info">
 								<div class="cards__top">
-									<span class="cards__date">11 августа 2022</span>
+									<time class="cards__date" datetime="11.08.2022">11 августа 2022</time>
 									<span class="cards__mark">Корпоративная жизнь</span>
 								</div>
 								<div class="cards__bottom">
@@ -356,97 +315,9 @@
 			</div>
 		</section>
 	</main>
-	<footer class="footer">
-	<div class="container">
-		<div class="footer__inner">
-			<div class="footer__copyright">
-				<span>&#169; S GROUP, 2006-2021</span>
-				<a href="javascript:void(0)">Политика конфиденциальности</a>
-				<a href="javascript:void(0)">Политика обработки персональных данных</a>
-			</div>
-			<div class="footer__sitemap">
-				<div class="footer__pages">
-					<div class="footer__pages-wrapper">
-						<div class="footer__pages-item">
-							<h3 class="footer__title">О компании</h3>
-							<ul class="footer__pages-list">
-								<li><a href="company-history.html">История компании</a></li>
-								<li><a href="about.html">S GROUP сегодня</a></li>
-								<li><a href="marathon.html">Марафон Добра</a></li>
-								<li><a href="javascript:void(0)">Работа в S GROUP</a></li>
-								<li><a href="corporate-life.html">Корпоративная жизнь</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__pages-wrapper">
-						<div class="footer__pages-item">
-							<h3 class="footer__title">Новости</h3>
-							<ul class="footer__pages-list">
-								<li><a href="javascript:void(0)">Новости о продуктах</a></li>
-								<li><a href="javascript:void(0)">Новости компании</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="footer__titles">
-					<ul class="footer__titles-list">
-						<li><a class="footer__title" href="javascript:void(0)">Каталог</a></li>
-						<li><a class="footer__title" href="javascript:void(0)">Контакты</a></li>
-						<li><a class="footer__title" href="javascript:void(0)">Доставка и оплата</a></li>
-						<li><a class="footer__title" href="javascript:void(0)">Стать партнером</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+	@@include('_include/footer.html')
 
-	<!-- mobile menu -->
-<div class="mobile-menu">
-	<div class="mobile-menu__head">
-		<div class="mobile-menu__location">
-			<a class="mobile-menu__button arrow" href="javascript:void(0)">Нижний Новгород</a>
-		</div>
-		<div class="mobile-menu__close">
-			<svg class="close">
-				<use href="assets/svg/sprite.svg#mobile-menu-close-button"></use>
-			</svg>
-		</div>
-	</div>
-	<nav class="mobile-menu__nav">
-		<ul>
-			<li><a class="nav__link" href="javascript:void(0)">Интернет магазин</a></li>
-			<li class="linkHasChild">
-				<a class="nav__link nav__link-arrow" href="javascript:void(0)">О компании</a>
-				<ul class="mobile-menu__sublist">
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости продукции</a></li>
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости компании</a></li>
-				</ul>
-			</li>
-			<li class="linkHasChild">
-				<a class="nav__link nav__link-arrow" href="javascript:void(0)">Новости</a>
-				<ul class="mobile-menu__sublist">
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости продукции</a></li>
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости компании</a></li>
-				</ul>
-			</li>
-			<li><a class="nav__link" href="javascript:void(0)">Доставка и оплата</a></li>
-			<li><a class="nav__link" href="javascript:void(0)">Контакты</a></li>
-		</ul>
-	</nav>
-</div>
-
-<div class="contacts__overlay"></div>
-
-<div class="location__overlay"></div>
-<div class="location__modal">
-	<ul class="location__modal-list">
-		<li class="location__modal-item">Нижний Новгород</li>
-		<li class="location__modal-item">Краснодар</li>
-	</ul>
-</div>
-
-
+	@@include('_include/modals.html')
 </div>
 
 <script src="js/main.js"></script>

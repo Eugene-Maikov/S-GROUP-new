@@ -55,6 +55,9 @@
     @media(max-width: 767px) and (max-height: 475px)  {
       bottom: 32vh;
     }
+    @media(max-width: 320px) and (max-height: 570px)  {
+      bottom: 35vh;
+    }
   }
 
   &__title {
@@ -80,6 +83,9 @@
       font-size: 40px;
     }
     @media(max-width: 767px) and (max-height: 350px)  {
+      line-height: 100%;
+    }
+    @media(max-width: 320px) and (max-height: 570px)  {
       line-height: 100%;
     }
   }
@@ -910,6 +916,12 @@
     img, source {
       max-height: 98px;
       object-fit: contain;
+    }
+  }
+
+  &__slider{
+    @media (max-width: 990px) {
+      margin: 0 -20px;
     }
   }
 }

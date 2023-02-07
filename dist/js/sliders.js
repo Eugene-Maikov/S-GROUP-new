@@ -224,5 +224,19 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true
     }
   });
+  var swiperPostGalleryThumbs = new Swiper(".post__slider-thumbs", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    allowTouchMove: false,
+    grid: {
+      rows: 2
+    }
+  });
+  var swiperPostGallery = new Swiper(".post__slider", {
+    effect: "creative",
+    thumbs: {
+      swiper: swiperPostGalleryThumbs
+    }
+  });
 });
 //# sourceMappingURL=sliders.js.map

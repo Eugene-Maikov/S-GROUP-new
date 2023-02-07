@@ -1,3 +1,133 @@
+.quote {
+  padding: 50px 0 83px 0;
+  background-color: #FFF;
+}
+@media (max-width: 1330px) {
+  .quote {
+    padding: 16px 0 45px 0;
+  }
+}
+@media (max-width: 767px) {
+  .quote {
+    padding: 16px 0;
+  }
+}
+.quote__inner {
+  max-width: 850px;
+  margin: 0 auto;
+}
+@media (max-width: 1330px) {
+  .quote__inner {
+    max-width: 600px;
+  }
+}
+@media (max-width: 767px) {
+  .quote__inner {
+    max-width: 100%;
+  }
+}
+.quote__head {
+  padding-bottom: 14px;
+  margin-bottom: 11px;
+  position: relative;
+  text-align: center;
+  color: var(--text-color-dark);
+  letter-spacing: 0.02em;
+  line-height: 140%;
+}
+@media (max-width: 1330px) {
+  .quote__head {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .quote__head {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+}
+.quote__head:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: 3px;
+}
+@media (max-width: 1330px) {
+  .quote__head:after {
+    width: 50px;
+    height: 2px;
+  }
+}
+@media (max-width: 767px) {
+  .quote__head:after {
+    height: 1px;
+  }
+}
+.quote__title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+@media (max-width: 1330px) {
+  .quote__title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .quote__title {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+}
+.quote__author {
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 1330px) {
+  .quote__author {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .quote__author {
+    font-size: 11px;
+  }
+}
+.quote__description {
+  text-align: center;
+}
+.quote__description p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+.quote__description p:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .quote__description p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1330px) {
+  .quote__description p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .quote__description p {
+    font-size: 11px;
+  }
+}
+
 .cards {
   background-color: var(--light-color);
   padding: 30px 0;

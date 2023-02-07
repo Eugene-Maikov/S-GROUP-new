@@ -232,4 +232,23 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true,
     },
   });
+
+
+
+  const swiperPostGalleryThumbs = new Swiper(".post__slider-thumbs", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    allowTouchMove: false,
+
+    grid: {
+      rows: 2,
+
+    },
+  });
+  const swiperPostGallery = new Swiper(".post__slider", {
+    effect: "creative",
+    thumbs: {
+      swiper: swiperPostGalleryThumbs,
+    },
+  });
 });

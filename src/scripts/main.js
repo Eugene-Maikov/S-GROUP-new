@@ -208,8 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   validateForm(".questions__form", ".js-input-email", ".js-input-checkbox", ".rrr")
-
-
 })
 
 
