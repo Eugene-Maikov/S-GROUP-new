@@ -228,12 +228,21 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 5,
     spaceBetween: 10,
     allowTouchMove: false,
-    grid: {
-      rows: 2
+    breakpoints: {
+      320: {
+        spaceBetween: 8
+      },
+      525: {
+        spaceBetween: 10
+      },
+      1330: {
+        spaceBetween: 10
+      }
     }
   });
   var swiperPostGallery = new Swiper(".post__slider", {
     effect: "creative",
+    allowTouchMove: false,
     thumbs: {
       swiper: swiperPostGalleryThumbs
     }
