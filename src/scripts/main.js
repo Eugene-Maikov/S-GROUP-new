@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return input.value.replace(/\D/g, "");
   };
 
-// Обработка ввода
+  // Обработка ввода
   let onPhoneInput = function (e) {
     let input = e.target;
     let inputNumbersValue = getInputsNumbersValue(input);
@@ -163,51 +163,36 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("paste", onPhonePaste);
   }
 
-// ---------------Валидация---------------
-  const validateEmail = (email) => {
-    const re =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
 
-  const validateForm = (blockForm, blockEmail, blockCheckbox, blockInputs ) => {
-    const form = document.querySelector(blockForm);
-    const inputEmail = document.querySelector(blockEmail);
-    const email = inputEmail.value
-    const inputCheckbox = document.querySelector(blockCheckbox);
-    const inputs = document.querySelectorAll(blockInputs);
+  //Модальное окно для видео
+  const btn = document.querySelector('.js-watch-video');
+  const modal = document.querySelector(".js-modal-video");
+  const closeButton = document.querySelector(".js-close");
 
-    form.addEventListener('submit', (evt) => {
+  const player = document.getElementById('video-iframe');
+  const iframeSrc = player.src;
 
-      inputs.forEach((item) => {
-        if (item.value === "") {
-          item.classList.add("error");
-          evt.preventDefault()
-        } else {
-          item.classList.remove("error");
-        }
-      })
+  btn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.add("active");
+    locationOverlay.classList.add("visible-location-overlay");
+    document.body.classList.add("no-scroll");
+  });
+  closeButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.remove("active");
+    locationOverlay.classList.remove("visible-location-overlay");
+    document.body.classList.remove("no-scroll");
+    player.src = iframeSrc;
+  });
+  modal.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.remove("active");
+    locationOverlay.classList.remove("visible-location-overlay");
+    document.body.classList.remove("no-scroll");
+    player.src = iframeSrc;
+  });
 
-      if (!validateEmail(email)) {
-        inputEmail.classList.add("error");
-        evt.preventDefault()
-      } else {
-        inputEmail.classList.remove("error");
-      }
-
-      if (!inputCheckbox.checked) {
-        inputCheckbox.classList.add("error");
-        evt.preventDefault()
-      } else {
-        inputCheckbox.classList.remove("error");
-      }
-
-      if (!inputs.value === "" && !inputEmail.value === "" &&  inputCheckbox.checked) {
-        form.submit()
-      }
-    })
-  }
-  validateForm(".questions__form", ".js-input-email", ".js-input-checkbox", ".rrr")
 })
 
 

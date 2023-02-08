@@ -11,7 +11,7 @@
 	<link href="css/sprite.css" rel="stylesheet" type="text/css">
 	<link href="css/global.css" rel="stylesheet" type="text/css">
 	<link href="css/header-and-footer.css" rel="stylesheet" type="text/css">
-	<link href="css/post-corporate-life.css" rel="stylesheet" type="text/css">
+	<link href="css/single-corporate-life.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="back-to-list">
+		<div class="back-to-list back-to-list__secondary">
 			<div class="container">
 				<a class="back-to-list__link" href="corporate-life.html">
 					<svg class="read__more">
@@ -203,7 +203,7 @@
 										</picture>
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide js-watch-video">
 									<div class="swiper-slide__image">
 										<picture>
 											<source srcset="assets/img/people-2.webp" type="image/webp">
@@ -223,6 +223,20 @@
 	@@include('_include/footer.html')
 
 	@@include('_include/modals.html')
+	<div class="popup-video js-modal-video">
+		<div class="popup-video__box">
+			<iframe id="video-iframe" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" height="315"
+			        src="https://www.youtube.com/embed/-DBjMoobDM8"
+			        title="YouTube video player"
+			        width="560"></iframe>
+			<div class="popup-video__close js-close">
+				<svg class="close">
+					<use href="assets/svg/sprite.svg#mobile-menu-close-button"></use>
+				</svg>
+			</div>
+		</div>
+
+	</div>
 </div>
 <script defer src="assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>

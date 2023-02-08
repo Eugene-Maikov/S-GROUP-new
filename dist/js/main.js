@@ -159,50 +159,33 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", onPhoneInput);
     input.addEventListener("keydown", onPhoneKeyDown);
     input.addEventListener("paste", onPhonePaste);
-  } // ---------------Валидация---------------
+  } //Модальное окно для видео
 
 
-  var validateEmail = function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-  var validateForm = function validateForm(blockForm, blockEmail, blockCheckbox, blockInputs) {
-    var form = document.querySelector(blockForm);
-    var inputEmail = document.querySelector(blockEmail);
-    var email = inputEmail.value;
-    var inputCheckbox = document.querySelector(blockCheckbox);
-    var inputs = document.querySelectorAll(blockInputs);
-    form.addEventListener('submit', function (evt) {
-      inputs.forEach(function (item) {
-        if (item.value === "") {
-          item.classList.add("error");
-          evt.preventDefault();
-        } else {
-          item.classList.remove("error");
-        }
-      });
-
-      if (!validateEmail(email)) {
-        inputEmail.classList.add("error");
-        evt.preventDefault();
-      } else {
-        inputEmail.classList.remove("error");
-      }
-
-      if (!inputCheckbox.checked) {
-        inputCheckbox.classList.add("error");
-        evt.preventDefault();
-      } else {
-        inputCheckbox.classList.remove("error");
-      }
-
-      if (!inputs.value === "" && !inputEmail.value === "" && inputCheckbox.checked) {
-        form.submit();
-      }
-    });
-  };
-
-  validateForm(".questions__form", ".js-input-email", ".js-input-checkbox", ".rrr");
+  var btn = document.querySelector('.js-watch-video');
+  var modal = document.querySelector(".js-modal-video");
+  var closeButton = document.querySelector(".js-close");
+  var player = document.getElementById('video-iframe');
+  var iframeSrc = player.src;
+  btn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.add("active");
+    locationOverlay.classList.add("visible-location-overlay");
+    document.body.classList.add("no-scroll");
+  });
+  closeButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.remove("active");
+    locationOverlay.classList.remove("visible-location-overlay");
+    document.body.classList.remove("no-scroll");
+    player.src = iframeSrc;
+  });
+  modal.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.remove("active");
+    locationOverlay.classList.remove("visible-location-overlay");
+    document.body.classList.remove("no-scroll");
+    player.src = iframeSrc;
+  });
 });
 //# sourceMappingURL=main.js.map

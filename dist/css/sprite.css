@@ -38,7 +38,8 @@
   fill: var(--text-color-light);
 }
 
-.mobile-menu__close {
+.mobile-menu__close,
+.popup-video__close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +48,8 @@
   right: 20px;
   z-index: 1001;
 }
-.mobile-menu__close svg {
+.mobile-menu__close svg,
+.popup-video__close svg {
   fill: #fff;
   width: 30px;
   height: 30px;

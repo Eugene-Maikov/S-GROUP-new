@@ -39,7 +39,8 @@
   }
 }
 
-.mobile-menu__close {
+.mobile-menu__close,
+.popup-video__close {
   display: flex;
   position: absolute;
   top: 15px;

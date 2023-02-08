@@ -37,7 +37,7 @@
     @media (max-width: 990px) {
       margin-right: 20px;
     }
-    @media(max-width: 990px) and (max-height: 475px)  {
+    @media(max-width: 990px) and (max-height: 475px) {
       margin-top: 30px;
     }
   }
@@ -52,10 +52,10 @@
     @media (max-width: 525px) {
       bottom: 30vh;
     }
-    @media(max-width: 767px) and (max-height: 475px)  {
+    @media(max-width: 767px) and (max-height: 475px) {
       bottom: 32vh;
     }
-    @media(max-width: 320px) and (max-height: 570px)  {
+    @media(max-width: 320px) and (max-height: 570px) {
       bottom: 35vh;
     }
   }
@@ -76,16 +76,16 @@
       font-size: 40px;
       line-height: 140%;
     }
-    @media(max-width: 990px) and (max-height: 475px)  {
+    @media(max-width: 990px) and (max-height: 475px) {
       font-size: 45px;
     }
-    @media(max-width: 767px) and (max-height: 475px)  {
+    @media(max-width: 767px) and (max-height: 475px) {
       font-size: 40px;
     }
-    @media(max-width: 767px) and (max-height: 350px)  {
+    @media(max-width: 767px) and (max-height: 350px) {
       line-height: 100%;
     }
-    @media(max-width: 320px) and (max-height: 570px)  {
+    @media(max-width: 320px) and (max-height: 570px) {
       line-height: 100%;
     }
   }
@@ -105,17 +105,17 @@
       font-size: 16px;
     }
 
-    @media(max-width: 990px) and (max-height: 475px)  {
+    @media(max-width: 990px) and (max-height: 475px) {
       font-size: 25px;
       line-height: 100%;
       margin-bottom: 10px;
     }
-    @media(max-width: 767px) and (max-height: 475px)  {
+    @media(max-width: 767px) and (max-height: 475px) {
       font-size: 16px;
       line-height: 100%;
       margin-bottom: 30px;
     }
-    @media(max-width: 767px) and (max-height: 350px)  {
+    @media(max-width: 767px) and (max-height: 350px) {
       margin-bottom: 35px;
     }
   }
@@ -231,7 +231,7 @@
   @media (max-width: 525px) {
     padding-top: 100px;
   }
-  @media(max-width: 767px) and (max-height: 475px)  {
+  @media(max-width: 767px) and (max-height: 475px) {
     padding-top: 90px;
   }
 
@@ -919,7 +919,7 @@
     }
   }
 
-  &__slider{
+  &__slider {
     @media (max-width: 990px) {
       margin: 0 -20px;
     }
@@ -1410,9 +1410,11 @@
 
   }
 }
-.checkbox.error ~ label::before{
+
+.checkbox.error ~ label::before {
   border: 1px solid red;
 }
+
 //---------------------------- end Questions -------------------------------
 //---------------------------- Contacts -------------------------------
 .contacts {
@@ -1802,7 +1804,7 @@
 
 }
 
-.contacts__overlay{
+.contacts__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1813,7 +1815,8 @@
   backdrop-filter: blur(7.5px);
   display: none;
 }
-.visible-filter{
+
+.visible-filter {
   display: block;
 }
 
