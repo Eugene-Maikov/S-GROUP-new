@@ -218,28 +218,28 @@
 			</div>
 		</article>
 
-
-	</main>
-	@@include('_include/footer.html')
-
-	@@include('_include/modals.html')
-	<div class="popup-video js-modal-video">
-		<div class="popup-video__box">
-			<iframe id="video-iframe" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" height="315"
-			        src="https://www.youtube.com/embed/-DBjMoobDM8"
-			        title="YouTube video player"
-			        width="560"></iframe>
-			<div class="popup-video__close js-close">
-				<svg class="close">
-					<use href="assets/svg/sprite.svg#mobile-menu-close-button"></use>
-				</svg>
+		@@include('_include/modals.html')
+		<div class="popup-video js-modal-video">
+			<div class="popup-video__box">
+				<iframe id="video-iframe" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" height="315"
+				        src="https://www.youtube.com/embed/-DBjMoobDM8"
+				        title="YouTube video player"
+				        width="560"></iframe>
+				<div class="popup-video__close js-close">
+					<svg class="close">
+						<use href="assets/svg/sprite.svg#mobile-menu-close-button"></use>
+					</svg>
+				</div>
 			</div>
-		</div>
 
-	</div>
+		</div>
+	</main>
+
+	@@include('_include/footer.html')
 </div>
 <script defer src="assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/modal-video.js"></script>
 <script src="js/sliders.js"></script>
 </body>
 

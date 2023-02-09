@@ -245,6 +245,14 @@ document.addEventListener("DOMContentLoaded", function () {
     allowTouchMove: false,
     thumbs: {
       swiper: swiperPostGalleryThumbs
+    },
+    breakpoints: {
+      320: {
+        allowTouchMove: true
+      },
+      767: {
+        allowTouchMove: false
+      }
     }
   });
 });

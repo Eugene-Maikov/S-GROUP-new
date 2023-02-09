@@ -170,6 +170,7 @@ a {
   content: "»";
   position: absolute;
   right: -9px;
+  top: 0;
 }
 .breadcrumbs__link {
   font-weight: 400;

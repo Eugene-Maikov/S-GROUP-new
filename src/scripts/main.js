@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("paste", onPhonePaste);
   }
 
-
   //Модальное окно для видео
   const btn = document.querySelector('.js-watch-video');
   const modal = document.querySelector(".js-modal-video");

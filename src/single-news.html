@@ -3,102 +3,48 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Корпоративная жизнь</title>
+	<title>Новости компании, галерея</title>
 	<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
 
 	<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 	<link href="css/reset.css" rel="stylesheet" type="text/css">
-	<link href="css/sprite.css" rel="stylesheet" type="text/css">
 	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/sprite.css" rel="stylesheet" type="text/css">
 	<link href="css/header-and-footer.css" rel="stylesheet" type="text/css">
 	<link href="css/single-corporate-life.css" rel="stylesheet" type="text/css">
+	<link href="css/news.css" rel="stylesheet" type="text/css">
+	<link href="css/single-news.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <div class="wrapper">
-	
-<header class="header">
-	<div class="container">
-		<div class="header__inner">
-			<a class="header__logo" href="index.html">
-				<svg class="logo">
-					<use href="assets/svg/sprite.svg#logo"></use>
-				</svg>
-			</a>
-			<div class="header__center">
-				<div class="header__wrapper">
+	@@include('_include/header.html')
+	<main class="main">
+		<section class="preview-single"
+		         style="background: url('assets/img/preview-news.webp') center no-repeat; background-size: cover;">
+			<div class="container">
+				<div class="breadcrumbs breadcrumbs-white">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a></li>
+						<li class="breadcrumbs__item">ЛДСП</li>
+					</ul>
+				</div>
 
-					<div class="header__location">
-						<a class="location__button arrow" href="javascript:void(0)">Нижний Новгород</a>
-					</div>
-					<nav class="menu">
-						<ul class="topmenu">
-							<li><a class="menu__link" href="javascript:void(0)">Интернет магазин</a></li>
-							<li><a class="menu__link arrow" href="javascript:void(0)">О компании</a>
-								<ul class="submenu">
-									<li><a class="submenu__link" href="">Производство</a></li>
-									<li><a class="submenu__link" href="">Магазин</a></li>
-									<li><a class="submenu__link" href="">Сервис</a></li>
-								</ul>
-							</li>
-							<li><a class="menu__link arrow" href="javascript:void(0)">Новости</a>
-								<ul class="submenu">
-									<li><a class="submenu__link" href="">Производство</a></li>
-									<li><a class="submenu__link" href="">Магазин</a></li>
-									<li><a class="submenu__link" href="">Сервис</a></li>
-								</ul>
-							</li>
-							<li><a class="menu__link" href="javascript:void(0)">Доставка и оплата</a></li>
-							<li><a class="menu__link" href="javascript:void(0)">Контакты</a></li>
-						</ul>
-					</nav>
+				<div class="preview-single__content">
+						<div class="back-to-list back-to-list__white">
+							<a class="back-to-list__link" href="news.html">
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+								Назад к списку</a>
+						</div>
+						<h1 class="preview-single__title">Не следует, однако забывать, что начало повседневной работы</h1>
 				</div>
 			</div>
-			<div class="header__icons">
-				<a class="header__icon header__search" href="javascript:void(0)">
-					<svg class="search">
-						<use href="assets/svg/sprite.svg#search"></use>
-					</svg>
-				</a>
-				<a class="header__icon header__whatsapp" href="javascript:void(0)">
-					<svg class="whatsapp">
-						<use href="assets/svg/sprite.svg#whatsapp"></use>
-					</svg>
-				</a>
-				<a class="header__icon header__basket" href="javascript:void(0)">
-					<svg class="basket">
-						<use href="assets/svg/sprite.svg#basket"></use>
-					</svg>
-				</a>
-				<a class="header__icon header__burger" href="javascript:void(0)">
-					<span></span>
-				</a>
-			</div>
-		</div>
-	</div>
-</header>
-	<main class="main">
-		<div class="breadcrumbs breadcrumbs-black margin-top-header">
-			<div class="container">
-				<ul class="breadcrumbs__list">
-					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a>
-					</li>
-					<li class="breadcrumbs__item">ЛДСП</li>
-				</ul>
-			</div>
-		</div>
-		<div class="back-to-list back-to-list__secondary">
-			<div class="container">
-				<a class="back-to-list__link" href="corporate-life.html">
-					<svg class="read__more">
-						<use href="assets/svg/sprite.svg#read-more"></use>
-					</svg>
-					Назад к списку</a>
-			</div>
-		</div>
+		</section>
 
-		<article class="post">
+		<article class="post post__single-news">
 			<div class="container">
 				<div class="post__inner">
 					<section class="post__content">
@@ -278,52 +224,108 @@
 			</div>
 		</article>
 
-		<!-- mobile menu -->
-<div class="mobile-menu">
-	<div class="mobile-menu__head">
-		<div class="mobile-menu__location">
-			<a class="mobile-menu__button arrow" href="javascript:void(0)">Нижний Новгород</a>
-		</div>
-		<div class="mobile-menu__close">
-			<svg class="close">
-				<use href="assets/svg/sprite.svg#mobile-menu-close-button"></use>
-			</svg>
-		</div>
-	</div>
-	<nav class="mobile-menu__nav">
-		<ul>
-			<li><a class="nav__link" href="javascript:void(0)">Интернет магазин</a></li>
-			<li class="linkHasChild">
-				<a class="nav__link nav__link-arrow" href="javascript:void(0)">О компании</a>
-				<ul class="mobile-menu__sublist">
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости продукции</a></li>
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости компании</a></li>
-				</ul>
-			</li>
-			<li class="linkHasChild">
-				<a class="nav__link nav__link-arrow" href="javascript:void(0)">Новости</a>
-				<ul class="mobile-menu__sublist">
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости продукции</a></li>
-					<li><a class="nav__sublink" href="javascript:void(0)">Новости компании</a></li>
-				</ul>
-			</li>
-			<li><a class="nav__link" href="javascript:void(0)">Доставка и оплата</a></li>
-			<li><a class="nav__link" href="javascript:void(0)">Контакты</a></li>
-		</ul>
-	</nav>
-</div>
+		<section class="other-news">
+			<div class="container">
+				<div class="main-title main-title-dark">Другие новости</div>
 
-<div class="contacts__overlay"></div>
-<div class="location__overlay"></div>
-<div class="location__modal">
-	<ul class="location__modal-list">
-		<li class="location__modal-item">Нижний Новгород</li>
-		<li class="location__modal-item">Краснодар</li>
-	</ul>
-</div>
+				<div class="other-news__inner">
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
 
+				<div class="other-news__show">
+					<a class="other-news__show-link" href="javascript:void(0)">Показать ещё</a>
+				</div>
+				<nav class="pagination">
+					<a class="pagination__link-arrow" href="javascript:void(0)">
+						<svg class="pagination__prev">
+							<use href="assets/svg/sprite.svg#pagination-prev"></use>
+						</svg>
+					</a>
+					<ul class="pagination__list ">
+						<li class="pagination__item active"><a class="pagination__link" href="javascript:void(0)">1</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">2</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">3</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">4</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">5</a></li>
+						<li class="pagination__item"></li>
+					</ul>
+					<a class="pagination__link-arrow" href="javascript:void(0)">
+						<svg class="pagination__next">
+							<use href="assets/svg/sprite.svg#pagination-next"></use>
+						</svg>
+					</a>
+				</nav>
+			</div>
+		</section>
 
-
+		@@include('_include/modals.html')
 		<div class="popup-video js-modal-video">
 			<div class="popup-video__box">
 				<iframe id="video-iframe" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" height="315"
@@ -339,56 +341,13 @@
 
 		</div>
 	</main>
-
-	<footer class="footer">
-	<div class="container">
-		<div class="footer__inner">
-			<div class="footer__copyright">
-				<span>&#169; S GROUP, 2006-2021</span>
-				<a href="javascript:void(0)">Политика конфиденциальности</a>
-				<a href="javascript:void(0)">Политика обработки персональных данных</a>
-			</div>
-			<div class="footer__sitemap">
-				<div class="footer__pages">
-					<div class="footer__pages-wrapper">
-						<div class="footer__pages-item">
-							<h3 class="footer__title">О компании</h3>
-							<ul class="footer__pages-list">
-								<li><a href="company-history.html">История компании</a></li>
-								<li><a href="about.html">S GROUP сегодня</a></li>
-								<li><a href="marathon.html">Марафон Добра</a></li>
-								<li><a href="javascript:void(0)">Работа в S GROUP</a></li>
-								<li><a href="corporate-life.html">Корпоративная жизнь</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__pages-wrapper">
-						<div class="footer__pages-item">
-							<h3 class="footer__title">Новости</h3>
-							<ul class="footer__pages-list">
-								<li><a href="javascript:void(0)">Новости о продуктах</a></li>
-								<li><a href="javascript:void(0)">Новости компании</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="footer__titles">
-					<ul class="footer__titles-list">
-						<li><a class="footer__title" href="javascript:void(0)">Каталог</a></li>
-						<li><a class="footer__title" href="javascript:void(0)">Контакты</a></li>
-						<li><a class="footer__title" href="javascript:void(0)">Доставка и оплата</a></li>
-						<li><a class="footer__title" href="javascript:void(0)">Стать партнером</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+	@@include('_include/footer.html')
 </div>
+
 <script defer src="assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/modal-video.js"></script>
 <script src="js/sliders.js"></script>
+<script src="js/modal-video.js"></script>
 </body>
 
 </html>

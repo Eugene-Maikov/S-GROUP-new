@@ -3,15 +3,17 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Корпоративная жизнь</title>
+	<title>Новости компании, галерея</title>
 	<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
 
 	<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 	<link href="css/reset.css" rel="stylesheet" type="text/css">
-	<link href="css/sprite.css" rel="stylesheet" type="text/css">
 	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/sprite.css" rel="stylesheet" type="text/css">
 	<link href="css/header-and-footer.css" rel="stylesheet" type="text/css">
 	<link href="css/single-corporate-life.css" rel="stylesheet" type="text/css">
+	<link href="css/news.css" rel="stylesheet" type="text/css">
+	<link href="css/single-news.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -78,27 +80,31 @@
 	</div>
 </header>
 	<main class="main">
-		<div class="breadcrumbs breadcrumbs-black margin-top-header">
+		<section class="preview-single"
+		         style="background: url('assets/img/preview-news.webp') center no-repeat; background-size: cover;">
 			<div class="container">
-				<ul class="breadcrumbs__list">
-					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a>
-					</li>
-					<li class="breadcrumbs__item">ЛДСП</li>
-				</ul>
-			</div>
-		</div>
-		<div class="back-to-list back-to-list__secondary">
-			<div class="container">
-				<a class="back-to-list__link" href="corporate-life.html">
-					<svg class="read__more">
-						<use href="assets/svg/sprite.svg#read-more"></use>
-					</svg>
-					Назад к списку</a>
-			</div>
-		</div>
+				<div class="breadcrumbs breadcrumbs-white">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a></li>
+						<li class="breadcrumbs__item">ЛДСП</li>
+					</ul>
+				</div>
 
-		<article class="post">
+				<div class="preview-single__content">
+						<div class="back-to-list back-to-list__white">
+							<a class="back-to-list__link" href="news.html">
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+								Назад к списку</a>
+						</div>
+						<h1 class="preview-single__title">Не следует, однако забывать, что начало повседневной работы</h1>
+				</div>
+			</div>
+		</section>
+
+		<article class="post post__single-news">
 			<div class="container">
 				<div class="post__inner">
 					<section class="post__content">
@@ -278,6 +284,107 @@
 			</div>
 		</article>
 
+		<section class="other-news">
+			<div class="container">
+				<div class="main-title main-title-dark">Другие новости</div>
+
+				<div class="other-news__inner">
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="other-news__item">
+						<div class="other-news__image">
+							<picture>
+								<source srcset="assets/img/news-img.webp" type="image/webp">
+								<img alt="" src="assets/img/news-img.jpg">
+							</picture>
+						</div>
+						<div class="other-news__content">
+							<h2 class="other-news__title">Не следует, однако забывать, что начало повседневной работы...</h2>
+							<a href="javascript:void(0)">
+								Подробнее
+								<svg class="read__more">
+									<use href="assets/svg/sprite.svg#read-more"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="other-news__show">
+					<a class="other-news__show-link" href="javascript:void(0)">Показать ещё</a>
+				</div>
+				<nav class="pagination">
+					<a class="pagination__link-arrow" href="javascript:void(0)">
+						<svg class="pagination__prev">
+							<use href="assets/svg/sprite.svg#pagination-prev"></use>
+						</svg>
+					</a>
+					<ul class="pagination__list ">
+						<li class="pagination__item active"><a class="pagination__link" href="javascript:void(0)">1</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">2</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">3</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">4</a></li>
+						<li class="pagination__item"><a class="pagination__link" href="javascript:void(0)">5</a></li>
+						<li class="pagination__item"></li>
+					</ul>
+					<a class="pagination__link-arrow" href="javascript:void(0)">
+						<svg class="pagination__next">
+							<use href="assets/svg/sprite.svg#pagination-next"></use>
+						</svg>
+					</a>
+				</nav>
+			</div>
+		</section>
+
 		<!-- mobile menu -->
 <div class="mobile-menu">
 	<div class="mobile-menu__head">
@@ -339,7 +446,6 @@
 
 		</div>
 	</main>
-
 	<footer class="footer">
 	<div class="container">
 		<div class="footer__inner">
@@ -385,10 +491,11 @@
 	</div>
 </footer>
 </div>
+
 <script defer src="assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/modal-video.js"></script>
 <script src="js/sliders.js"></script>
+<script src="js/modal-video.js"></script>
 </body>
 
 </html>
