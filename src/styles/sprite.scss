@@ -200,4 +200,9 @@
 }
 // ---------------------------- eng Pagination arrows -------------------------------
 
-
+.input-file__icon,
+.upload-file__icon{
+  width: 23px;
+  height: 30px;
+  fill: var(--secondary-color);
+}

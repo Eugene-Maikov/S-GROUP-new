@@ -212,4 +212,11 @@
     height: 22px;
   }
 }
+
+.input-file__icon,
+.upload-file__icon {
+  width: 23px;
+  height: 30px;
+  fill: var(--secondary-color);
+}
 /*# sourceMappingURL=sprite.css.map */
