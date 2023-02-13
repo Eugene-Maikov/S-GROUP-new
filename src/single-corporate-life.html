@@ -135,12 +135,9 @@
 										</picture>
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide js-preview-video">
 									<div class="swiper-slide__image">
-										<picture>
-											<source srcset="assets/img/people-2.webp" type="image/webp">
-											<img alt="" src="assets/img/people-2.jpg">
-										</picture>
+										<img alt="" src="">
 									</div>
 								</div>
 							</div>
@@ -205,10 +202,7 @@
 								</div>
 								<div class="swiper-slide js-watch-video">
 									<div class="swiper-slide__image">
-										<picture>
-											<source srcset="assets/img/people-2.webp" type="image/webp">
-											<img alt="" src="assets/img/people-2.jpg">
-										</picture>
+										<img alt="" src="">
 									</div>
 								</div>
 							</div>
@@ -218,10 +212,13 @@
 			</div>
 		</article>
 
+
 		@@include('_include/modals.html')
 		<div class="popup-video js-modal-video">
 			<div class="popup-video__box">
-				<iframe id="video-iframe" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" height="315"
+				<iframe allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				        allowfullscreen
+				        frameborder="0" height="315" id="video-iframe"
 				        src="https://www.youtube.com/embed/-DBjMoobDM8"
 				        title="YouTube video player"
 				        width="560"></iframe>
@@ -239,7 +236,6 @@
 </div>
 <script defer src="assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/modal-video.js"></script>
 <script src="js/sliders.js"></script>
 </body>
 

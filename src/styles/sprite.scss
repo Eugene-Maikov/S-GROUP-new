@@ -76,6 +76,8 @@
 
 //---------------------------- end News-arrows -------------------------------
 // ---------------------------- Reviews-arrows -------------------------------
+.personnel__prev,
+.personnel__next,
 .reviews__prev,
 .reviews__next {
   width: 40px;
@@ -141,19 +143,47 @@
   width: 16px;
   height: 20px;
   fill: #262728;
+
+  @media (max-width: 1330px) {
+    width: 12px;
+    height: 16px;
+  }
+
+  &-address {
+    fill: var(--secondary-color);
+  }
 }
 
 .contacts__phone {
   width: 20px;
   height: 20px;
   fill: #262728;
+
+  @media (max-width: 1330px) {
+    width: 12px;
+    height: 16px;
+  }
+
+  &-address {
+    fill: var(--secondary-color);
+  }
 }
 
 .contacts__email {
   width: 20px;
   height: 16px;
   fill: #262728;
+
+  @media (max-width: 1330px) {
+    width: 12px;
+    height: 16px;
+  }
+
+  &-address {
+    fill: var(--secondary-color);
+  }
 }
+
 
 //---------------------------- end Contacts icons -------------------------------
 
@@ -187,7 +217,7 @@
 // ---------------------------- end Today icons -------------------------------
 // ---------------------------- Pagination arrows -------------------------------
 .pagination__prev,
-.pagination__next{
+.pagination__next {
   width: 20px;
   height: 26px;
   padding: 5px;
@@ -198,10 +228,11 @@
     height: 22px;
   }
 }
+
 // ---------------------------- eng Pagination arrows -------------------------------
 
 .input-file__icon,
-.upload-file__icon{
+.upload-file__icon {
   width: 23px;
   height: 30px;
   fill: var(--secondary-color);

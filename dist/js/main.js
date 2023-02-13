@@ -1,5 +1,17 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 document.addEventListener("DOMContentLoaded", function () {
   // --------------- Mobile menu ---------------
   var burger = document.querySelector('.header__burger');
@@ -159,33 +171,195 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", onPhoneInput);
     input.addEventListener("keydown", onPhoneKeyDown);
     input.addEventListener("paste", onPhonePaste);
-  } //Модальное окно для видео
+  } // Модальное окно для видео
 
 
   var btn = document.querySelector('.js-watch-video');
   var modal = document.querySelector(".js-modal-video");
   var closeButton = document.querySelector(".js-close");
   var player = document.getElementById('video-iframe');
-  var iframeSrc = player.src;
-  btn.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.add("active");
-    locationOverlay.classList.add("visible-location-overlay");
-    document.body.classList.add("no-scroll");
-  });
-  closeButton.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.remove("active");
-    locationOverlay.classList.remove("visible-location-overlay");
-    document.body.classList.remove("no-scroll");
-    player.src = iframeSrc;
-  });
-  modal.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.remove("active");
-    locationOverlay.classList.remove("visible-location-overlay");
-    document.body.classList.remove("no-scroll");
-    player.src = iframeSrc;
-  });
+
+  if (player) {
+    var iframeSrc = player.src;
+    btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.add("active");
+      locationOverlay.classList.add("visible-location-overlay");
+      document.body.classList.add("no-scroll");
+    });
+    closeButton.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.remove("active");
+      locationOverlay.classList.remove("visible-location-overlay");
+      document.body.classList.remove("no-scroll");
+      player.src = iframeSrc;
+    });
+    modal.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.remove("active");
+      locationOverlay.classList.remove("visible-location-overlay");
+      document.body.classList.remove("no-scroll");
+      player.src = iframeSrc;
+    }); // Превью видео
+
+    var previewSrc = document.getElementById('video-iframe').src;
+    var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    var previewId = previewSrc.match(VID_REGEX)[1];
+    var previewImg = "https://i.ytimg.com/vi/".concat(previewId, "/maxresdefault.jpg");
+    var imgSliderThumb = document.querySelector('.js-watch-video .swiper-slide__image img');
+    var imgSlider = document.querySelector('.js-preview-video .swiper-slide__image img');
+    imgSliderThumb.src = previewImg;
+    imgSlider.src = previewImg;
+  } // ---------------Валидация---------------
+
+
+  var form = document.querySelector(".form");
+  var inputEmail = document.querySelector(".js-input-email");
+  var inputCheckbox = document.querySelector(".js-input-checkbox");
+  var inputs = document.querySelectorAll(".validate");
+
+  if (form) {
+    form.addEventListener('submit', function (evt) {
+      if (inputs) {
+        //name, surname, phone
+        inputs.forEach(function (item) {
+          if (item.value === "") {
+            item.classList.add("error");
+            evt.preventDefault();
+          } else {
+            item.classList.remove("error");
+          }
+        });
+      }
+
+      if (inputEmail) {
+        //email
+        var re = /^(((?:(?![\t-\r "\(\),\.:-<>@\[\]\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF])[\s\S])+(\.(?:(?![\t-\r "\(\),\.:-<>@\[\]\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF])[\s\S])+)*)|("(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])+"))@(((?:(?![\t-\r "\(\),\.:-<>@\[\]\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF])[\s\S])+\.)+(?:(?![\t-\r "\(\),\.:-<>@\[\]\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF])[\s\S]){2,})$/i;
+
+        var isEmailValid = function isEmailValid(value) {
+          return re.test(String(value).toLowerCase());
+        };
+
+        if (!isEmailValid(inputEmail.value)) {
+          inputEmail.classList.add("error");
+          evt.preventDefault();
+        } else {
+          inputEmail.classList.remove("error");
+        }
+      }
+
+      if (inputCheckbox) {
+        //checkbox
+        if (!inputCheckbox.checked) {
+          inputCheckbox.classList.add("error");
+          evt.preventDefault();
+        } else {
+          inputCheckbox.classList.remove("error");
+        }
+      }
+
+      if (!inputs.value === "" && inputCheckbox.checked && !inputEmail.value === "") {
+        form.submit();
+      }
+    });
+  } // --------------- Кнопка «Прикрепить файл» ---------------
+
+
+  var fileWrapper = document.querySelectorAll(".upload-file__wrapper");
+
+  if (fileWrapper) {
+    for (var _i = 1; _i <= 4; _i++) {
+      window["uploadDragFiles_" + _i] = new Object();
+    } // сюда будем помещать drug-&-drop файлы (4)
+
+
+    fileWrapper.forEach(function (current_item, index) {
+      var inputFile = current_item.querySelector(".upload-file__input");
+      var fileList = []; // массив файлов
+      // --------------- Кнопка --------------
+
+      var textSelector = current_item.querySelector(".upload-file__text"); // Событие выбора файла(ов)
+
+      inputFile.addEventListener("change", function () {
+        var _fileList;
+
+        (_fileList = fileList).push.apply(_fileList, _toConsumableArray(inputFile.files)); // вызов функции для каждого файла
+
+
+        fileList.forEach(function (file) {
+          uploadFile(file);
+        });
+      }); // Проверяем размер файлов и выводим название
+
+      var uploadFile = function uploadFile(file) {
+        // размер файла <5 Мб
+        if (file.size > 5 * 1024 * 1024) {
+          alert("Файл должен быть не более 5 МБ.");
+          return;
+        } // Показ загружаемых файлов
+
+
+        if (file && fileList.length > 1) {
+          if (fileList.length <= 4) {
+            textSelector.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(fileList.length, " \u0444\u0430\u0439\u043B\u0430");
+          } else {
+            textSelector.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(fileList.length, " \u0444\u0430\u0439\u043B\u043E\u0432");
+          }
+        } else {
+          textSelector.textContent = file.name;
+        }
+
+        fileList = [];
+      }; // --------------- Загрузка файлов при помощи «Drag-and-drop» ---------------
+
+
+      var dropZone = current_item.querySelector(".upload-file__label");
+      var dropZoneText = current_item.querySelector(".upload-file__text");
+      var maxFileSize = 5000000; // максимальный размер файла - 5 мб.
+      // Проверка поддержки «Drag-and-drop»
+
+      if (typeof window.FileReader == "undefined") {
+        dropZone.textContent = "Drag&Drop Не поддерживается браузером!";
+        dropZone.classList.add("error");
+      } // Событие - перетаскивания файла
+
+
+      dropZone.ondragover = function () {
+        return false;
+      }; // Событие - отмена перетаскивания файла
+
+
+      dropZone.ondragleave = function () {
+        return false;
+      }; // Событие - файл перетащили
+
+
+      dropZone.addEventListener("drop", function (e) {
+        e.preventDefault();
+        var uploadDragFiles = e.dataTransfer.files[0]; // один файл
+        // Проверка размера файла
+
+        if (uploadDragFiles.size > maxFileSize) {
+          dropZoneText.textContent = "Размер превышает допустимое значение!";
+          this.addClass("error");
+          return false;
+        } // Показ загружаемых файлов
+
+
+        if (uploadDragFiles.length > 1) {
+          if (uploadDragFiles.length <= 4) {
+            dropZoneText.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(uploadDragFiles.length, " \u0444\u0430\u0439\u043B\u0430");
+          } else {
+            dropZoneText.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(uploadDragFiles.length, " \u0444\u0430\u0439\u043B\u043E\u0432");
+          }
+        } else {
+          dropZoneText.textContent = e.dataTransfer.files[0].name;
+        } // добавляем файл в объект "uploadDragFiles_i"
+
+
+        window["uploadDragFiles_" + index] = uploadDragFiles;
+      });
+    });
+  }
 });
 //# sourceMappingURL=main.js.map

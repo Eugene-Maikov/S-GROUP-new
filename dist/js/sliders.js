@@ -255,5 +255,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  var swiperPersonnel = new Swiper(".personnel__slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".personnel__next",
+      prevEl: ".personnel__prev"
+    },
+    pagination: {
+      el: ".personnel__pagination",
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 20
+      },
+      767: {
+        spaceBetween: 20
+      },
+      1330: {
+        spaceBetween: 30
+      }
+    }
+  });
 });
 //# sourceMappingURL=sliders.js.map

@@ -78,6 +78,8 @@
   }
 }
 
+.personnel__prev,
+.personnel__next,
 .reviews__prev,
 .reviews__next {
   width: 40px;
@@ -87,14 +89,18 @@
   cursor: pointer;
 }
 @media (max-width: 1330px) {
-  .reviews__prev,
+  .personnel__prev,
+.personnel__next,
+.reviews__prev,
 .reviews__next {
     width: 30px;
     height: 45px;
   }
 }
 @media (max-width: 767px) {
-  .reviews__prev,
+  .personnel__prev,
+.personnel__next,
+.reviews__prev,
 .reviews__next {
     display: none;
   }
@@ -153,17 +159,44 @@
   height: 20px;
   fill: #262728;
 }
+@media (max-width: 1330px) {
+  .contacts__location {
+    width: 12px;
+    height: 16px;
+  }
+}
+.contacts__location-address {
+  fill: var(--secondary-color);
+}
 
 .contacts__phone {
   width: 20px;
   height: 20px;
   fill: #262728;
 }
+@media (max-width: 1330px) {
+  .contacts__phone {
+    width: 12px;
+    height: 16px;
+  }
+}
+.contacts__phone-address {
+  fill: var(--secondary-color);
+}
 
 .contacts__email {
   width: 20px;
   height: 16px;
   fill: #262728;
+}
+@media (max-width: 1330px) {
+  .contacts__email {
+    width: 12px;
+    height: 16px;
+  }
+}
+.contacts__email-address {
+  fill: var(--secondary-color);
 }
 
 .about__1,

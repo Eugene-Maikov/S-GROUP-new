@@ -3,7 +3,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // ---------------Tabs---------------
-  var newsTabs = new GraphTabs("newsTabs");
-  var contactsTabs = new GraphTabs("contactsTabs");
+  var addressTabs = new GraphTabs("addressTabs");
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=contacts.js.map

@@ -163,35 +163,202 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("paste", onPhonePaste);
   }
 
-  //Модальное окно для видео
+  // Модальное окно для видео
   const btn = document.querySelector('.js-watch-video');
   const modal = document.querySelector(".js-modal-video");
   const closeButton = document.querySelector(".js-close");
 
   const player = document.getElementById('video-iframe');
-  const iframeSrc = player.src;
 
-  btn.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.add("active");
-    locationOverlay.classList.add("visible-location-overlay");
-    document.body.classList.add("no-scroll");
-  });
-  closeButton.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.remove("active");
-    locationOverlay.classList.remove("visible-location-overlay");
-    document.body.classList.remove("no-scroll");
-    player.src = iframeSrc;
-  });
-  modal.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.remove("active");
-    locationOverlay.classList.remove("visible-location-overlay");
-    document.body.classList.remove("no-scroll");
-    player.src = iframeSrc;
-  });
+  if (player) {
+    const iframeSrc = player.src;
 
+    btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.add("active");
+      locationOverlay.classList.add("visible-location-overlay");
+      document.body.classList.add("no-scroll");
+    });
+    closeButton.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.remove("active");
+      locationOverlay.classList.remove("visible-location-overlay");
+      document.body.classList.remove("no-scroll");
+      player.src = iframeSrc;
+    });
+    modal.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.remove("active");
+      locationOverlay.classList.remove("visible-location-overlay");
+      document.body.classList.remove("no-scroll");
+      player.src = iframeSrc;
+    });
+
+    // Превью видео
+    let previewSrc = document.getElementById('video-iframe').src
+    let VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
+    let previewId = previewSrc.match(VID_REGEX)[1]
+    let previewImg = `https://i.ytimg.com/vi/${previewId}/maxresdefault.jpg`
+
+    let imgSliderThumb = document.querySelector('.js-watch-video .swiper-slide__image img')
+    let imgSlider = document.querySelector('.js-preview-video .swiper-slide__image img')
+
+    imgSliderThumb.src = previewImg
+    imgSlider.src = previewImg
+
+  }
+
+
+  // ---------------Валидация---------------
+  const form = document.querySelector(".form");
+  const inputEmail = document.querySelector(".js-input-email");
+  const inputCheckbox = document.querySelector(".js-input-checkbox");
+  const inputs = document.querySelectorAll(".validate");
+
+  if (form) {
+    form.addEventListener('submit', (evt) => {
+
+      if (inputs){
+        //name, surname, phone
+        inputs.forEach((item) => {
+          if (item.value === "") {
+            item.classList.add("error");
+            evt.preventDefault()
+          } else {
+            item.classList.remove("error");
+          }
+        })
+      }
+
+      if (inputEmail) {
+        //email
+        const re =
+          /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+        const isEmailValid = (value) => {
+          return re.test(String(value).toLowerCase());
+        }
+
+        if (!isEmailValid(inputEmail.value)) {
+          inputEmail.classList.add("error");
+          evt.preventDefault()
+        } else {
+          inputEmail.classList.remove("error");
+        }
+      }
+
+      if (inputCheckbox){
+        //checkbox
+        if (!inputCheckbox.checked) {
+          inputCheckbox.classList.add("error");
+          evt.preventDefault()
+        } else {
+          inputCheckbox.classList.remove("error");
+        }
+      }
+
+      if (!inputs.value === "" && inputCheckbox.checked && !inputEmail.value === "") {
+        form.submit()
+      }
+    })
+  }
+
+  // --------------- Кнопка «Прикрепить файл» ---------------
+  const fileWrapper = document.querySelectorAll(".upload-file__wrapper")
+
+  if (fileWrapper) {
+    for (let i = 1; i <= 4; i++) {
+      window["uploadDragFiles_" + i] = new Object();
+    } // сюда будем помещать drug-&-drop файлы (4)
+
+    fileWrapper.forEach((current_item, index) => {
+
+      const inputFile = current_item.querySelector(".upload-file__input")
+
+      let fileList = [] // массив файлов
+
+      // --------------- Кнопка --------------
+      let textSelector = current_item.querySelector(".upload-file__text")
+
+      // Событие выбора файла(ов)
+      inputFile.addEventListener("change", function () {
+        fileList.push(...inputFile.files);
+        // вызов функции для каждого файла
+        fileList.forEach(file => {
+          uploadFile(file);
+        });
+      });
+
+      // Проверяем размер файлов и выводим название
+      const uploadFile = (file) => {
+
+        // размер файла <5 Мб
+        if (file.size > 5 * 1024 * 1024) {
+          alert("Файл должен быть не более 5 МБ.");
+          return;
+        }
+
+        // Показ загружаемых файлов
+        if (file && fileList.length > 1) {
+          if (fileList.length <= 4) {
+            textSelector.textContent = `Выбрано ${fileList.length} файла`;
+          } else {
+            textSelector.textContent = `Выбрано ${fileList.length} файлов`;
+          }
+        } else {
+          textSelector.textContent = file.name;
+        }
+        fileList = [];
+      }
+
+
+      // --------------- Загрузка файлов при помощи «Drag-and-drop» ---------------
+      const dropZone = current_item.querySelector(".upload-file__label");
+      const dropZoneText = current_item.querySelector(".upload-file__text");
+      const maxFileSize = 5000000; // максимальный размер файла - 5 мб.
+
+      // Проверка поддержки «Drag-and-drop»
+      if (typeof (window.FileReader) == "undefined") {
+        dropZone.textContent = "Drag&Drop Не поддерживается браузером!";
+        dropZone.classList.add("error");
+      }
+      // Событие - перетаскивания файла
+      dropZone.ondragover = () => {
+        return false;
+      };
+      // Событие - отмена перетаскивания файла
+      dropZone.ondragleave = () => {
+        return false;
+      };
+      // Событие - файл перетащили
+      dropZone.addEventListener("drop", function (e) {
+        e.preventDefault();
+
+        let uploadDragFiles = e.dataTransfer.files[0]; // один файл
+
+        // Проверка размера файла
+        if (uploadDragFiles.size > maxFileSize) {
+          dropZoneText.textContent = "Размер превышает допустимое значение!";
+          this.addClass("error");
+          return false;
+        }
+
+        // Показ загружаемых файлов
+        if (uploadDragFiles.length > 1) {
+          if (uploadDragFiles.length <= 4) {
+            dropZoneText.textContent = `Выбрано ${uploadDragFiles.length} файла`;
+          } else {
+            dropZoneText.textContent = `Выбрано ${uploadDragFiles.length} файлов`;
+          }
+        } else {
+          dropZoneText.textContent = e.dataTransfer.files[0].name;
+        }
+
+        // добавляем файл в объект "uploadDragFiles_i"
+        window["uploadDragFiles_" + index] = uploadDragFiles;
+      });
+
+    });
+  }
 })
 
 

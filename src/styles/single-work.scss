@@ -150,8 +150,12 @@
 
 //---------------------------- Questions -------------------------------
 .respond {
-  background-color: #fff;
-  padding: 40px 0;
+  padding-bottom: 60px;
+  background-color: var(--light-color);
+
+  @media (max-width: 1330px) {
+    padding-bottom: 40px;
+  }
 
   &__inner {
     background-color: var(--primary-color);
@@ -251,45 +255,7 @@
     }
   }
 
-  &__input{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 3px;
-    padding: 14px 20px;
-    width: 100%;
-    background-color: transparent;
-    outline: none;
-
-    @media (max-width: 1330px) {
-      font-size: 12px;
-      padding: 7px 10px 6px 10px;
-    }
-
-    @media (max-width: 767px) {
-      font-size: 11px;
-    }
-
-    &::placeholder {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 140%;
-      letter-spacing: 0.02em;
-      color: #FFFFFF;
-
-      @media (max-width: 1330px) {
-        font-size: 12px;
-      }
-
-      @media (max-width: 767px) {
-        font-size: 11px;
-      }
-    }
-  }
-
+  // ------------ Drag and Drop ----------
   .upload-file__wrapper{
     grid-column: 1/4;
   }
@@ -340,6 +306,15 @@
       height: 16px;
     }
   }
+  /* drag and drop - ошибка */
+  .upload-file__label.error {
+    border: 1px solid red;
+
+    .upload-file__icon{
+      fill: red;
+    }
+  }
+  // ------------ end Drag and Drop ----------
 
   &__submit {
     background: var(--secondary-color);
@@ -444,6 +419,8 @@
 }
 
 //---------------------------- end Questions -------------------------------
+
+
 
 
 
