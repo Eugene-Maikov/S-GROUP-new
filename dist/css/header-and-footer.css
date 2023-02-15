@@ -222,6 +222,7 @@
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  white-space: nowrap;
 }
 @media (max-width: 1330px) {
   .header .menu .submenu .submenu__link {
@@ -557,8 +558,7 @@
 .mobile-menu .linkHasChild.active .mobile-menu__sublist {
   display: block;
 }
-
-.active {
+.mobile-menu .active {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);

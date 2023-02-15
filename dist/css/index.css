@@ -1877,6 +1877,7 @@
 }
 .contacts__tabs .tabs__content .map img,
 .contacts__tabs .tabs__content .map iframe {
+  border: none;
   height: 100%;
   width: 100%;
   -webkit-filter: grayscale(1);

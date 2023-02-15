@@ -267,22 +267,112 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  const swiperPersonnel = new Swiper(".personnel__slider", {
+  const swiperPersonnel1 = new Swiper(".personnel__slider-1", {
     slidesPerView: 3,
     spaceBetween: 30,
 
     navigation: {
-      nextEl: ".personnel__next",
-      prevEl: ".personnel__prev",
+      nextEl: ".personnel__next-1",
+      prevEl: ".personnel__prev-1",
     },
     pagination: {
-      el: ".personnel__pagination",
+      el: ".personnel__pagination-1",
       clickable: true,
     },
 
     breakpoints: {
       320: {
         slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      525: {
+        spaceBetween: 20,
+      },
+      767: {
+        spaceBetween: 20,
+      },
+      1330: {
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperPersonnel2 = new Swiper(".personnel__slider-2", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    navigation: {
+      nextEl: ".personnel__next-2",
+      prevEl: ".personnel__prev-2",
+    },
+    pagination: {
+      el: ".personnel__pagination-2",
+      clickable: true,
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      525: {
+        spaceBetween: 20,
+      },
+      767: {
+        spaceBetween: 20,
+      },
+      1330: {
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperPersonnel3 = new Swiper(".personnel__slider-3", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    navigation: {
+      nextEl: ".personnel__next-3",
+      prevEl: ".personnel__prev-3",
+    },
+    pagination: {
+      el: ".personnel__pagination-3",
+      clickable: true,
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      525: {
+        spaceBetween: 20,
+      },
+      767: {
+        spaceBetween: 20,
+      },
+      1330: {
+        spaceBetween: 30,
+      },
+    },
+  });
+  const swiperPersonnel4 = new Swiper(".personnel__slider-4", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    navigation: {
+      nextEl: ".personnel__next-4",
+      prevEl: ".personnel__prev-4",
+    },
+    pagination: {
+      el: ".personnel__pagination-4",
+      clickable: true,
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      525: {
         spaceBetween: 20,
       },
       767: {

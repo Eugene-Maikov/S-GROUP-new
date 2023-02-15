@@ -1,10 +1,5 @@
 .address {
   background-color: var(--light-color);
-  padding: 0 0 30px 0;
-
-  @media (max-width: 1330px) {
-    padding: 0 0 20px 0;
-  }
 
   .main-title {
     padding-top: 0;
@@ -190,6 +185,7 @@
     }
     @media (max-width: 767px) {
       margin-bottom: 20px;
+      margin-top: 9px;
     }
   }
 
@@ -206,6 +202,7 @@
 
       @media (max-width: 767px) {
         font-size: 9px;
+        margin-bottom: 9px;
       }
     }
   }
@@ -269,11 +266,14 @@
     width: 66.6666%;
     filter: grayscale(1);
 
-    @media (max-width: 1330px) {
-      iframe {
-        height: 100%;
+    iframe {
+      border: none;
+
+      @media (max-width: 1330px) {
+          height: 100%;
       }
     }
+
     @media (max-width: 767px) {
       width: 100%;
     }
@@ -282,10 +282,10 @@
 
 .personnel {
   background-color: var(--light-color);
-  padding: 0 0 60px 0;
+  padding: 30px 0 60px 0;
 
   @media (max-width: 1330px) {
-    padding: 0 0 40px 0;
+    padding: 20px 0 40px 0;
   }
 
   &__inner {
@@ -303,9 +303,25 @@
     }
   }
 
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   &__item {
     background-color: #fff;
     padding: 30px 30px 26px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 1330px) {
+      padding: 20px;
+    }
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
   }
 
   &__head {
@@ -320,24 +336,15 @@
     }
   }
 
-  &__titles {
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    color: var(--text-color-dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   &__photo {
     border-radius: 50%;
     border: 2px solid #FFFFFF;
     position: relative;
     z-index: 1;
-    max-width: 80px;
-    min-width: 80px;
-    max-height: 80px;
-    min-height: 80px;
+    max-width: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -345,10 +352,10 @@
 
     @media (max-width: 1330px) {
       margin-right: 10px;
-      max-width: 60px;
-      min-width: 60px;
-      max-height: 60px;
-      min-height: 60px;
+      max-width: 62px;
+      min-width: 62px;
+      max-height: 62px;
+      min-height: 62px;
     }
     @media (max-width: 767px) {
       max-width: 50px;
@@ -377,14 +384,14 @@
     }
 
     img, source {
-      width: 62px;
-      height: 62px;
+      width: 82px;
+      height: 82px;
       object-fit: cover;
       border-radius: 50%;
 
       @media (max-width: 1330px) {
-        width: 46px;
-        height: 46px;
+        width: 52px;
+        height: 52px;
       }
       @media (max-width: 767px) {
         width: 39px;
@@ -393,14 +400,24 @@
     }
   }
 
+  &__titles {
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__name {
+    line-height: 140%;
+    letter-spacing: 0.02em;
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 6px;
+    margin-bottom: 15px;
 
     @media (max-width: 1330px) {
       font-size: 14px;
-      margin-bottom: 0;
+      margin-bottom: 8px;
     }
     @media (max-width: 767px) {
       font-size: 11px;
@@ -408,6 +425,8 @@
   }
 
   &__post {
+    line-height: 140%;
+    letter-spacing: 0.02em;
     font-weight: 400;
     font-size: 12px;
 
@@ -417,27 +436,44 @@
     }
   }
 
+  .address__body {
+    margin: 0;
+  }
+
   .address__item {
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @media (max-width: 1330px) {
+        margin-bottom: 9px;
+      }
     }
   }
 
-  &__prev {
+  &__prev-1,
+  &__prev-2,
+  &__prev-3,
+  &__prev-4 {
     position: absolute;
     left: -5px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  &__next {
+  &__next-1,
+  &__next-2,
+  &__next-3,
+  &__next-4 {
     position: absolute;
     right: -5px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  &__pagination {
+  &__pagination-1,
+  &__pagination-2,
+  &__pagination-3,
+  &__pagination-4 {
     display: flex;
     justify-content: center;
     margin-top: 30px;
@@ -483,4 +519,13 @@
     }
   }
 
+}
+
+.questions {
+  background-color: var(--light-color);
+  padding-top: 0;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }

@@ -78,8 +78,14 @@
   }
 }
 
-.personnel__prev,
-.personnel__next,
+.personnel__prev-1,
+.personnel__next-1,
+.personnel__prev-2,
+.personnel__next-2,
+.personnel__prev-3,
+.personnel__next-3,
+.personnel__prev-4,
+.personnel__next-4,
 .reviews__prev,
 .reviews__next {
   width: 40px;
@@ -89,8 +95,14 @@
   cursor: pointer;
 }
 @media (max-width: 1330px) {
-  .personnel__prev,
-.personnel__next,
+  .personnel__prev-1,
+.personnel__next-1,
+.personnel__prev-2,
+.personnel__next-2,
+.personnel__prev-3,
+.personnel__next-3,
+.personnel__prev-4,
+.personnel__next-4,
 .reviews__prev,
 .reviews__next {
     width: 30px;
@@ -98,8 +110,14 @@
   }
 }
 @media (max-width: 767px) {
-  .personnel__prev,
-.personnel__next,
+  .personnel__prev-1,
+.personnel__next-1,
+.personnel__prev-2,
+.personnel__next-2,
+.personnel__prev-3,
+.personnel__next-3,
+.personnel__prev-4,
+.personnel__next-4,
 .reviews__prev,
 .reviews__next {
     display: none;

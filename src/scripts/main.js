@@ -163,6 +163,60 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("paste", onPhonePaste);
   }
 
+  let handleModalPopup = function handleModalPopup(btn, blockModal) {
+    let btns = document.querySelectorAll(btn);
+    let modal = document.querySelector(blockModal);
+    let overlay = document.querySelector('.location__overlay')
+    let arrCloseButton = document.querySelectorAll(".js-close");
+
+
+    if (btns && modal) {
+
+      btns.forEach(function (btnItem) {
+        btnItem.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          modal.classList.add("active");
+          overlay.classList.add("visible-location-overlay");
+          document.body.classList.add("no-scroll");
+          console.log('btnItem')
+        });
+      });
+
+      arrCloseButton.forEach(function (closeButton) {
+        closeButton.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          modal.classList.remove("active");
+          overlay.classList.remove("visible-location-overlay");
+          document.body.classList.remove("no-scroll");
+          console.log('closeButton')
+        });
+      });
+
+      overlay.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modal.classList.remove("active");
+        overlay.classList.remove("visible-location-overlay");
+        document.body.classList.remove("no-scroll");
+        console.log('overlay')
+      });
+
+      if (window.screen.width > 767) {
+        document.addEventListener("keydown", function (evt) {
+          if (evt.key === "Escape") {
+            evt.preventDefault();
+            modal.classList.remove("active");
+            overlay.classList.remove("visible-location-overlay");
+            document.body.classList.remove("no-scroll");
+          }
+        });
+      }
+    }
+
+  }
+
+  handleModalPopup(".js-open-callback", ".js-modal-callback",)
+
+
   // Модальное окно для видео
   const btn = document.querySelector('.js-watch-video');
   const modal = document.querySelector(".js-modal-video");
@@ -179,6 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
       locationOverlay.classList.add("visible-location-overlay");
       document.body.classList.add("no-scroll");
     });
+
     closeButton.addEventListener("click", function (evt) {
       evt.preventDefault();
       modal.classList.remove("active");
@@ -195,9 +250,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Превью видео
-    let previewSrc = document.getElementById('video-iframe').src
     let VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
-    let previewId = previewSrc.match(VID_REGEX)[1]
+    let previewId = iframeSrc.match(VID_REGEX)[1]
     let previewImg = `https://i.ytimg.com/vi/${previewId}/maxresdefault.jpg`
 
     let imgSliderThumb = document.querySelector('.js-watch-video .swiper-slide__image img')
@@ -218,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener('submit', (evt) => {
 
-      if (inputs){
+      if (inputs) {
         //name, surname, phone
         inputs.forEach((item) => {
           if (item.value === "") {
@@ -246,7 +300,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      if (inputCheckbox){
+      if (inputCheckbox) {
         //checkbox
         if (!inputCheckbox.checked) {
           inputCheckbox.classList.add("error");

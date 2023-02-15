@@ -171,8 +171,55 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", onPhoneInput);
     input.addEventListener("keydown", onPhoneKeyDown);
     input.addEventListener("paste", onPhonePaste);
-  } // Модальное окно для видео
+  }
 
+  var handleModalPopup = function handleModalPopup(btn, blockModal) {
+    var btns = document.querySelectorAll(btn);
+    var modal = document.querySelector(blockModal);
+    var overlay = document.querySelector('.location__overlay');
+    var arrCloseButton = document.querySelectorAll(".js-close");
+
+    if (btns && modal) {
+      btns.forEach(function (btnItem) {
+        btnItem.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          modal.classList.add("active");
+          overlay.classList.add("visible-location-overlay");
+          document.body.classList.add("no-scroll");
+          console.log('btnItem');
+        });
+      });
+      arrCloseButton.forEach(function (closeButton) {
+        closeButton.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          modal.classList.remove("active");
+          overlay.classList.remove("visible-location-overlay");
+          document.body.classList.remove("no-scroll");
+          console.log('closeButton');
+        });
+      });
+      overlay.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modal.classList.remove("active");
+        overlay.classList.remove("visible-location-overlay");
+        document.body.classList.remove("no-scroll");
+        console.log('overlay');
+      });
+
+      if (window.screen.width > 767) {
+        document.addEventListener("keydown", function (evt) {
+          if (evt.key === "Escape") {
+            evt.preventDefault();
+            modal.classList.remove("active");
+            overlay.classList.remove("visible-location-overlay");
+            document.body.classList.remove("no-scroll");
+          }
+        });
+      }
+    }
+  };
+
+  handleModalPopup(".js-open-callback", ".js-modal-callback"); // Модальное окно для видео
 
   var btn = document.querySelector('.js-watch-video');
   var modal = document.querySelector(".js-modal-video");
@@ -202,9 +249,8 @@ document.addEventListener("DOMContentLoaded", function () {
       player.src = iframeSrc;
     }); // Превью видео
 
-    var previewSrc = document.getElementById('video-iframe').src;
     var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-    var previewId = previewSrc.match(VID_REGEX)[1];
+    var previewId = iframeSrc.match(VID_REGEX)[1];
     var previewImg = "https://i.ytimg.com/vi/".concat(previewId, "/maxresdefault.jpg");
     var imgSliderThumb = document.querySelector('.js-watch-video .swiper-slide__image img');
     var imgSlider = document.querySelector('.js-preview-video .swiper-slide__image img');
