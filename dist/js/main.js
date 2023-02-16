@@ -260,14 +260,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   var form = document.querySelector(".form");
-  var inputEmail = document.querySelector(".js-input-email");
+  var inputEmail = document.querySelector(".js-input-email"); // const inputPhone = document.querySelector(".js-input-phone");
+
   var inputCheckbox = document.querySelector(".js-input-checkbox");
   var inputs = document.querySelectorAll(".validate");
 
   if (form) {
     form.addEventListener('submit', function (evt) {
       if (inputs) {
-        //name, surname, phone
+        //name, surname
         inputs.forEach(function (item) {
           if (item.value === "") {
             item.classList.add("error");

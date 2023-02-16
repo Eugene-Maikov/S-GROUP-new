@@ -266,6 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------Валидация---------------
   const form = document.querySelector(".form");
   const inputEmail = document.querySelector(".js-input-email");
+  // const inputPhone = document.querySelector(".js-input-phone");
   const inputCheckbox = document.querySelector(".js-input-checkbox");
   const inputs = document.querySelectorAll(".validate");
 
@@ -273,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('submit', (evt) => {
 
       if (inputs) {
-        //name, surname, phone
+        //name, surname
         inputs.forEach((item) => {
           if (item.value === "") {
             item.classList.add("error");

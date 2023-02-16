@@ -723,7 +723,6 @@ a {
 }
 @media (max-width: 525px) {
   .popup-callback {
-    width: 100%;
     padding: 15px 20px 20px 16px;
   }
 }
@@ -1034,7 +1033,8 @@ a {
   }
 }
 .form-callback__checkbox .checkbox {
-  display: none;
+  position: absolute;
+  z-index: -1;
 }
 .form-callback__checkbox label {
   display: -webkit-inline-box;
@@ -1047,6 +1047,11 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #fff;
   cursor: pointer;
 }
 @media (max-width: 1330px) {
