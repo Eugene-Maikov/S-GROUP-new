@@ -558,7 +558,8 @@
 .mobile-menu .linkHasChild.active .mobile-menu__sublist {
   display: block;
 }
-.mobile-menu .active {
+
+.mobile-menu.active {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
