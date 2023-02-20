@@ -299,27 +299,9 @@ a {
   opacity: 0.5;
 }
 
-.breadcrumbs-black {
-  background-color: var(--light-color);
-  padding: 24px 0 25px 0;
-}
-@media (max-width: 1330px) {
-  .breadcrumbs-black {
-    padding: 17px 0 16px 0;
-  }
-}
-.breadcrumbs-black .breadcrumbs__item {
-  color: var(--text-color-dark);
-}
-.breadcrumbs-black .breadcrumbs__item:not(:last-child):after {
-  color: #A8A9AA;
-}
-.breadcrumbs-black .breadcrumbs__link {
-  color: #A8A9AA;
-}
-
 .margin-top-header {
   margin-top: 120px;
+  background-color: var(--light-color);
 }
 @media (max-width: 1330px) {
   .margin-top-header {
@@ -330,6 +312,24 @@ a {
   .margin-top-header {
     margin-top: 70px;
   }
+}
+.margin-top-header .breadcrumbs {
+  background-color: var(--light-color);
+  padding: 24px 0 25px 0;
+}
+@media (max-width: 1330px) {
+  .margin-top-header .breadcrumbs {
+    padding: 17px 0 16px 0;
+  }
+}
+.margin-top-header .breadcrumbs .breadcrumbs__item {
+  color: var(--text-color-dark);
+}
+.margin-top-header .breadcrumbs .breadcrumbs__item:not(:last-child):after {
+  color: #A8A9AA;
+}
+.margin-top-header .breadcrumbs .breadcrumbs__link {
+  color: #A8A9AA;
 }
 
 .visually-hidden {
@@ -699,6 +699,68 @@ a {
   .error-404__description-link {
     font-size: 11px;
   }
+}
+
+.popup-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+
+.popup-video__box {
+  background: var(--text-color-dark);
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+  .popup-video__box {
+    width: 85%;
+  }
+  .popup-video__box iframe {
+    width: 100%;
+  }
+}
+.popup-video__box .popup-video__close {
+  width: 45px;
+  height: 45px;
+  background-color: var(--text-color-dark);
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 1002;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.popup-video__box .popup-video__close .close {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.js-modal-video {
+  display: none;
+}
+
+.js-modal-video.active {
+  display: block;
 }
 
 .popup-callback {

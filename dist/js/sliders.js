@@ -213,14 +213,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-  var swiperToday = new Swiper(".today__slider", {
+  var swiperAbout = new Swiper(".about__slider", {
     slidesPerView: 1,
     navigation: {
-      nextEl: ".today__next",
-      prevEl: ".today__prev"
+      nextEl: ".about__next",
+      prevEl: ".about__prev"
     },
     pagination: {
-      el: ".today__pagination",
+      el: ".about__pagination",
       clickable: true
     }
   });

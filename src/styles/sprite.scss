@@ -29,6 +29,20 @@
       height: 30px;
     }
   }
+  .header__telegram svg{
+    width: 43px;
+    height: 43px;
+
+    @media (max-width: 1330px) {
+      width: 36px;
+      height: 36px;
+    }
+    @media (max-width: 990px) {
+      width: 32px;
+      height: 32px;
+    }
+
+  }
 }
 
 .header-home {

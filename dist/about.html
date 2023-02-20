@@ -60,6 +60,11 @@
 						<use href="assets/svg/sprite.svg#search"></use>
 					</svg>
 				</a>
+				<a class="header__icon header__telegram" href="javascript:void(0)">
+					<svg class="telegram">
+						<use href="assets/svg/sprite.svg#telegram"></use>
+					</svg>
+				</a>
 				<a class="header__icon header__whatsapp" href="javascript:void(0)">
 					<svg class="whatsapp">
 						<use href="assets/svg/sprite.svg#whatsapp"></use>
@@ -78,16 +83,17 @@
 	</div>
 </header>
 	<main class="main">
-		<div class="breadcrumbs breadcrumbs-black margin-top-header">
+		<section class="margin-top-header">
 			<div class="container">
-				<ul class="breadcrumbs__list">
-					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a>
-					</li>
-					<li class="breadcrumbs__item">ЛДСП</li>
-				</ul>
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a></li>
+						<li class="breadcrumbs__item">ЛДСП</li>
+					</ul>
+				</div>
 			</div>
-		</div>
+		</section>
 
 		<section class="about">
 			<div class="about__inner">
@@ -163,10 +169,7 @@
 									</div>
 								</div>
 							</div>
-							<a class="about__video" href="javascript:void(0)">
-								<!-- <svg class="about__video-icon">-->
-								<!-- 	<use href="assets/svg/sprite.svg#about-video"></use>-->
-								<!-- </svg>-->
+							<a class="about__video js-watch-video" href="javascript:void(0)">
 								<div class="about__video-image">
 									<img alt="" src="assets/img/about-video.png">
 								</div>
@@ -488,6 +491,21 @@
 
 
 
+		<div class="popup-video js-modal-video">
+			<div class="popup-video__box">
+				<iframe allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				        allowfullscreen
+				        frameborder="0" height="315" id="video-iframe"
+				        src="https://www.youtube.com/embed/-DBjMoobDM8"
+				        title="YouTube video player"
+				        width="560"></iframe>
+				<div class="popup-video__close js-close">
+					<svg class="close">
+						<use href="assets/svg/sprite.svg#mobile-menu-close-button"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
 
 	</main>
 	<footer class="footer">

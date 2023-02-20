@@ -5,7 +5,7 @@
 }
 @media (max-width: 1330px) {
   .cards-work {
-    padding: 40px 0;
+    padding: 0 0 40px 0;
   }
 }
 .cards-work .main-title {
