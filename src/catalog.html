@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Работа</title>
+	<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/sprite.css" rel="stylesheet" type="text/css">
+	<link href="css/header-and-footer.css" rel="stylesheet" type="text/css">
+	<link href="css/catalog.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper">
+	@@include('_include/header.html')
+	<main class="main">
+		<section class="margin-top-header">
+			<div class="container">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a></li>
+						<li class="breadcrumbs__item">ЛДСП</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="catalog">
+			<div class="container">
+				<div class="catalog__head">
+					<h2 class="main-title main-title-dark">Элемент каталога</h2>
+					<span class="catalog__quantity">(253)</span>
+				</div>
+				<div class="catalog__inner">
+
+					<aside class="sidebar" role="complementary">
+
+					</aside>
+					<div class="catalog__body" role="main">
+						<div class="catalog-filter">
+							<div class="catalog-filter__action">
+								<div class="catalog-filter__description">Сортировать</div>
+								<a class="catalog-filter__property" href="javascript:void(0)">
+									По цене</a>
+							</div>
+							<div class="catalog-filter__options">
+								<div class="catalog-filter__options-item table">
+									<svg class="catalog-filter-table">
+										<use href="./assets/svg/sprite.svg#filter-table"></use>
+									</svg>
+								</div>
+								<div class="catalog-filter__options-item line">
+									<svg class="catalog-filter-line">
+										<use href="./assets/svg/sprite.svg#filter-line"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog__list">
+							<div class="catalog-item">
+								<div class="catalog-item__image">
+									<picture>
+										<source srcset="assets/img/catalog-1.webp" type="image/webp">
+										<img alt="" src="assets/img/catalog-1.jpg">
+									</picture>
+								</div>
+								<h3 class="catalog-item__title">ЛДСП SWISS KRONO</h3>
+								<span class="catalog-item__property">Ольха SE 9310</span>
+								<span class="catalog-item__property">2750*1830*16</span>
+								<div class="catalog-item__price">2 001 руб./мм</div>
+								<div class="catalog-item__bottom">
+									<a href="javascript:void(0)" class="catalog-item__button"></a>
+									<a href="javascript:void(0)" class="catalog-item__button"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		@@include('_include/modals.html')
+
+	</main>
+	@@include('_include/footer.html')
+
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

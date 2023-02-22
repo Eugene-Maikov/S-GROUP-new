@@ -85,7 +85,7 @@
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0.02em;
-  color: #A8A9AA;
+  color: var(--gray-color);
   margin-bottom: 25px;
 }
 @media (max-width: 1330px) {

@@ -1,0 +1,199 @@
+//---------------------------- Catalog-categories -------------------------------
+.catalog-categories {
+  .main-title {
+    padding-top: 0;
+
+    @media (max-width: 1330px) {
+      padding: 0 0 10px 0;
+    }
+  }
+
+  .catalog {
+    padding-bottom: 0;
+    background-color: var(--light-color);
+
+    @media (max-width: 767px) {
+      padding-top: 0;
+    }
+    @media (max-width: 525px) {
+      padding-top: 0;
+    }
+    @media(max-width: 767px) and (max-height: 475px) {
+      padding-top: 0;
+    }
+  }
+
+  .catalog__materials {
+    margin: 30px 0 0 0;
+
+    @media (max-width: 1330px) {
+      margin: 26px 0 0 0;
+    }
+    @media (max-width: 520px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .catalog__item {
+    @media (max-width: 1330px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 520px) {
+      margin-bottom: 33px;
+    }
+  }
+}
+
+//---------------------------- end Catalog-categories -------------------------------
+.catalog {
+  background-color: var(--light-color);
+
+  .main-title {
+    padding-top: 0;
+
+    @media (max-width: 1330px) {
+      padding: 0 0 10px 0;
+    }
+  }
+
+  &__head {
+    display: flex;
+  }
+
+  &__quantity {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #A8A9AA;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 22px 10px;
+
+    @media (max-width: 1330px) {
+      padding: 0 0 20px 10px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0.03em;
+      padding: 0 0 20px 10px;
+    }
+    @media (max-width: 767px) {
+      font-size: 11px;
+      line-height: 15px;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  //--------------- sidebar ---------------
+  .sidebar[role="complementary"] {
+    width: 25%;
+  }
+
+  //--------------- end sidebar ---------------
+  //--------------- body ---------------
+  &__body[role="main"] {
+    width: 75%;
+  }
+
+  &-filter {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 13px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E4E5E6;
+
+    @media (max-width: 1330px) {
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 767px) {
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-filter__action,
+  &-filter__options {
+    display: flex;
+    align-items: center;
+  }
+
+  &-filter__options {
+    margin-right: -5px;
+  }
+  &-filter__options-item{
+    margin-left: 10px;
+
+    @media (max-width: 1330px) {
+      margin-left: 0;
+    }
+
+    .active{
+      svg{
+
+      }
+    }
+  }
+
+  &-filter__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--gray-color);
+    margin-right: 10px;
+
+    @media (max-width: 1330px) {
+      font-size: 12px;
+    }
+    @media (max-width: 767px) {
+      font-size: 11px;
+    }
+  }
+
+  &-filter__property {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    position: relative;
+
+    @media (max-width: 1330px) {
+      font-size: 12px;
+    }
+    @media (max-width: 767px) {
+      font-size: 11px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.05345 1.38021L4.52665 6L-2.01938e-07 1.38021L1.41332 -6.17781e-08L4.52665 3.17734L7.64014 -3.33961e-07L9.05345 1.38021Z' fill='%23262728'/%3e%3c/svg%3e");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      right: -15px;
+      top: 8px;
+
+      @media (max-width: 1330px) {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='5' viewBox='0 0 6 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 1.42654L2.99995 4.48822L-1.3383e-07 1.42654L0.936649 0.511837L2.99995 2.61756L5.06335 0.511837L6 1.42654Z' fill='%23262728'/%3e%3c/svg%3e");
+        width: 6px;
+        height: 6px;
+        top: 7px;
+      }
+    }
+  }
+
+  //--------------- end body ---------------
+}

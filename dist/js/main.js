@@ -407,6 +407,43 @@ document.addEventListener("DOMContentLoaded", function () {
         window["uploadDragFiles_" + index] = uploadDragFiles;
       });
     });
-  }
+  } //Изменение размеров строки, при увеличении кол-ва текста. Секция каталог категорий
+
+
+  var catalogTexts = document.querySelectorAll('.catalog__text');
+
+  var switchPropertyText = function switchPropertyText(item) {
+    if (window.screen.width > 1330) {
+      item.style.fontSize = "15px";
+      item.style.height = '65px';
+      item.style.paddingLeft = '10px';
+      item.style.paddingRight = '10px';
+    }
+
+    if (window.screen.width < 1330) {
+      item.style.fontSize = "12px";
+      item.style.height = '62px';
+      item.style.paddingLeft = '10px';
+      item.style.paddingRight = '10px';
+    }
+
+    if (window.screen.width < 767) {
+      item.style.fontSize = "10px";
+      item.style.height = '45px';
+      item.style.paddingLeft = '10px';
+      item.style.paddingRight = '10px';
+    }
+  };
+
+  catalogTexts.forEach(function (item) {
+    var string = item.innerHTML;
+
+    if (string.length > 20) {
+      switchPropertyText(item);
+      window.addEventListener('resize', function () {
+        switchPropertyText(item);
+      }, true);
+    }
+  });
 });
 //# sourceMappingURL=main.js.map

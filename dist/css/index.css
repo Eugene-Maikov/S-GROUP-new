@@ -1113,7 +1113,7 @@
 .reviews__item {
   background-color: #fff;
   padding: 30px 25px 27px 30px;
-  height: 234px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1331,13 +1331,6 @@
   letter-spacing: 0.02em;
   color: var(--text-color-dark);
   margin-bottom: 17px;
-  /*Ограничение по кол-ву строк*/
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
 }
 @media (max-width: 1330px) {
   .reviews__description {

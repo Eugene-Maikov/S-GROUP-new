@@ -29,6 +29,7 @@
   --container-offset: 20px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --light-color: #F5F6F7;
+  --gray-color: #A8A9AA;
   --secondary-color: #5695CB;
   --primary-color: #27364B;
   --text-color-dark: #262728;
@@ -326,10 +327,10 @@ a {
   color: var(--text-color-dark);
 }
 .margin-top-header .breadcrumbs .breadcrumbs__item:not(:last-child):after {
-  color: #A8A9AA;
+  color: var(--gray-color);
 }
 .margin-top-header .breadcrumbs .breadcrumbs__link {
-  color: #A8A9AA;
+  color: var(--gray-color);
 }
 
 .visually-hidden {
@@ -889,7 +890,7 @@ a {
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0.02em;
-  color: #A8A9AA;
+  color: var(--gray-color);
   margin-bottom: 5px;
 }
 @media (max-width: 1330px) {
@@ -1045,7 +1046,7 @@ a {
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0.02em;
-  color: #A8A9AA;
+  color: var(--gray-color);
 }
 @media (max-width: 1330px) {
   .form-callback__checkbox label span {
@@ -1127,7 +1128,7 @@ a {
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0.02em;
-  color: #A8A9AA;
+  color: var(--gray-color);
 }
 @media (max-width: 1330px) {
   .form-callback__checkbox label span {

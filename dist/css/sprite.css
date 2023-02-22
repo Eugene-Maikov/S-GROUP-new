@@ -286,4 +286,23 @@
   height: 30px;
   fill: var(--secondary-color);
 }
+
+.catalog-filter-table,
+.catalog-filter-line {
+  width: 24px;
+  height: 24px;
+  fill: var(--gray-color);
+  padding: 5px;
+}
+.catalog-filter-table .active,
+.catalog-filter-line .active {
+  fill: var(--text-color-dark);
+}
+@media (max-width: 1330px) {
+  .catalog-filter-table,
+.catalog-filter-line {
+    width: 21px;
+    height: 21px;
+  }
+}
 /*# sourceMappingURL=sprite.css.map */
