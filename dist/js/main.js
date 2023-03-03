@@ -267,12 +267,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (form) {
     form.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+
       if (inputs) {
         //name, surname
         inputs.forEach(function (item) {
           if (item.value === "") {
             item.classList.add("error");
-            evt.preventDefault();
           } else {
             item.classList.remove("error");
           }
@@ -289,7 +290,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!isEmailValid(inputEmail.value)) {
           inputEmail.classList.add("error");
-          evt.preventDefault();
         } else {
           inputEmail.classList.remove("error");
         }
@@ -299,13 +299,12 @@ document.addEventListener("DOMContentLoaded", function () {
         //checkbox
         if (!inputCheckbox.checked) {
           inputCheckbox.classList.add("error");
-          evt.preventDefault();
         } else {
           inputCheckbox.classList.remove("error");
         }
       }
 
-      if (!inputs.value === "" && inputCheckbox.checked && !inputEmail.value === "") {
+      if (inputs.value != "" && inputCheckbox.checked && inputEmail.value != "") {
         form.submit();
       }
     });

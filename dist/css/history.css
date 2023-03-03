@@ -82,6 +82,9 @@
     width: 100%;
   }
 }
+.people__slider .swiper-wrapper {
+  height: auto;
+}
 .people__slider .swiper {
   width: 100%;
 }

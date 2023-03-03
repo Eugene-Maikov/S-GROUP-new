@@ -362,6 +362,9 @@
     margin-right: -20px;
   }
 }
+.personnel .swiper-wrapper {
+  height: auto;
+}
 .personnel .swiper-slide {
   height: auto;
   display: -webkit-box;

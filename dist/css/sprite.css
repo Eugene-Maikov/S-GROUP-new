@@ -14,6 +14,12 @@
     height: 44px;
   }
 }
+@media (max-width: 375px) {
+  .logo {
+    width: 97px;
+    height: 44px;
+  }
+}
 
 .header__icons .header__icon svg {
   fill: var(--text-color-dark);
@@ -289,20 +295,20 @@
 
 .catalog-filter-table,
 .catalog-filter-line {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   fill: var(--gray-color);
   padding: 5px;
 }
-.catalog-filter-table .active,
-.catalog-filter-line .active {
+.catalog-filter-table.active,
+.catalog-filter-line.active {
   fill: var(--text-color-dark);
 }
 @media (max-width: 1330px) {
   .catalog-filter-table,
 .catalog-filter-line {
-    width: 21px;
-    height: 21px;
+    width: 26px;
+    height: 26px;
   }
 }
 

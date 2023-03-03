@@ -61,8 +61,8 @@
     }
   }
 
-  .cards__show{
-    @media (max-width: 767px){
+  .cards__show {
+    @media (max-width: 767px) {
       margin-bottom: 10px;
     }
   }
@@ -104,29 +104,8 @@
     width: 100%;
   }
 
-  //--------------- sidebar ---------------
-  .sidebar-filter{
-    width: 25%;
-    padding-right: 15px;
-
-    @media (max-width: 1330px) {
-      padding-right: 10px;
-    }
-    @media (max-width: 990px) {
-      display: none;
-      width: 100%;
-    }
-
-    &__body{
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-    }
-  }
-
-  //--------------- end sidebar ---------------
   //--------------- body ---------------
-  &__body[role="main"] {
+  &__body {
     width: 75%;
     padding-left: 15px;
 
@@ -167,6 +146,8 @@
 
   &-filter__options-item {
     margin-left: 10px;
+    display: flex;
+    align-items: center;
 
     @media (max-width: 1330px) {
       margin-left: 0;
@@ -218,19 +199,20 @@
       background-repeat: no-repeat;
       width: 10px;
       height: 10px;
-      right: -15px;
+      right: -16px;
       top: 8px;
 
       @media (max-width: 1330px) {
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='5' viewBox='0 0 6 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 1.42654L2.99995 4.48822L-1.3383e-07 1.42654L0.936649 0.511837L2.99995 2.61756L5.06335 0.511837L6 1.42654Z' fill='%23262728'/%3e%3c/svg%3e");
         width: 6px;
         height: 6px;
-        top: 7px;
+        right: -11px;
+        top: 6px;
       }
     }
   }
 
-  &__list{
+  &__list {
     padding-bottom: 30px;
 
     @media (max-width: 1330px) {
@@ -260,7 +242,7 @@
   &-item {
     background-color: #ffffff;
 
-    &:hover{
+    &:hover {
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
       .catalog-item__bottoms {
@@ -470,3 +452,219 @@
 
   //--------------- end body ---------------
 }
+
+//--------------- sidebar ---------------
+.sidebar-filter {
+  width: 25%;
+  padding-right: 15px;
+
+  @media (max-width: 1330px) {
+    padding-right: 10px;
+  }
+  @media (max-width: 990px) {
+    display: none;
+    width: 100%;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__group{
+    margin-bottom: 10px;
+  }
+
+  &__head {
+    background-color: #fff;
+    padding: 15px 20px;
+
+    @media (max-width: 1330px) {
+      padding: 15px 10px;
+    }
+    @media (max-width: 990px) {
+      padding: 15px 20px;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    padding: 0 20px 20px 15px;
+  }
+
+  &__title {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-color-dark);
+    position: relative;
+
+    @media (max-width: 1330px) {
+      font-size: 12px;
+    }
+    @media (max-width: 990px) {
+      font-size: 11px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.05345 1.38021L4.52665 6L-2.01938e-07 1.38021L1.41332 -6.17781e-08L4.52665 3.17734L7.64014 -3.33961e-07L9.05345 1.38021Z' fill='%23262728'/%3e%3c/svg%3e");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      right: 0;
+      top: 3px;
+
+      @media (max-width: 1330px) {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='5' viewBox='0 0 6 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 1.42654L2.99995 4.48822L-1.3383e-07 1.42654L0.936649 0.511837L2.99995 2.61756L5.06335 0.511837L6 1.42654Z' fill='%23262728'/%3e%3c/svg%3e");
+        width: 6px;
+        height: 6px;
+        top: 4px;
+      }
+    }
+  }
+
+  // ----- Checkbox -----
+  &__checkbox-list {
+    padding-top: 15px;
+    border-top: 1px solid #E4E5E6;
+  }
+
+  &__checkbox-item {
+    &:not(:last-child) {
+      padding-bottom: 19px;
+
+      @media (max-width: 1330px) {
+        padding-bottom: 8px;
+      }
+      @media (max-width: 990px) {
+        padding-bottom: 9px;
+      }
+    }
+  }
+
+  &__checkbox-label {
+    cursor: pointer;
+  }
+
+  &__checkbox-input {
+    display: none;
+
+    &:checked + .sidebar-filter__checkbox-description::before {
+      border-color: #1B89C5;
+      background: #1B89C5;
+    }
+
+    &:checked + .sidebar-filter__checkbox-description::after {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.5183 0L4.64823 5.87009L2.06498 3.28684L0 5.35187L4.64823 10L12.5833 2.06498L10.5183 0Z' fill='white'/%3e%3c/svg%3e ");
+    }
+  }
+
+  &__checkbox-description {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      color: var(--text-color-dark);
+      user-select: none;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 243px;
+
+      @media (max-width: 1330px) {
+        font-size: 12px;
+      }
+      @media (max-width: 990px) {
+        font-size: 11px;
+      }
+
+      span.label {
+        padding-right: 5px;
+      }
+
+      span.quantity {
+        color: rgba(168, 169, 170, 1);
+      }
+    }
+
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #E4E5E6;
+      border-radius: 3px;
+      margin-right: 10px;
+      background-color: #F5F6F7;
+
+      @media (max-width: 1330px) {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 10px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: 3px;
+
+      @media (max-width: 1330px) {
+        width: 10px;
+        height: 8px;
+      }
+    }
+
+  }
+  // ----- end Checkbox -----
+
+  &__more{
+    padding-top: 15px;
+    justify-content: flex-end;
+    display: none;
+
+    &.show{
+      display: flex;
+    }
+  }
+  &__more-link{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    border-bottom: 1px dotted var(--text-color-dark);
+    display: inline-block;
+
+    @media (max-width: 1330px) {
+      font-size: 12px;
+    }
+    @media (max-width: 990px) {
+      font-size: 11px;
+    }
+  }
+
+}
+
+//--------------- end sidebar ---------------
+
