@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------- Выбор города ---------------
   const filter = document.querySelector('.contacts__filter')
   const overlay = document.querySelector('.contacts__overlay')
-  const contactsMobile = document.querySelectorAll('.contacts__mobile')
+  const contactsMobile = document.querySelectorAll('.contacts__head')
   const filterTabs = document.querySelectorAll('.tabs__nav-item')
 
   contactsMobile.forEach((tab) => {

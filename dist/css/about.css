@@ -300,6 +300,9 @@
     padding-bottom: 10px;
   }
 }
+.about .swiper-wrapper {
+  height: 100%;
+}
 .about .swiper-pagination-bullet {
   width: 20px;
   height: 20px;

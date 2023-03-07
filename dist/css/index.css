@@ -1729,7 +1729,7 @@
 }
 @media (max-width: 1330px) {
   .contacts__content {
-    padding: 0 12px;
+    padding: 12px;
   }
 }
 .contacts__title {
@@ -1768,20 +1768,20 @@
 }
 .contacts__body {
   width: 321px;
-  height: 225px;
+  height: 230px;
   position: relative;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 @media (max-width: 1330px) {
   .contacts__body {
     width: 232px;
-    height: 153px;
+    height: 180px;
   }
 }
 @media (max-width: 990px) {
@@ -1805,11 +1805,20 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 22px;
 }
-@media (max-width: 1330px) {
+@media (max-width: 990px) {
   .contacts__info {
     margin-bottom: 14px;
+  }
+}
+@media (max-width: 1330px) {
+  .contacts__info:nth-child(1) {
+    height: 36px;
+  }
+}
+@media (max-width: 990px) {
+  .contacts__info:nth-child(1) {
+    height: auto;
   }
 }
 .contacts__info-inner {
@@ -1842,6 +1851,25 @@
   .contacts .contacts__body a,
 .contacts .contacts__body span {
     font-size: 12px;
+  }
+}
+.contacts .contacts__body .contacts__content {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+}
+@media (max-width: 1330px) {
+  .contacts .contacts__body .contacts__content {
+    padding: 12px;
   }
 }
 .contacts__info-post {
@@ -1880,7 +1908,7 @@
 }
 @media (max-width: 1330px) {
   .contacts__tabs {
-    padding-top: 257px;
+    padding-top: 230px;
   }
 }
 .contacts__tabs .tabs__nav-btn--active .contacts__head:before {
@@ -2035,15 +2063,16 @@
 }
 .contacts .contacts__mobile .contacts__body {
   width: 280px;
-  height: 161px;
+  height: auto;
+  min-height: auto;
   position: relative;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .contacts .contacts__mobile .contacts__body:before {
   content: "";

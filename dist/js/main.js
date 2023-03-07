@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var filter = document.querySelector('.contacts__filter');
   var overlay = document.querySelector('.contacts__overlay');
-  var contactsMobile = document.querySelectorAll('.contacts__mobile');
+  var contactsMobile = document.querySelectorAll('.contacts__head');
   var filterTabs = document.querySelectorAll('.tabs__nav-item');
   contactsMobile.forEach(function (tab) {
     tab.addEventListener("click", function () {
