@@ -260,15 +260,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   var form = document.querySelector(".form");
-  var inputEmail = document.querySelector(".js-input-email"); // const inputPhone = document.querySelector(".js-input-phone");
+  var inputEmail = document.querySelector(".js-input-email");
+  var inputName = document.querySelector(".js-input-name"); // const inputPhone = document.querySelector(".js-input-phone");
 
   var inputCheckbox = document.querySelector(".js-input-checkbox");
   var inputs = document.querySelectorAll(".validate");
 
   if (form) {
     form.addEventListener('submit', function (evt) {
-      evt.preventDefault();
-
       if (inputs) {
         //name, surname
         inputs.forEach(function (item) {
@@ -304,8 +303,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      if (inputs.value != "" && inputCheckbox.checked && inputEmail.value != "") {
+      if (inputName.value !== "" && inputCheckbox.checked && inputEmail.value !== "") {
         form.submit();
+      } else {
+        evt.preventDefault();
       }
     });
   } // --------------- Кнопка «Прикрепить файл» ---------------

@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("no-scroll")
   })
 
-
   // --------------- Mobile menu / выпадающий список ---------------
   // Выбор опций/сортировка
   const handleOption = (el) => {
@@ -266,13 +265,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------Валидация---------------
   const form = document.querySelector(".form");
   const inputEmail = document.querySelector(".js-input-email");
+  const inputName = document.querySelector(".js-input-name");
   // const inputPhone = document.querySelector(".js-input-phone");
   const inputCheckbox = document.querySelector(".js-input-checkbox");
   const inputs = document.querySelectorAll(".validate");
 
   if (form) {
     form.addEventListener('submit', (evt) => {
-      evt.preventDefault();
 
       if (inputs) {
         //name, surname
@@ -309,8 +308,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      if (inputs.value != "" && inputCheckbox.checked && inputEmail.value != "") {
-        form.submit()
+      if ( inputName.value !== "" && inputCheckbox.checked && inputEmail.value !== "" ) {
+        form.submit();
+      } else {
+        evt.preventDefault();
       }
     })
   }
