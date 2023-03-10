@@ -300,10 +300,6 @@
   fill: var(--gray-color);
   padding: 5px;
 }
-.catalog-filter-table.active,
-.catalog-filter-line.active {
-  fill: var(--text-color-dark);
-}
 @media (max-width: 1330px) {
   .catalog-filter-table,
 .catalog-filter-line {

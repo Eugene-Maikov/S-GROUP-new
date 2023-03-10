@@ -733,9 +733,15 @@ a {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .popup-video__box {
     width: 85%;
+    height: 50%;
+  }
+}
+@media (max-width: 425px) {
+  .popup-video__box {
+    height: auto;
   }
 }
 .popup-video__box .popup-video__close {

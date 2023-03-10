@@ -270,10 +270,6 @@
   fill: var(--gray-color);
   padding: 5px;
 
-  &.active{
-    fill: var(--text-color-dark);
-  }
-
   @media (max-width: 1330px) {
     width: 26px;
     height: 26px;

@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let overlay = document.querySelector('.location__overlay')
     let arrCloseButton = document.querySelectorAll(".js-close");
 
-
     if (btns && modal) {
 
       btns.forEach(function (btnItem) {
@@ -177,7 +176,19 @@ document.addEventListener("DOMContentLoaded", () => {
           modal.classList.add("active");
           overlay.classList.add("visible-location-overlay");
           document.body.classList.add("no-scroll");
-          console.log('btnItem')
+
+          //Передача значения data-email (Если он есть)
+          let dataEmailValue = btnItem.getAttribute('data-email')
+          let hiddenInput = document.querySelector('input[name="email_to"]')
+
+          if (btnItem.hasAttribute("data-email")) {
+            console.log('data-email на кнопке: ' + dataEmailValue)
+          }
+          if (hiddenInput){
+            console.log('до присвоения: ' + hiddenInput.value)
+            hiddenInput.value = dataEmailValue
+            console.log('после присвоения: ' + hiddenInput.value)
+          }
         });
       });
 
@@ -209,6 +220,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       }
+
+
     }
 
   }
@@ -286,8 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (inputEmail) {
         //email
-        const re =
-          /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+        const re = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
         const isEmailValid = (value) => {
           return re.test(String(value).toLowerCase());
         }
@@ -308,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      if ( inputName.value !== "" && inputCheckbox.checked && inputEmail.value !== "" ) {
+      if (inputName.value !== "" && inputCheckbox.checked && inputEmail.value !== "") {
         form.submit();
       } else {
         evt.preventDefault();
@@ -444,7 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (string.length > 20) {
       switchPropertyText(item)
 
-      window.addEventListener('resize', function() {
+      window.addEventListener('resize', function () {
         switchPropertyText(item)
       }, true);
     }

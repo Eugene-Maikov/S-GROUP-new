@@ -185,8 +185,20 @@ document.addEventListener("DOMContentLoaded", function () {
           evt.preventDefault();
           modal.classList.add("active");
           overlay.classList.add("visible-location-overlay");
-          document.body.classList.add("no-scroll");
-          console.log('btnItem');
+          document.body.classList.add("no-scroll"); //Передача значения data-email (Если он есть)
+
+          var dataEmailValue = btnItem.getAttribute('data-email');
+          var hiddenInput = document.querySelector('input[name="email_to"]');
+
+          if (btnItem.hasAttribute("data-email")) {
+            console.log('data-email на кнопке: ' + dataEmailValue);
+          }
+
+          if (hiddenInput) {
+            console.log('до присвоения: ' + hiddenInput.value);
+            hiddenInput.value = dataEmailValue;
+            console.log('после присвоения: ' + hiddenInput.value);
+          }
         });
       });
       arrCloseButton.forEach(function (closeButton) {
