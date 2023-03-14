@@ -33,7 +33,8 @@
       height: 30px;
     }
   }
-  .header__telegram svg{
+
+  .header__telegram svg {
     width: 43px;
     height: 43px;
 
@@ -275,9 +276,48 @@
     height: 26px;
   }
 }
-.catalog-item__button-basket{
+
+.catalog-item__button-basket {
   width: 14px;
   height: 15px;
   fill: var(--secondary-color);
 }
+
 // ---------------------------- end Catalog filter -------------------------------
+// ---------------------------- Single-card -------------------------------
+.availability-icon-have,
+.availability-icon-notHave {
+  width: 24px;
+  height: 24px;
+}
+
+.minus {
+  width: 14px;
+  height: 2px;
+  fill: var(--text-color-dark);
+}
+
+.plus {
+  width: 14px;
+  height: 14px;
+  fill: var(--text-color-dark);
+}
+
+.single-card__prev,
+.single-card__next {
+  width: 13px;
+  height: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  cursor: pointer;
+
+  @media (max-width: 1330px) {
+
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+// ---------------------------- end Single-card -------------------------------

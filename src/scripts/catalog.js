@@ -1,6 +1,5 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
-
   const filterGroupElements = document.querySelectorAll('.sidebar-filter__head')
 
   // Открыть/закрыть элемент фильтра

@@ -241,25 +241,77 @@
 
   <!-- filter-table -->
   <symbol id="filter-table" viewBox="0 0 16 16">
-      <path d="M0 0H4.21053V4.21053H0V0Z"/>
-      <path d="M0 5.89474H4.21053V10.1053H0V5.89474Z"/>
-      <path d="M0 11.7895H4.21053V16H0V11.7895Z"/>
-      <path d="M5.89474 0H10.1053V4.21053H5.89474V0Z"/>
-      <path d="M5.89474 5.89474H10.1053V10.1053H5.89474V5.89474Z"/>
-      <path d="M5.89474 11.7895H10.1053V16H5.89474V11.7895Z"/>
-      <path d="M11.7895 0H16V4.21053H11.7895V0Z"/>
-      <path d="M11.7895 5.89474H16V10.1053H11.7895V5.89474Z"/>
-      <path d="M11.7895 11.7895H16V16H11.7895V11.7895Z"/>
+    <path d="M0 0H4.21053V4.21053H0V0Z"/>
+    <path d="M0 5.89474H4.21053V10.1053H0V5.89474Z"/>
+    <path d="M0 11.7895H4.21053V16H0V11.7895Z"/>
+    <path d="M5.89474 0H10.1053V4.21053H5.89474V0Z"/>
+    <path d="M5.89474 5.89474H10.1053V10.1053H5.89474V5.89474Z"/>
+    <path d="M5.89474 11.7895H10.1053V16H5.89474V11.7895Z"/>
+    <path d="M11.7895 0H16V4.21053H11.7895V0Z"/>
+    <path d="M11.7895 5.89474H16V10.1053H11.7895V5.89474Z"/>
+    <path d="M11.7895 11.7895H16V16H11.7895V11.7895Z"/>
   </symbol>
   <!-- filter-line -->
   <symbol id="filter-line" viewBox="0 0 16 16">
-      <path d="M0 0H16V4.21053H0V0Z"/>
-      <path d="M16 5.89474V10.1053H0V5.89474H16Z"/>
-      <path d="M0 11.7895V16H16V11.7895H0Z"/>
+    <path d="M0 0H16V4.21053H0V0Z"/>
+    <path d="M16 5.89474V10.1053H0V5.89474H16Z"/>
+    <path d="M0 11.7895V16H16V11.7895H0Z"/>
   </symbol>
   <!-- basket -->
   <symbol id="basket" viewBox="0 0 14 16">
     <path d="M12.7748 4.00715C12.7577 3.64864 12.4621 3.36683 12.1032 3.36683H10.0201V1.5691C10.0201 0.703952 9.31613 0 8.45098 0H4.86452C3.99941 0 3.29542 0.703912 3.29542 1.5691V3.36683H1.21225C0.853373 3.36683 0.557726 3.64864 0.540658 4.00715L0.000770537 15.2954C-0.00802584 15.4792 0.0587943 15.6584 0.185696 15.7915C0.312558 15.9247 0.488566 16 0.672442 16H12.6432C12.8271 16 13.003 15.9247 13.1299 15.7915C13.2569 15.6584 13.3237 15.4792 13.3149 15.2954L12.7748 4.00715ZM4.64045 1.5691C4.64045 1.44555 4.74097 1.34492 4.86456 1.34492H8.45102C8.57457 1.34492 8.67512 1.44551 8.67512 1.5691V3.36683H4.64049L4.64045 1.5691Z"/>
+  </symbol>
+  <!-- single-catalog (have) -->
+  <symbol id="have" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="12" fill="#5BB318"/>
+    <g filter="url(#filter0_d_670_19670)">
+      <path d="M16.5183 7L10.6482 12.8701L8.06498 10.2868L6 12.3519L10.6482 17L18.5833 9.06498L16.5183 7Z"
+            fill="white"/>
+    </g>
+    <defs>
+      <filter id="filter0_d_670_19670" x="4" y="6" width="16.584" height="14" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                       result="hardAlpha"/>
+        <feOffset dy="1"/>
+        <feGaussianBlur stdDeviation="1"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_670_19670"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_670_19670" result="shape"/>
+      </filter>
+    </defs>
+  </symbol>
+  <!-- single-catalog (notHave) -->
+  <symbol id="notHave" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="12" fill="#E64848"/>
+    <g filter="url(#filter0_d_670_19665)">
+      <path d="M17 8.42857L15.5714 7L12 10.5714L8.42857 7L7 8.42857L10.5714 12L7 15.5714L8.42857 17L12 13.4286L15.5714 17L17 15.5714L13.4286 12L17 8.42857Z"
+            fill="white"/>
+    </g>
+    <defs>
+      <filter id="filter0_d_670_19665" x="5" y="6" width="14" height="14" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                       result="hardAlpha"/>
+        <feOffset dy="1"/>
+        <feGaussianBlur stdDeviation="1"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_670_19665"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_670_19665" result="shape"/>
+      </filter>
+    </defs>
+  </symbol>
+  <!-- single-catalog (minus) -->
+  <symbol id="minus" viewBox="0 0 14 2">
+    <rect width="14" height="2" fill="#262728"/>
+  </symbol>
+  <!-- single-catalog (plus) -->
+  <symbol id="plus" viewBox="0 0 14 14">
+    <path d="M6 6V0H8V6H14V8H8V14H6V8H0V6H6Z" fill="#262728"/>
   </symbol>
 
 </svg>

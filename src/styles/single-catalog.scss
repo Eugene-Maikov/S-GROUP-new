@@ -1,0 +1,236 @@
+//---------------------------- Single-card -------------------------------
+.single-card {
+  background-color: var(--light-color);
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__inner {
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+  }
+
+  &__images {
+    flex: 0 0 380px;
+    width: 380px;
+    height: 458px;
+    background-color: #ccc;
+
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // ========= Slider-1 ==============
+  &__prev {
+    position: absolute;
+    z-index: 1;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__next {
+    position: absolute;
+    z-index: 1;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // ========= end Slider-1 ==============
+
+  &__content {
+    flex: 1 1 auto;
+    padding-left: 30px;
+  }
+
+  &__article {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    margin-bottom: 17px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-color-dark);
+    margin-bottom: 15px;
+  }
+
+  &__property-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 18px;
+  }
+
+  &__property-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__availability {
+    margin-bottom: 22px;
+  }
+
+  &__availability-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    margin-bottom: 14px;
+  }
+
+  &__availability-item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__availability-location {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    margin-left: 10px;
+  }
+
+
+  &__specifications-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    margin-bottom: 6px;
+  }
+
+  &__specifications-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #E4E5E6;
+
+    &:not(:first-child) {
+      padding: 12px 0 4px 0;
+    }
+  }
+
+  &__specifications-name,
+  &__specifications-info {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+  }
+
+  //  Кол-во товаров
+  &__counting {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 300px;
+    padding: 25px 30px 30px;
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &__counting-price {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+  }
+
+  &__counting-quantity {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E4E5E6;
+    border-radius: 3px;
+  }
+
+  &__counting-number {
+    background-color: #F8F9FA;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+  }
+
+  &__counting-remove {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    height: 40px;
+    border-right: 1px solid #E4E5E6;
+  }
+
+  &__counting-add {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-left: 1px solid #E4E5E6;
+  }
+
+  &__counting-btn {
+    border: none;
+    background: var(--secondary-color);
+    box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 01px 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 50px;
+  }
+
+}
+
+//---------------------------- end Single-card -------------------------------

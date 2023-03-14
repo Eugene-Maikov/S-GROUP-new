@@ -363,5 +363,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  var singleCardSliderThumbs = new Swiper(".single-card__slider-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true
+  });
+  var singleCardSlider = new Swiper(".single-card__slider", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    thumbs: {
+      swiper: swiper
+    }
+  });
 });
 //# sourceMappingURL=sliders.js.map
