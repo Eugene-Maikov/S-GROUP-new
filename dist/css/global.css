@@ -1185,4 +1185,9 @@ a {
 .form__input.error {
   border-color: red;
 }
+
+.no-scroll {
+  overflow: hidden;
+  padding-right: 15px;
+}
 /*# sourceMappingURL=global.css.map */

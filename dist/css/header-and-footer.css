@@ -575,10 +575,6 @@
   z-index: 1001;
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 .location__modal {
   position: fixed;
   z-index: 1000;
@@ -686,7 +682,7 @@
 }
 
 .location__overlay {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;

@@ -163,10 +163,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let handleModalPopup = function handleModalPopup(btn, blockModal) {
-    let btns = document.querySelectorAll(btn);
-    let modal = document.querySelector(blockModal);
+    let btns = document.querySelectorAll(btn)
+    let modal = document.querySelector(blockModal)
     let overlay = document.querySelector('.location__overlay')
-    let arrCloseButton = document.querySelectorAll(".js-close");
+    let arrCloseButton = document.querySelectorAll(".js-close")
 
     if (btns && modal) {
 
@@ -220,14 +220,10 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       }
-
-
     }
-
   }
 
   handleModalPopup(".js-open-callback", ".js-modal-callback",)
-
 
   // Модальное окно для видео
   const btn = document.querySelector('.js-watch-video');
@@ -322,6 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (inputName.value !== "" && inputCheckbox.checked && inputEmail.value !== "") {
         form.submit();
+        handleModalPopup("form-callback__submit", ".js-modal-thanks",)
       } else {
         evt.preventDefault();
       }

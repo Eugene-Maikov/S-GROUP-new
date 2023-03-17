@@ -317,6 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (inputName.value !== "" && inputCheckbox.checked && inputEmail.value !== "") {
         form.submit();
+        handleModalPopup("form-callback__submit", ".js-modal-thanks");
       } else {
         evt.preventDefault();
       }
