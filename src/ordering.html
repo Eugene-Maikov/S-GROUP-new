@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Оформление заказа</title>
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport" />
+
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/global.css" rel="stylesheet" type="text/css">
+  <link href="css/sprite.css" rel="stylesheet" type="text/css">
+  <link href="css/header-and-footer.css" rel="stylesheet" type="text/css">
+  <link href="./css/ordering.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include('_include/header.html')
+    <main class="main">
+      <section class="margin-top-header">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="javascript:void(0)">Категории</a></li>
+              <li class="breadcrumbs__item">ЛДСП</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="ordering">
+        <div class="container">
+          <h1 class="main-title main-title-dark">Оформление заказа</h1>
+          <form class="tabs-container js-form" name="ordering" action="#1" method="get" novalidate autocomplete="on">
+            <div class="tabs-container__btns ordering__btns">
+              <button class="js-tabs-btn is-active ordering__tabs-btn" type="button">Офомить как физ. лицо</button>
+              <button class="js-tabs-btn ordering__tabs-btn" type="button">Офомить как юр. лицо</button>
+            </div>
+            <div class="ordering__inner">
+              <!-- Контент Офомить как физ. лицо -->
+              <div class="tabs-container__item is-active ordering__fiz ordering__item">
+
+                <!-- ФИО -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">ФИО</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__input-wrap js-desc">
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="fiz-surname" name="fiz-surname"
+                        placeholder="Фамилия" required="" data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="fiz-surname">Фамилия</label>
+                    </div>
+
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="fiz-name" name="fiz-name"
+                        placeholder="Имя" required="" data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="fiz-name">Имя</label>
+                    </div>
+
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="fiz-otchestvo" name="fiz-otchestvo"
+                        placeholder="Отчество" required="" data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="fiz-otchestvo">Отчество</label>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Контакты -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Контакты</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__input-wrap js-desc">
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="tel" id="fiz-phone" name="fiz-phone"
+                        data-tel-input placeholder="Телефон" required=""
+                        data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="fiz-phone">Телефон</label>
+                    </div>
+
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="fiz-email" name="fiz-email"
+                        placeholder="E-mail" required="" data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="fiz-email">E-mail</label>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Способ доставки -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">способ доставки</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__radio-wrap js-desc js-delivery-method">
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="fiz-pickup"
+                        name="fiz-delivery-method[pickup]" checked>
+                      <label for="fiz-pickup">Самовывоз</label>
+                    </div>
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="fiz-delivery"
+                        name="fiz-delivery-method[delivery]">
+                      <label for="fiz-delivery">Доставка</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Адрес доставки -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Адрес доставки</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__delivery js-desc">
+                    <div class="ordering__input-wrap">
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="text" id="fiz-city" placeholder="Город"
+                          name="fiz-city" required="" data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="fiz-city">Город</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input _big form-control" type="text" id="fiz-street" placeholder="Улица"
+                          name="fiz-street" required="" data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="fiz-street">Улица</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input _small form-control" type="text" id="fiz-apartment"
+                          name="fiz-apartment" placeholder="Кв./Оф." required=""
+                          data-pristine-required-message="заполните поле">
+                        <label class="ordering__label" for="fiz-apartment">Кв. / Оф.</label>
+                      </div>
+                    </div>
+                    <div class="ordering__map">
+                      <img src="./assets/img/ordering/map.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <!-- Способ оплаты -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">способ оплаты</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__radio-wrap js-desc js-payment-method">
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="fiz-map-site"
+                        name="fiz-payment-method[map-site]" checked>
+                      <label for="fiz-map-site">Картой на сайте</label>
+                    </div>
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="fiz-card-delivery"
+                        name="fiz-payment-method[card-delivery]">
+                      <label for="fiz-card-delivery">Картой (самовывоз)</label>
+                    </div>
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="fiz-cash-pickup"
+                        name="fiz-payment-method[cash-pickup]">
+                      <label for="fiz-cash-pickup">Наличными (самовывоз)</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Комментарии -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Комментарии</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__textarea-wrap js-desc">
+                    <div class="ordering__textarea-box form-group">
+                      <textarea class="ordering__textarea form-control" name="fiz-comments"></textarea>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Контент Офомить как юр. лицо -->
+              <div class="tabs-container__item ordering__yur ordering__item">
+                <!-- Способ покупки -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Способ покупки</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__radio-wrap js-desc js-purchase-method">
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control js-modal-window" type="radio" id="entity-quick-order"
+                        name="entity-purchase-method[quick-order]">
+                      <label for="entity-quick-order">Быстрый заказ</label>
+                    </div>
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control js-partner" type="radio" id="entity-partner" checked
+                        name="entity-purchase-method[partner]">
+                      <label for="entity-partner">Стать партнёром</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Данные организации -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Данные организации</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__input-wrap _big-container js-desc">
+
+                    <div class="ordering__input-holder">
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input _super-big form-control" type="text" id="entity-company-name"
+                          name="entity-company-name" placeholder="Название компании" required=""
+                          data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-company-name">Название компании</label>
+                      </div>
+                    </div>
+
+                    <div class="ordering__input-holder">
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="number" id="entity-inn" name="entity-inn"
+                          placeholder="ИНН" required="" data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-inn">ИНН</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="number" id="entity-kpp" name="entity-kpp"
+                          placeholder="КПП" required="" data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-kpp">КПП</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="number" id="entity-bik" name="entity-bik"
+                          placeholder="БИК" required="" data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-bik">БИК</label>
+                      </div>
+                    </div>
+
+                    <div class="ordering__input-holder">
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="text" id="entity-bank-name"
+                          name="entity-bank-name" placeholder="Название банка" required=""
+                          data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-bank-name">Название банка</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="number" id="entity-check-acc"
+                          name="entity-check-acc" placeholder="Р/С" required=""
+                          data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-check-acc">Р/С</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="number" id="entity-cor-acc"
+                          name="entity-cor-acc" placeholder="К/С" required=""
+                          data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-cor-acc">К/С</label>
+                      </div>
+                    </div>
+
+                    <div class="ordering__input-holder">
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input _super-big form-control" type="text" id="entity-legal-address"
+                          name="entity-legal-address" placeholder="Юридический адрес" required=""
+                          data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-legal-address">Юридический адрес</label>
+                      </div>
+                    </div>
+
+                    <div class="ordering__input-holder">
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input _super-big form-control" type="text" id="entity-actual-address"
+                          name="entity-actual-address" placeholder="Фактический адрес" required=""
+                          data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-actual-address">Фактический адрес</label>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- ФИО -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">ФИО</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__input-wrap js-desc">
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="entity-surname" name="entity-surname"
+                        placeholder="Фамилия" required="" data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="entity-surname">Фамилия</label>
+                    </div>
+
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="entity-name" name="entity-name"
+                        placeholder="Имя" required="" data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="entity-name">Имя</label>
+                    </div>
+
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="entity-otchestvo"
+                        name="entity-otchestvo" placeholder="Отчество" required=""
+                        data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="entity-otchestvo">Отчество</label>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Контакты -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Контакты</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__input-wrap js-desc">
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="tel" id="entity-phone" name="entity-phone"
+                        data-tel-input placeholder="Телефон" required=""
+                        data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="entity-phone">Телефон</label>
+                    </div>
+
+                    <div class="ordering__input-box form-group">
+                      <input class="ordering__input form-control" type="text" id="entity-email" name="entity-email"
+                        placeholder="E-mail" required="" data-pristine-required-message="необходимо заполнить поле">
+                      <label class="ordering__label" for="entity-email">E-mail</label>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Способ доставки -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">способ доставки</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__radio-wrap js-desc js-entity-delivery-method">
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="entity-pickup"
+                        name="entity-delivery-method[pickup]" checked>
+                      <label for="entity-pickup">Самовывоз</label>
+                    </div>
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="entity-delivery"
+                        name="entity-delivery-method[delivery]">
+                      <label for="entity-delivery">Доставка</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Адрес доставки -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Адрес доставки</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__delivery js-desc">
+                    <div class="ordering__input-wrap">
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input form-control" type="text" id="entity-city" placeholder="Город"
+                          name="entity-city" required="" data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-city">Город</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input _big form-control" type="text" id="entity-street"
+                          placeholder="Улица" name="entity-street" required=""
+                          data-pristine-required-message="необходимо заполнить поле">
+                        <label class="ordering__label" for="entity-street">Улица</label>
+                      </div>
+
+                      <div class="ordering__input-box form-group">
+                        <input class="ordering__input _small form-control" type="text" id="entity-apartment"
+                          name="entity-apartment" placeholder="Кв./Оф." required=""
+                          data-pristine-required-message="заполните поле">
+                        <label class="ordering__label" for="entity-apartment">Кв. / Оф.</label>
+                      </div>
+                    </div>
+                    <div class="ordering__map">
+                      <img src="./assets/img/ordering/map.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <!-- Способ оплаты -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">способ оплаты</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__radio-wrap js-desc">
+                    <div class="ordering__radio-box form-group">
+                      <input class="ordering__radio form-control" type="radio" id="entity-payment-account"
+                        name="entity-payment-method[account]" checked>
+                      <label for="entity-payment-account">Оплата по счёту</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Комментарии -->
+                <div class="ordering__point js-item active">
+                  <div class="ordering__point-header">
+                    <h2 class="ordering__point-title">Комментарии</h2>
+                    <div class="ordering__point-acc">
+                      <svg class="icon accordion">
+                        <use href="./assets/svg/sprite.svg#accordion"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ordering__textarea-wrap js-desc">
+                    <div class="ordering__textarea-box form-group">
+                      <textarea class="ordering__textarea form-control" name="entity-comments"></textarea>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Контент Итого в заказе -->
+              <div class="ordering__total">
+
+                <div class="ordering__total-inner">
+                  <div class="ordering__total-item">
+                    <p class="ordering__total-text">Количество</p>
+                    <span class="ordering__total-sum ordering__quantity">300</span>
+                  </div>
+
+                  <div class="ordering__total-item">
+                    <p class="ordering__total-text">Сумма</p>
+                    <span class="ordering__total-sum ordering__sum">600 300 руб.</span>
+                  </div>
+
+                  <div class="ordering__total-item">
+                    <p class="ordering__total-text">Доставка</p>
+                    <span class="ordering__total-sum ordering__shipping">15 000 руб.</span>
+                  </div>
+
+                  <div class="ordering__total-item">
+                    <p class="ordering__total-text">Итого</p>
+                    <span class="ordering__total-sum ordering__final">615 300 руб.</span>
+                  </div>
+                </div>
+
+                <button class="ordering__btn" type="submit">Оформить заказ</button>
+
+                <div class="ordering__checkbox-wrap form-group">
+                  <input type="checkbox" class="ordering__checkbox" id="privacy-policy" name="privacy-policy"
+                    required="" data-pristine-required-message="необходимо согласие">
+                  <label for="privacy-policy">Я согласен на обработку персональных данных, а также соглашаюсь с
+                    политикой конфиденциальности</label>
+                </div>
+
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </section>
+      @@include('_include/modals.html')
+      <div class="popup-callback js-modal-quick-order">
+        <form class="form-callback js-form-quick-order" name="quick-order" action="#2" method="get" novalidate
+          autocomplete="on">
+
+          <h2 class="form-callback__title">Форма заявки</h2>
+
+          <div class="form-callback__group form-group">
+            <label class="form-callback__label" for="form-quick-order-name">ФИО</label>
+            <input class="form__input form-control" id="form-quick-order-name" name="form-quick-order-name"
+              placeholder="Ваше ФИО" type="text" required="" data-pristine-required-message="необходимо заполнить поле">
+          </div>
+
+          <div class="form-callback__group form-group">
+            <label class="form-callback__label" for="form-quick-order-company-name">Названи компании</label>
+            <input class="form__input form-control" id="form-quick-order-company-name"
+              name="form-quick-order-company-name" placeholder="Названи компании" type="text" required=""
+              data-pristine-required-message="необходимо заполнить поле">
+          </div>
+
+          <div class="form-callback__group form-group">
+            <label class="form-callback__label" for="form-quick-order-phone">Телефон</label>
+            <input class="form__input form-control" data-tel-input id="form-quick-order-phone" maxlength="18"
+              name="form-quick-order-phone" placeholder="Телефон" type="tel" required=""
+              data-pristine-required-message="необходимо заполнить поле">
+          </div>
+
+          <div class="form-callback__group form-group">
+            <label class="form-callback__label" for="form-quick-order-email">E-mail</label>
+            <input class="form__input form-control" id="form-quick-order-email" name="form-quick-order-email"
+              placeholder="E-mail" type="email" required="" data-pristine-required-message="необходимо заполнить поле">
+          </div>
+
+          <div class="form-callback__group">
+            <button class="form-callback__submit" type="submit">Отправить запрос</button>
+          </div>
+
+          <div class="form-callback__checkbox form-group">
+            <input class="checkbox form-control" checked id="form-quick-order-policy" name="privacy-policy"
+              type="checkbox" required="" data-pristine-required-message="необходимо согласие">
+            <label for="form-quick-order-policy"><span>Я согласен на обработку персональных данных, а также соглашаюсь с
+                политикой конфиденциальности</span></label>
+          </div>
+
+        </form>
+        <div class="popup-callback__close js-close">
+          <svg class="close">
+            <use href="assets/svg/sprite.svg#mobile-menu-close-button"></use>
+          </svg>
+        </div>
+      </div>
+    </main>
+    @@include('_include/footer.html')
+
+  </div>
+  <div class="overlay"></div>
+  <script defer src="./assets/plugins/pristine/pristine.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="./js/ordering.js"></script>
+
+</body>
+
+</html>

@@ -6,6 +6,7 @@
     width: 144px;
     height: 50px;
   }
+
   @media (max-width: 767px) {
     width: 127px;
     height: 44px;
@@ -24,12 +25,14 @@
       width: 34px;
       height: 34px;
     }
+
     @media (max-width: 990px) {
       width: 30px;
       height: 30px;
     }
   }
-  .header__telegram svg{
+
+  .header__telegram svg {
     width: 43px;
     height: 43px;
 
@@ -37,6 +40,7 @@
       width: 36px;
       height: 36px;
     }
+
     @media (max-width: 990px) {
       width: 32px;
       height: 32px;
@@ -83,6 +87,7 @@
     width: 30px;
     height: 45px;
   }
+
   @media (max-width: 767px) {
     display: none;
   }
@@ -110,6 +115,7 @@
     width: 30px;
     height: 45px;
   }
+
   @media (max-width: 767px) {
     display: none;
   }
@@ -129,6 +135,7 @@
     width: 30px;
     height: 40px;
   }
+
   @media (max-width: 767px) {
     width: 20px;
     height: 26px;
@@ -150,6 +157,7 @@
     height: 12px;
     right: -18.35px;
   }
+
   @media (max-width: 767px) {
     width: 15.29px;
     height: 10px;
@@ -256,4 +264,11 @@
   width: 23px;
   height: 30px;
   fill: var(--secondary-color);
+}
+
+
+.icon.accordion {
+  width: 12px;
+  height: 18px;
+  transition: all .3s ease
 }
