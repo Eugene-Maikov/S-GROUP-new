@@ -314,6 +314,12 @@
     <path d="M6 6V0H8V6H14V8H8V14H6V8H0V6H6Z" fill="#262728"/>
   </symbol>
 
+  <!-- arrow accordion -->
+  <symbol id="accordion" viewBox="0 0 13 8">
+    <path d="M12.0713 6.15972L6.03554 2.63822e-07L-2.6925e-07 6.15972L1.88442 8L6.03554 3.76355L10.1868 8L12.0713 6.15972Z"/>
+  </symbol>
+
+
 </svg>
         <!-- <svg class="icon close">
                 <use href="./assets/svg/sprite.svg#close"></use>
