@@ -6,15 +6,19 @@
   background-color: #F7F8F9;
   padding-bottom: 60px;
 
+  @media(max-width: 1330px) {
+    padding-bottom: 30px;
+  }
+
   &__tabs-btn {
     border: none;
-    background: #E4E5E6;
+    background: var(--border-color);
     padding: 14px 18px;
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.02em;
-    color: #A8A9AA;
+    color: var(--gray-color);
 
     &:not(:last-child) {
       margin-right: 2px;
@@ -22,24 +26,40 @@
 
     &.is-active {
       background: #FFFFFF;
-      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1), inset 0px -3px 0px #5695CB;
-      color: #262728;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1), inset 0px -3px 0px var(--secondary-color);
+      color: var(--text-color-dark);
+    }
+
+    @media(max-width: 1330px) {
+      padding: 5px 20px 8px 20px;
     }
   }
 
   &__btns {
     display: flex;
     margin-bottom: 30px;
+
+    @media(max-width: 1330px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media(max-width: 990px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     width: 960px;
+
+    @media(max-width: 1330px) {
+      width: 710px;
+    }
   }
 
   &__total {
@@ -47,12 +67,22 @@
     background: #FFFFFF;
     padding: 22px 30px 25px;
 
+    @media(max-width: 1330px) {
+      padding: 16px 20px 20px 20px;
+      width: 210px;
+    }
+
     &-item {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px dashed #E4E5E6;
+      border-bottom: 1px dashed var(--border-color);
       padding-bottom: 4px;
       margin-bottom: 12px;
+
+      @media(max-width: 1330px) {
+        padding-bottom: 3px;
+        margin-bottom: 9px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -64,7 +94,11 @@
       font-size: 16px;
       line-height: 140%;
       letter-spacing: 0.02em;
-      color: #262728;
+      color: var(--text-color-dark);
+
+      @media(max-width: 1330px) {
+        font-size: 12px;
+      }
     }
 
     &-sum {
@@ -73,20 +107,37 @@
       line-height: 140%;
       text-align: right;
       letter-spacing: 0.02em;
-      color: #262728;
+      color: var(--text-color-dark);
+
+      @media(max-width: 1330px) {
+        font-size: 12px;
+      }
+      @media(max-width: 767px) {
+        font-size: 11px;
+      }
     }
   }
 
   &__btn {
     margin-top: 30px;
-    background: #5695CB;
+    background: var(--secondary-color);
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     border: none;
     padding: 14px 42px;
     width: 100%;
     color: #FFFFFF;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    @media(max-width: 1330px) {
+      margin-top: 20px;
+      padding: 7px 26px;
+      width: 100%;
+      font-size: 12px;
+    }
+    @media(max-width: 767px) {
+      font-size: 11px;
+    }
   }
 
   &__checkbox {
@@ -94,7 +145,7 @@
     z-index: -1;
     opacity: 0;
 
-    &+label::after {
+    & + label::after {
       content: "";
       min-width: 20px;
       min-height: 20px;
@@ -103,49 +154,75 @@
       display: flex;
       order: -1;
       margin-right: 12px;
-      border: 1px solid #E4E5E6;
+      border: 1px solid var(--border-color);
       border-radius: 4px;
       position: absolute;
       left: 0;
-      top: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media(max-width: 1330px) {
+        min-width: 16px;
+        min-height: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        margin-right: 5px;
+      }
     }
 
-    &:checked+label::after {
+    &:checked + label::after {
       content: "";
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='13' height='10' viewBox='0 0 13 10' fill='none'%3e%3cpath d='M10.5183 0L4.64823 5.87009L2.06498 3.28684L0 5.35187L4.64823 10L12.5833 2.06498L10.5183 0Z' fill='%23262728'/%3e%3c/svg%3e");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
-      background-color: #F5F6F7;
-      border-color: #E4E5E6;
+      background-color: var(--light-color);
+      border-color: var(--border-color);
       display: flex;
     }
 
-    &+label {
+    & + label {
       font-weight: 400;
       font-size: 12px;
       line-height: 140%;
       letter-spacing: 0.02em;
-      color: #A8A9AA;
+      color: var(--gray-color);
       user-select: none;
       padding-left: 30px;
       display: block;
+
+      @media(max-width: 1330px) {
+        font-size: 9px;
+        padding-left: 24px;
+      }
     }
 
     &-wrap {
       position: relative;
       margin-top: 26px;
+
+      @media(max-width: 1330px) {
+        margin-top: 17px;
+      }
     }
   }
 
   &__point {
     background: #FFFFFF;
-    padding: 25px 30px 0px;
+    padding: 25px 30px 0;
     margin-bottom: 10px;
+
+    @media(max-width: 1330px) {
+      padding: 16px 20px 0 20px;
+    }
 
     &.active .ordering__input-wrap {
       max-height: fit-content;
       padding-bottom: 30px;
+
+      @media(max-width: 1330px) {
+        padding-bottom: 20px;
+      }
     }
 
     &.active .icon.accordion {
@@ -155,16 +232,28 @@
     &.active .ordering__radio-wrap {
       max-height: fit-content;
       padding-bottom: 30px;
+
+      @media(max-width: 1330px) {
+        padding-bottom: 20px;
+      }
     }
 
     &.active .ordering__textarea-wrap {
       max-height: fit-content;
       padding-bottom: 30px;
+
+      @media(max-width: 1330px) {
+        padding-bottom: 15px;
+      }
     }
 
     &.active .ordering__delivery {
       max-height: fit-content;
       padding-bottom: 30px;
+
+      @media(max-width: 1330px) {
+        padding-bottom: 20px;
+      }
     }
 
     &-header {
@@ -178,29 +267,44 @@
       line-height: 140%;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: #262728;
+      color: var(--text-color-dark);
+
+      @media(max-width: 1330px) {
+        font-size: 12px;
+      }
     }
 
     &-acc {
-      padding: 0px 8px;
+      padding: 0 8px;
       display: inline-block;
       cursor: pointer;
     }
 
     &.active .ordering__point-header {
       padding-bottom: 14px;
-      border-bottom: 1px solid #E4E5E6;
+      border-bottom: 1px solid var(--border-color);
+
+      @media(max-width: 1330px) {
+        padding-bottom: 0;
+      }
     }
   }
 
   &__input {
-    background: #F5F6F7;
-    border: 1px solid #E4E5E6;
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
     border-radius: 3px;
     width: 280px;
     height: 50px;
     padding: 0 20px;
     outline: none;
+
+    @media(max-width: 1330px) {
+      height: 30px;
+      padding: 0 10px;
+      font-size: 11px;
+      width: 210px;
+    }
 
     &-holder {
       display: flex;
@@ -217,6 +321,10 @@
       margin-right: 30px;
       position: relative;
 
+      @media(max-width: 1330px) {
+        margin-right: 20px;
+      }
+
       &:last-of-type {
         margin-right: 0;
       }
@@ -232,6 +340,10 @@
       margin-top: 20px;
       display: flex;
 
+      @media(max-width: 1330px) {
+        margin-top: 10px;
+      }
+
       &._big-container {
         flex-direction: column;
       }
@@ -239,14 +351,27 @@
 
     &._big {
       width: 460px;
+
+      @media(max-width: 1330px) {
+        width: 360px;
+      }
     }
 
     &._super-big {
       width: 900px;
+
+      @media(max-width: 1330px) {
+        width: 670px;
+      }
     }
 
     &._small {
       width: 100px;
+
+      @media(max-width: 1330px) {
+        width: 60px;
+        margin-bottom: 3px;
+      }
     }
   }
 
@@ -255,8 +380,12 @@
     font-size: 12px;
     line-height: 140%;
     letter-spacing: 0.02em;
-    color: #A8A9AA;
+    color: var(--gray-color);
     margin-bottom: 5px;
+
+    @media(max-width: 1330px) {
+      font-size: 9px;
+    }
   }
 
   &__radio {
@@ -267,6 +396,10 @@
       margin-top: 20px;
       max-height: 0;
       overflow: hidden;
+
+      @media(max-width: 1330px) {
+        margin-top: 9px;
+      }
     }
 
 
@@ -274,89 +407,123 @@
       position: relative;
       margin-bottom: 20px;
 
+      @media(max-width: 1330px) {
+        margin-bottom: 8px;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
     }
 
-    &+label {
+    & + label {
       user-select: none;
     }
   }
 
   &__map {
     margin-top: 20px;
+
+    @media(max-width: 1330px) {
+      margin-top: 0;
+    }
   }
 
   &__delivery {
     max-height: 0;
     overflow: hidden;
     margin-top: 20px;
+
+    @media(max-width: 1330px) {
+      margin-top: 0;
+    }
   }
 
 
-  input[type=radio]:checked+label:before,
-  input[type=radio]:not(:checked)+label:before {
+  input[type=radio]:checked + label:before,
+  input[type=radio]:not(:checked) + label:before {
     border-radius: 100%;
   }
 
-  input[type=radio]:checked+label:before,
-  input[type=radio]:not(:checked)+label:before {
+  input[type=radio]:checked + label:before,
+  input[type=radio]:not(:checked) + label:before {
     content: "";
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 24px;
     height: 24px;
-    border: 2px solid #5695CB;
+    border: 2px solid var(--secondary-color);
     background-color: #ffffff;
+
+    @media(max-width: 1330px) {
+      width: 16px;
+      height: 16px;
+    }
   }
 
 
-  input[type=radio]:not(:checked)+label:before {
+  input[type=radio]:not(:checked) + label:before {
     content: "";
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 24px;
     height: 24px;
-    border: 2px solid #E4E5E6;
+    border: 2px solid var(--border-color);
     background-color: #ffffff;
+
+    @media(max-width: 1330px) {
+      width: 16px;
+      height: 16px;
+    }
   }
 
-  input[type=radio]:checked+label,
-  input[type=radio]:not(:checked)+label {
+  input[type=radio]:checked + label,
+  input[type=radio]:not(:checked) + label {
     display: inline-block;
     position: relative;
     padding-left: 32px;
     line-height: 20px;
     cursor: pointer;
+
+    @media(max-width: 1330px) {
+      font-size: 12px;
+    }
+    @media(max-width: 767px) {
+      font-size: 11px;
+    }
   }
 
-  input[type=radio]:checked+label:after {
+  input[type=radio]:checked + label:after {
     opacity: 1;
   }
 
-  input[type=radio]:not(:checked)+label:after {
+  input[type=radio]:not(:checked) + label:after {
     opacity: 0;
   }
 
-  input[type=radio]:not(:checked)+label {
-    color: #A8A9AA;
+  input[type=radio]:not(:checked) + label {
+    color: var(--gray-color);
   }
 
-  input[type=radio]:checked+label:after,
-  input[type=radio]:not(:checked)+label:after {
+  input[type=radio]:checked + label:after,
+  input[type=radio]:not(:checked) + label:after {
     left: 4px;
     top: 4px;
     width: 16px;
     height: 16px;
     border-radius: 100%;
-    background-color: #5695CB;
+    background-color: var(--secondary-color);
+
+    @media(max-width: 1330px) {
+      width: 8px;
+      height: 8px;
+    }
   }
 
-  input[type=radio]:checked+label:after,
-  input[type=radio]:not(:checked)+label:after {
+  input[type=radio]:checked + label:after,
+  input[type=radio]:not(:checked) + label:after {
     content: "";
     position: absolute;
     -webkit-transition: all 0.2s ease;
@@ -364,8 +531,8 @@
     transition: all 0.2s ease;
   }
 
-  input[type=radio]:checked+label,
-  input[type=radio]:not(:checked)+label {
+  input[type=radio]:checked + label,
+  input[type=radio]:not(:checked) + label {
     display: inline-block;
     position: relative;
     padding-left: 32px;
@@ -381,27 +548,43 @@
     margin: 0;
     padding: 0;
     line-height: 1;
-  }
 
+    @media(max-width: 1330px) {
+      bottom: -16px;
+    }
+  }
 
   &__textarea {
     width: 900px;
     height: 150px;
-    background: #F5F6F7;
-    border: 1px solid #E4E5E6;
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
     border-radius: 3px;
     outline: none;
     resize: none;
     padding: 6px 20px;
 
+    @media(max-width: 1330px) {
+      width: 100%;
+      height: 100px;
+    }
+
     &-box {
       margin-top: 20px;
+
+      @media(max-width: 1330px) {
+        margin-top: 10px;
+      }
     }
 
     &-wrap {
       max-height: 0;
       overflow: hidden;
       margin-top: 20px;
+
+      @media(max-width: 1330px) {
+        margin-top: 0;
+      }
     }
   }
 }

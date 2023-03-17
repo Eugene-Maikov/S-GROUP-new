@@ -30,6 +30,7 @@
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --light-color: #F5F6F7;
   --gray-color: #A8A9AA;
+  --border-color: #E4E5E6;
   --secondary-color: #5695CB;
   --primary-color: #27364B;
   --text-color-dark: #262728;
