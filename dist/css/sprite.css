@@ -286,4 +286,12 @@
   height: 30px;
   fill: var(--secondary-color);
 }
+
+.icon.accordion {
+  width: 12px;
+  height: 18px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 /*# sourceMappingURL=sprite.css.map */
