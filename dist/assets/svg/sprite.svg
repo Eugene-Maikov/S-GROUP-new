@@ -257,6 +257,7 @@
     <path d="M16 5.89474V10.1053H0V5.89474H16Z"/>
     <path d="M0 11.7895V16H16V11.7895H0Z"/>
   </symbol>
+
   <!-- basket -->
   <symbol id="basket" viewBox="0 0 14 16">
     <path d="M12.7748 4.00715C12.7577 3.64864 12.4621 3.36683 12.1032 3.36683H10.0201V1.5691C10.0201 0.703952 9.31613 0 8.45098 0H4.86452C3.99941 0 3.29542 0.703912 3.29542 1.5691V3.36683H1.21225C0.853373 3.36683 0.557726 3.64864 0.540658 4.00715L0.000770537 15.2954C-0.00802584 15.4792 0.0587943 15.6584 0.185696 15.7915C0.312558 15.9247 0.488566 16 0.672442 16H12.6432C12.8271 16 13.003 15.9247 13.1299 15.7915C13.2569 15.6584 13.3237 15.4792 13.3149 15.2954L12.7748 4.00715ZM4.64045 1.5691C4.64045 1.44555 4.74097 1.34492 4.86456 1.34492H8.45102C8.57457 1.34492 8.67512 1.44551 8.67512 1.5691V3.36683H4.64049L4.64045 1.5691Z"/>
@@ -305,6 +306,9 @@
       </filter>
     </defs>
   </symbol>
+
+<!-- ...................... minus & plus ...................... -->
+
   <!-- single-catalog (minus) -->
   <symbol id="minus" viewBox="0 0 14 2">
     <rect width="14" height="2" fill="#262728"/>
@@ -313,10 +317,44 @@
   <symbol id="plus" viewBox="0 0 14 14">
     <path d="M6 6V0H8V6H14V8H8V14H6V8H0V6H6Z" fill="#262728"/>
   </symbol>
+  <!-- btn minus -->
+  <symbol id="btn-minus" viewBox="0 0 14 2">
+    <rect width="14" height="2" fill="#262728"/>
+  </symbol>
+  <!-- btn plus -->
+  <symbol id="btn-plus" viewBox="0 0 14 14">
+    <path d="M6 6V0H8V6H14V8H8V14H6V8H0V6H6Z" fill="#262728"/>
+  </symbol>
+<!-- ...................... end Minus & Plus ...................... -->
+
 
   <!-- arrow accordion -->
   <symbol id="accordion" viewBox="0 0 13 8">
     <path d="M12.0713 6.15972L6.03554 2.63822e-07L-2.6925e-07 6.15972L1.88442 8L6.03554 3.76355L10.1868 8L12.0713 6.15972Z"/>
+  </symbol>
+
+  <!-- zoom -->
+  <symbol id="zoom" viewBox="0 0 36 36">
+    <g filter="url(#filter0_d_670_19699)">
+      <path d="M17.6972 13.421H15.9867V15.9867H13.421V17.6972H15.9867V20.263H17.6972V17.6972H20.263V15.9867H17.6972V13.421Z"
+            fill="white"/>
+      <path d="M16.842 10C13.0695 10 10 13.0695 10 16.842C10 20.6145 13.0695 23.684 16.842 23.684C18.36 23.6837 19.8343 23.1755 21.0301 22.2403L24.7898 26L25.9991 24.7907L22.2395 21.031C23.1751 19.8351 23.6836 18.3604 23.684 16.842C23.684 13.0695 20.6145 10 16.842 10ZM16.842 21.9735C14.012 21.9735 11.7105 19.672 11.7105 16.842C11.7105 14.012 14.012 11.7105 16.842 11.7105C19.672 11.7105 21.9735 14.012 21.9735 16.842C21.9735 19.672 19.672 21.9735 16.842 21.9735Z"
+            fill="white"/>
+    </g>
+    <defs>
+      <filter id="filter0_d_670_19699" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                       result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="5"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_670_19699"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_670_19699" result="shape"/>
+      </filter>
+    </defs>
   </symbol>
 
 

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Доставка и оплата</title>
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport" />
+
+  <link href="css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="css/global.css" rel="stylesheet" type="text/css" />
+  <link href="css/sprite.css" rel="stylesheet" type="text/css" />
+  <link href="css/header-and-footer.css" rel="stylesheet" type="text/css" />
+  <link href="./css/shipping-payment.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include('_include/header.html')
+    <main class="main">
+      <section class="margin-top-header">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="javascript:void(0)">Категории</a>
+              </li>
+              <li class="breadcrumbs__item">ЛДСП</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="logistics">
+        <div class="container">
+          <h1 class="main-title main-title-dark">Доставка и оплата</h1>
+          <div class="tabs-container">
+            <div class="tabs-container__btns logistics__btns">
+              <button class="js-tabs-btn is-active logistics__tabs-btn" type="button">
+                Тарифы
+              </button>
+              <button class="js-tabs-btn logistics__tabs-btn" type="button">
+                Калькулятор доставки
+              </button>
+              <button class="js-tabs-btn logistics__tabs-btn" type="button">
+                Способы оплаты
+              </button>
+            </div>
+
+            <div class="logistics__inner">
+              <!-- Контент Тарифы -->
+              <div class="tabs-container__item is-active logistics__fiz logistics__item">
+                <div class="logistics__rates">
+                  <div class="logistics__rates-heading">
+                    <h2 class="logistics__rates-title">Тарифы</h2>
+                  </div>
+
+                  <div class="logistics__rates-box">
+                    <form action="#1" class="logistics__rates-form">
+                      <div class="logistics__rates-row js-sort-box">
+                        <input class="logistics__rates-input js-sort-btn" type="text" readonly
+                          value="Доставка из Нижнего Новгорода" />
+                        <ul class="logistics__rates-list js-sort-list">
+                          <li class="js-sort-item">Доставка из Москвы</li>
+                          <li class="js-sort-item">Доставка из Уфы</li>
+                          <li class="js-sort-item">Доставка из Сарова</li>
+                        </ul>
+
+                        <div class="logistics__rates-acc">
+                          <svg class="icon accordion">
+                            <use href="./assets/svg/sprite.svg#accordion"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="logistics__rates-row js-sort-box">
+                        <input class="logistics__rates-input js-sort-btn" type="text" readonly
+                          value="Прайс на ГАЗЕЛЬ" />
+                        <ul class="logistics__rates-list js-sort-list">
+                          <li class="js-sort-item">Прайс на Жигули</li>
+                          <li class="js-sort-item">Прайс на Белаз</li>
+                          <li class="js-sort-item">Прайс на Велосипед</li>
+                        </ul>
+
+                        <div class="logistics__rates-acc">
+                          <svg class="icon accordion">
+                            <use href="./assets/svg/sprite.svg#accordion"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="logistics__rates-table">
+                    <div class="logistics__rates-header">
+                      <div class="logistics__rates-back">Город отправления</div>
+                      <div class="logistics__rates-forward">Город назначения</div>
+                      <div class="logistics__rates-weight">Вес</div>
+                      <div class="logistics__rates-calculation">Безнал. расчет без НДС руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 000 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Крунг-Тхеп-Маха-Накхон</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 100,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 10,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">15 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">
+                        Нижний новгород, Советский район Нижний новгород, Советский район Нижний
+                        новгород, Советский район Нижний новгород, Советский район
+                      </div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">199 500 руб.</div>
+                    </div>
+                    <div class="logistics__rates-item">
+                      <div class="logistics__rates-back">Нижний Новгород</div>
+                      <div class="logistics__rates-forward">Нижний новгород, Советский район</div>
+                      <div class="logistics__rates-weight">до 1,5 тонн</div>
+                      <div class="logistics__rates-calculation">1 500 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Контент Калькулятор доставки-->
+              <div class="tabs-container__item logistics__yur logistics__item">
+                <div class="logistics__calс">
+                  <div class="logistics__calс-header">
+                    <h2 class="logistics__calс-title">Калькулятор доставки</h2>
+                  </div>
+                  <div class="logistics__calс-box">
+                    <div class="logistics__calс-item js-item">
+                      <div class="logistics__calс-name">
+                        <p>МДФ ламинированный БЕЛЫЙ, Кастамону</p>
+                        <div class="logistics__rates-acc">
+                          <svg class="icon accordion">
+                            <use href="./assets/svg/sprite.svg#accordion"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="logistics__calс-acc js-desc">
+                        <div class=" logistics__calс-option">
+                          <div class="logistics__calс-point">
+                            <p>Сорт</p>
+                            <span>1сорт(F)</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>Листов в упаковке</p>
+                            <span>38</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>Вес упаковки</p>
+                            <span>2800</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>ОПТ от 1 пачки</p>
+                            <span>4800</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>Розница</p>
+                            <span>4900</span>
+                          </div>
+                        </div>
+
+                        <form class="logistics__calс-form">
+                          <div class="logistics__calс-inner">
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-sheets">Листов</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-sheets" type="number" value="10000"
+                                  min="0" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-packages">Упаковок</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-packages" type="number" value="263"
+                                  min="0" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-square-meters">М2</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-square-meters" type="number"
+                                  value="57925.22" min="0" step="any" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-cubic-meters">М3</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-cubic-meters" type="number"
+                                  value="57925.22" min="0" step="any" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="Weight">Вес</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="Weight" type="number" value="736400" min="0" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="logistics__calс-block">
+                            <div>
+                              <p class="logistics__calс-desc">Цена</p>
+                              <p class="logistics__calс-price">12 544 001 руб.</p>
+                            </div>
+                            <button class="logistics__calс-btn" type="submit">заказать</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="logistics__calс-item active js-item">
+                      <div class="logistics__calс-name">
+                        <p>МДФ ШЛ 6 мм, 2800*2070, Кастамону</p>
+                        <div class="logistics__rates-acc">
+                          <svg class="icon accordion">
+                            <use href="./assets/svg/sprite.svg#accordion"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="logistics__calс-acc js-desc">
+                        <div class=" logistics__calс-option">
+                          <div class="logistics__calс-point">
+                            <p>Сорт</p>
+                            <span>1сорт(F)</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>Листов в упаковке</p>
+                            <span>38</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>Вес упаковки</p>
+                            <span>2800</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>ОПТ от 1 пачки</p>
+                            <span>4800</span>
+                          </div>
+                          <div class="logistics__calс-point">
+                            <p>Розница</p>
+                            <span>4900</span>
+                          </div>
+                        </div>
+
+                        <form class="logistics__calс-form">
+                          <div class="logistics__calс-inner">
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-sheets">Листов</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-sheets" type="number" value="10000"
+                                  min="0" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-packages">Упаковок</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-packages" type="number" value="263"
+                                  min="0" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-square-meters">М2</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-square-meters" type="number"
+                                  value="57925.22" min="0" step="any" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="number-cubic-meters">М3</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="number-cubic-meters" type="number"
+                                  value="57925.22" min="0" step="any" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="logistics__calс-holder">
+                              <label class="logistics__calс-label" for="Weight">Вес</label>
+                              <div class="logistics__calс-content">
+                                <p class="btn-minus btn-count">
+                                  <svg class="icon-btn-minus">
+                                    <use href="./assets/svg/sprite.svg#btn-minus"></use>
+                                  </svg>
+                                </p>
+                                <input class="logistics__calс-input" id="Weight" type="number" value="736400" min="0" />
+                                <p class="btn-plus btn-count">
+                                  <svg class="icon-btn-plus">
+                                    <use href="./assets/svg/sprite.svg#btn-plus"></use>
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="logistics__calс-block">
+                            <div>
+                              <p class="logistics__calс-desc">Цена</p>
+                              <p class="logistics__calс-price">12 544 001 руб.</p>
+                            </div>
+                            <button class="logistics__calс-btn" type="submit">заказать</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Контент Способы оплаты -->
+              <div class="tabs-container__item logistics__yur logistics__item">
+                <div class="logistics__point">
+                  <div class="logistics__point-header">
+                    <h2 class="logistics__point-title">Способы оплаты</h2>
+                  </div>
+
+                  <div class="logistics__point-box">
+                    <h3 class="logistics__point-subtitle">
+                      Широкому кругу (специалистов) участие в формировании
+                    </h3>
+                    <p class="logistics__point-description">
+                      Широкому кругу (специалистов) участие в формировании системы обучения
+                      кадров, соответствует насущным потребностям. Повседневная практика
+                      показывает, что консультация с широким активом способствует подготовки и
+                      реализации новых предложений.
+                    </p>
+                  </div>
+
+                  <div class="logistics__point-box">
+                    <h3 class="logistics__point-subtitle">
+                      Широкому кругу (специалистов) участие в формировании
+                    </h3>
+                    <p class="logistics__point-description">
+                      Широкому кругу (специалистов) участие в формировании системы обучения
+                      кадров, соответствует насущным потребностям. Повседневная практика
+                      показывает, что консультация с широким активом способствует подготовки и
+                      реализации новых предложений.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('_include/modals.html')
+    </main>
+    @@include('_include/footer.html')
+  </div>
+  <div class="overlay"></div>
+  <script defer src="./assets/plugins/pristine/pristine.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="./js/shipping-payment.js"></script>
+</body>
+
+</html>

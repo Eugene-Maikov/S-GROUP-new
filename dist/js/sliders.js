@@ -365,18 +365,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   var singleCardSliderThumbs = new Swiper(".single-card__slider-thumbs", {
     spaceBetween: 10,
-    slidesPerView: 4,
+    slidesPerView: 5,
     freeMode: true,
     watchSlidesProgress: true
   });
   var singleCardSlider = new Swiper(".single-card__slider", {
-    spaceBetween: 10,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: ".single-card__next",
+      prevEl: ".single-card__prev"
     },
     thumbs: {
-      swiper: swiper
+      swiper: singleCardSliderThumbs
     }
   });
 });

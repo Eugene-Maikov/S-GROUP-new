@@ -309,12 +309,22 @@
   height: 14px;
   fill: var(--text-color-dark);
 }
+.icon-btn-minus {
+  width: 14px;
+  height: 2px;
+}
+
+.icon-btn-plus {
+  width: 14px;
+  height: 14px;
+}
+
 
 .single-card__prev,
 .single-card__next {
-  width: 13px;
-  height: 20px;
-  background: #FFFFFF;
+  width: 23px;
+  height: 30px;
+  fill: #FFFFFF;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 5px;
   cursor: pointer;
@@ -325,6 +335,10 @@
   @media (max-width: 767px) {
     display: none;
   }
+}
+.single-card__zoom{
+  width: 40px;
+  height: 40px;
 }
 
 // ---------------------------- end Single-card -------------------------------
