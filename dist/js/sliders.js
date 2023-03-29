@@ -378,5 +378,34 @@ document.addEventListener("DOMContentLoaded", function () {
       swiper: singleCardSliderThumbs
     }
   });
+  var similarProductsSlider = new Swiper(".similar-products__slider", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".similar-products-next",
+      prevEl: ".similar-products-prev"
+    },
+    pagination: {
+      el: ".similar-products-pagination",
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      990: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      1330: {
+        spaceBetween: 30
+      }
+    }
+  });
 });
 //# sourceMappingURL=sliders.js.map

@@ -296,6 +296,11 @@
 .availability-icon-notHave {
   width: 24px;
   height: 24px;
+
+  @media (max-width: 1330px) {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .minus {
@@ -329,9 +334,7 @@
   padding: 5px;
   cursor: pointer;
 
-  @media (max-width: 1330px) {
 
-  }
   @media (max-width: 767px) {
     display: none;
   }
@@ -339,6 +342,18 @@
 .single-card__zoom{
   width: 40px;
   height: 40px;
+}
+
+.similar-products-prev svg,
+.similar-products-next svg{
+  width: 13px;
+  height: 20px;
+  fill: var(--text-color-dark);
+
+  @media (max-width: 1330px) {
+    width: 10px;
+    height: 15px;
+  }
 }
 
 // ---------------------------- end Single-card -------------------------------
