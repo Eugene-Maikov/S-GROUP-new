@@ -398,6 +398,16 @@ document.addEventListener("DOMContentLoaded", () => {
     thumbs: {
       swiper: singleCardSliderThumbs,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+      },
+      525: {
+        slidesPerView: 1,
+      }
+
+    },
   });
   const similarProductsSlider = new Swiper(".similar-products__slider", {
     slidesPerView: 5,

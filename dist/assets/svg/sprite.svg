@@ -264,47 +264,13 @@
   </symbol>
   <!-- single-catalog (have) -->
   <symbol id="have" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="12" fill="#5BB318"/>
-    <g filter="url(#filter0_d_670_19670)">
       <path d="M16.5183 7L10.6482 12.8701L8.06498 10.2868L6 12.3519L10.6482 17L18.5833 9.06498L16.5183 7Z"
             fill="white"/>
-    </g>
-    <defs>
-      <filter id="filter0_d_670_19670" x="4" y="6" width="16.584" height="14" filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                       result="hardAlpha"/>
-        <feOffset dy="1"/>
-        <feGaussianBlur stdDeviation="1"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_670_19670"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_670_19670" result="shape"/>
-      </filter>
-    </defs>
   </symbol>
   <!-- single-catalog (notHave) -->
   <symbol id="notHave" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="12" fill="#E64848"/>
-    <g filter="url(#filter0_d_670_19665)">
       <path d="M17 8.42857L15.5714 7L12 10.5714L8.42857 7L7 8.42857L10.5714 12L7 15.5714L8.42857 17L12 13.4286L15.5714 17L17 15.5714L13.4286 12L17 8.42857Z"
             fill="white"/>
-    </g>
-    <defs>
-      <filter id="filter0_d_670_19665" x="5" y="6" width="14" height="14" filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                       result="hardAlpha"/>
-        <feOffset dy="1"/>
-        <feGaussianBlur stdDeviation="1"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_670_19665"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_670_19665" result="shape"/>
-      </filter>
-    </defs>
   </symbol>
 
 <!-- ...................... minus & plus ...................... -->

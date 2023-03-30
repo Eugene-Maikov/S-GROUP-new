@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Работа</title>
+	<title>Детальная страница</title>
 	<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
 
 	<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
@@ -35,10 +35,6 @@
 				<div class="single-card__wrapper">
 					<div class="single-card__inner">
 						<div class="single-card__images">
-							<!--							<picture>-->
-							<!--								<source srcset="assets/img/single-card.webp" type="image/webp">-->
-							<!--								<img alt="" src="assets/img/single-card.png">-->
-							<!--							</picture>-->
 							<div class="swiper single-card__slider">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
@@ -73,7 +69,7 @@
 										<img src="assets/img/about-1.jpg"/>
 									</div>
 									<div class="swiper-slide">
-										<img src="assets/img/catalog-gallery.jpg"/>
+										<img src="assets/img/people-1.jpg"/>
 									</div>
 								</div>
 							</div>
@@ -100,7 +96,7 @@
 								<div class="single-card__availability-title">Наличие:</div>
 								<ul class="single-card__availability-list">
 									<li class="single-card__availability-item">
-										<div class="single-card__availability-icon">
+										<div class="single-card__availability-icon have">
 											<svg class="availability-icon-have">
 												<use href="assets/svg/sprite.svg#have"></use>
 											</svg>
@@ -108,7 +104,7 @@
 										<div class="single-card__availability-location">Нижний Новгород</div>
 									</li>
 									<li class="single-card__availability-item">
-										<div class="single-card__availability-icon">
+										<div class="single-card__availability-icon not-have">
 											<svg class="availability-icon-notHave">
 												<use href="assets/svg/sprite.svg#notHave"></use>
 											</svg>
@@ -144,13 +140,13 @@
 						<div class="single-card__counting-price">2 001 руб./мм</div>
 						<div class="single-card__counting-quantity">
 							<div class="single-card__counting-remove">
-								<svg class="minus">
+								<svg class="icon-btn-minus">
 									<use href="assets/svg/sprite.svg#minus"></use>
 								</svg>
 							</div>
-							<div class="single-card__counting-number">1</div>
+							<input class="single-card__counting-number" id="number-count" type="number" value="1" min="1" step="any">
 							<div class="single-card__counting-add">
-								<svg class="plus">
+								<svg class="icon-btn-plus">
 									<use href="assets/svg/sprite.svg#plus"></use>
 								</svg>
 							</div>

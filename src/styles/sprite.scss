@@ -303,25 +303,24 @@
   }
 }
 
-.minus {
-  width: 14px;
-  height: 2px;
-  fill: var(--text-color-dark);
-}
-
-.plus {
-  width: 14px;
-  height: 14px;
-  fill: var(--text-color-dark);
-}
 .icon-btn-minus {
   width: 14px;
   height: 2px;
+
+  @media (max-width: 1330px) {
+    width: 12px;
+    height: 2px;
+  }
 }
 
 .icon-btn-plus {
   width: 14px;
   height: 14px;
+
+  @media (max-width: 1330px) {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 
@@ -335,7 +334,7 @@
   cursor: pointer;
 
 
-  @media (max-width: 767px) {
+  @media (max-width: 525px) {
     display: none;
   }
 }
