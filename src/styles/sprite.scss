@@ -360,5 +360,10 @@
 .icon.accordion {
   width: 12px;
   height: 18px;
-  transition: all .3s ease
+  transition: all .3s ease;
+
+  @media (max-width: 1330px) {
+    width: 8px;
+    height: 12px;
+  }
 }
