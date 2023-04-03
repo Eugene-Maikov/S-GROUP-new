@@ -461,26 +461,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }); // Счетчик - 1 +
 
   var handleCounter = function handleCounter(remove, add, input) {
-    var removeBtn = document.querySelector(remove);
-    var addBtn = document.querySelector(add);
-    var inputField = document.querySelector(input);
+    var itemsBlock = document.querySelectorAll('.shopping-item');
 
-    if (removeBtn && addBtn && inputField) {
-      var counter = 1;
-      addBtn.addEventListener('click', function () {
-        counter++;
-        inputField.value = counter;
-      });
-      removeBtn.addEventListener('click', function () {
-        if (!counter <= 0) {
-          counter--;
+    if (itemsBlock) {
+      itemsBlock.forEach(function (item) {
+        var removeBtn = item.querySelector(remove);
+        var addBtn = item.querySelector(add);
+        var inputField = item.querySelector(input);
+        var counter = 1;
+        addBtn.addEventListener('click', function () {
+          counter++;
           inputField.value = counter;
-        }
+        });
+        removeBtn.addEventListener('click', function () {
+          if (!counter <= 0) {
+            counter--;
+            inputField.value = counter;
+          }
+        });
       });
     }
   };
 
-  handleCounter('.single-card__counting-remove', '.single-card__counting-add', '.single-card__counting-number');
   handleCounter('.shopping-item__counting-remove', '.shopping-item__counting-add', '.shopping-item__counting-number');
 });
 //# sourceMappingURL=main.js.map
