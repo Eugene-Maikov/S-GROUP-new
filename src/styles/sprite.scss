@@ -367,3 +367,13 @@
     height: 12px;
   }
 }
+
+.icon-delete{
+  width: 13px;
+  height: 16px;
+
+  @media (max-width: 1330px) {
+    width: 10px;
+    height: 12px;
+  }
+}

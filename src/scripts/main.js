@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("paste", onPhonePaste);
   }
 
+  // Модальное окно
   let handleModalPopup = function handleModalPopup(btn, blockModal) {
     let btns = document.querySelectorAll(btn)
     let modal = document.querySelector(blockModal)
@@ -459,6 +460,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+
+
+  // Счетчик - 1 +
+  const handleCounter = (remove, add, input) => {
+    const removeBtn = document.querySelector(remove)
+    const addBtn = document.querySelector(add)
+    const inputField = document.querySelector(input)
+
+
+
+    if (removeBtn && addBtn && inputField){
+      let counter = 1
+      addBtn.addEventListener('click', () => {
+        counter++
+        inputField.value = counter
+      })
+      removeBtn.addEventListener('click', () => {
+        if (!counter <= 0) {
+          counter--
+          inputField.value = counter
+        }
+      })
+    }
+
+  }
+  handleCounter('.single-card__counting-remove', '.single-card__counting-add', '.single-card__counting-number')
+  handleCounter('.shopping-item__counting-remove', '.shopping-item__counting-add', '.shopping-item__counting-number')
 
 })
 

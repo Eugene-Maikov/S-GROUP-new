@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const handleGroupElements = () => {
     const filterGroupElements = document.querySelectorAll('.sidebar-filter__head')
 
-    if(filterGroupElements){
+    if (filterGroupElements) {
       filterGroupElements.forEach((el) => {
         el.addEventListener('click', () => {
           el.nextElementSibling.classList.toggle('active')
@@ -33,36 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Счетчик - 1 +
-  const handleCounter = () => {
-    const remove = document.querySelector('.single-card__counting-remove')
-    const add = document.querySelector('.single-card__counting-add')
-    const input = document.querySelector('.single-card__counting-number')
-
-    let counter = 1
-
-    add.addEventListener('click', () => {
-      counter++
-      input.value = counter
-    })
-    remove.addEventListener('click', () => {
-      if(!counter <= 0) {
-        counter--
-        input.value = counter
-      }
-    })
-
-
-  }
-
   handleGroupElements()
   handleFilterModal()
-  handleCounter()
 
   Fancybox.bind('[data-fancybox="gallery"]', {
     // Your custom options
   })
-
 
 
 })

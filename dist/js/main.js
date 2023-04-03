@@ -171,7 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", onPhoneInput);
     input.addEventListener("keydown", onPhoneKeyDown);
     input.addEventListener("paste", onPhonePaste);
-  }
+  } // Модальное окно
+
 
   var handleModalPopup = function handleModalPopup(btn, blockModal) {
     var btns = document.querySelectorAll(btn);
@@ -457,6 +458,29 @@ document.addEventListener("DOMContentLoaded", function () {
         switchPropertyText(item);
       }, true);
     }
-  });
+  }); // Счетчик - 1 +
+
+  var handleCounter = function handleCounter(remove, add, input) {
+    var removeBtn = document.querySelector(remove);
+    var addBtn = document.querySelector(add);
+    var inputField = document.querySelector(input);
+
+    if (removeBtn && addBtn && inputField) {
+      var counter = 1;
+      addBtn.addEventListener('click', function () {
+        counter++;
+        inputField.value = counter;
+      });
+      removeBtn.addEventListener('click', function () {
+        if (!counter <= 0) {
+          counter--;
+          inputField.value = counter;
+        }
+      });
+    }
+  };
+
+  handleCounter('.single-card__counting-remove', '.single-card__counting-add', '.single-card__counting-number');
+  handleCounter('.shopping-item__counting-remove', '.shopping-item__counting-add', '.shopping-item__counting-number');
 });
 //# sourceMappingURL=main.js.map

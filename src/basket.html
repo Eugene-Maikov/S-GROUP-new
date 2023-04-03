@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Доставка и оплата</title>
+	<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<link href="css/global.css" rel="stylesheet" type="text/css"/>
+	<link href="css/sprite.css" rel="stylesheet" type="text/css"/>
+	<link href="css/header-and-footer.css" rel="stylesheet" type="text/css"/>
+	<link href="css/basket.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="wrapper">
+	@@include('_include/header.html')
+	<main class="main">
+		<section class="margin-top-header">
+			<div class="container">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link" href="index.html">Главная</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link" href="javascript:void(0)">Категории</a>
+						</li>
+						<li class="breadcrumbs__item">ЛДСП</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="shopping">
+			<div class="container">
+				<h1 class="main-title main-title-dark">Корзина</h1>
+				<form action="/" class="shopping__inner" method="get">
+					<div class="shopping__list">
+						<div class="shopping-item">
+							<div class="shopping-item__image">
+								<img alt="" src="./assets/img/catalog-1.jpg">
+							</div>
+							<div class="shopping-item__center">
+								<div class="shopping-item__content">
+									<h3 class="shopping-item__content-title">ЛДСП SWISS KRONO</h3>
+									<div class="shopping-item__content-prop">Ольха SE 9310 2750*1830*16</div>
+								</div>
+								<div class="shopping-item__price">
+									<span class="shopping-item__price-description">Цена</span>
+									<p class="shopping-item__price-number">2 001 руб.</p>
+								</div>
+								<div class="shopping-item__counting">
+									<div class="shopping-item__counting-remove">
+										<svg class="icon-btn-minus">
+											<use href="assets/svg/sprite.svg#minus"></use>
+										</svg>
+									</div>
+									<input class="shopping-item__counting-number" id="shopping-count-1" min="1" step="any" type="number"
+									       value="1">
+									<div class="shopping-item__counting-add">
+										<svg class="icon-btn-plus">
+											<use href="assets/svg/sprite.svg#plus"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="shopping-item__sum">
+									<span class="shopping-item__price-description">Цена</span>
+									<p class="shopping-item__price-number">2 001 руб.</p>
+								</div>
+							</div>
+							<div class="shopping-item__delete">
+								<a class="shopping-item__delete-btn" href="#">
+									<svg class="icon-delete">
+										<use href="assets/svg/sprite.svg#delete"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="shopping-item">
+							<div class="shopping-item__image">
+								<img alt="" src="./assets/img/catalog-1.jpg">
+							</div>
+							<div class="shopping-item__center">
+								<div class="shopping-item__content">
+									<h3 class="shopping-item__content-title">ЛДСП SWISS KRONO</h3>
+									<div class="shopping-item__content-prop">Ольха SE 9310 2750*1830*16</div>
+								</div>
+								<div class="shopping-item__price">
+									<span class="shopping-item__price-description">Цена</span>
+									<p class="shopping-item__price-number">2 001 руб.</p>
+								</div>
+								<div class="shopping-item__counting">
+									<div class="shopping-item__counting-remove">
+										<svg class="icon-btn-minus">
+											<use href="assets/svg/sprite.svg#minus"></use>
+										</svg>
+									</div>
+									<input class="shopping-item__counting-number" id="shopping-count-2" min="1" step="any" type="number"
+									       value="1">
+									<div class="shopping-item__counting-add">
+										<svg class="icon-btn-plus">
+											<use href="assets/svg/sprite.svg#plus"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="shopping-item__sum">
+									<span class="shopping-item__price-description">Цена</span>
+									<p class="shopping-item__price-number">2 001 руб.</p>
+								</div>
+							</div>
+							<div class="shopping-item__delete">
+								<a class="shopping-item__delete-btn" href="#">
+									<svg class="icon-delete">
+										<use href="assets/svg/sprite.svg#delete"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="shopping__total">
+						<div class="shopping__total-info">
+							<div class="shopping__total-group">
+								<div class="shopping__total-text">Количество</div>
+								<div class="shopping__total-number">300</div>
+							</div>
+							<div class="shopping__total-group">
+								<div class="shopping__total-text">Сумма</div>
+								<div class="shopping__total-number">600 300 руб.</div>
+							</div>
+						</div>
+						<div class="shopping__total-buttons">
+							<button type="submit" class="shopping__total-btn blue">Оформить заказ</button>
+							<button type="button" class="shopping__total-btn">продолжить покупки</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+		@@include('_include/modals.html')
+	</main>
+	@@include('_include/footer.html')
+</div>
+<div class="overlay"></div>
+<script defer src="js/main.js"></script>
+</body>
+
+</html>
