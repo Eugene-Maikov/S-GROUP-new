@@ -487,6 +487,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   handleCounter('.shopping-item__counting-remove', '.shopping-item__counting-add', '.shopping-item__counting-number')
+
+  // ---------------Модальное окно поиска---------------
+  const handleModalSearch = () => {
+    const popupSearch = document.querySelector('.popup-callback__search')
+    const overlayBlue = document.querySelector('.overlay-blue')
+    const btn = document.querySelector('.header__search')
+    if (popupSearch) {
+      btn.addEventListener('click', () => {
+        popupSearch.classList.add('active')
+        overlayBlue.classList.add('active')
+        document.body.classList.add('no-scroll')
+      })
+      overlayBlue.addEventListener('click', () => {
+        popupSearch.classList.remove('active')
+        overlayBlue.classList.remove('active')
+        document.body.classList.remove('no-scroll')
+      })
+    }
+  }
+  handleModalSearch()
 })
 
 

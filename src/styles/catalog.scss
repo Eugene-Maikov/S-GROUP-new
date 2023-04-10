@@ -997,4 +997,46 @@
 }
 
 //--------------- end sidebar ---------------
+//--------------- Result-search ---------------
+.result-search{
+  padding-bottom: 24px;
+  background: var(--light-color);
+
+  @media screen and (max-width: 1330px) {
+    padding-bottom: 15px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 16px;
+  }
+
+  &__row{
+    strong{
+      font-weight: 700;
+    }
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark);
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+
+      @media screen and (max-width: 1330px) {
+        margin-bottom: 1px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-bottom: 3px;
+      }
+    }
+
+    @media screen and (max-width: 1330px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 11px;
+    }
+  }
+}
+//--------------- end Result-search ---------------
 

@@ -483,6 +483,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  handleCounter('.shopping-item__counting-remove', '.shopping-item__counting-add', '.shopping-item__counting-number');
+  handleCounter('.shopping-item__counting-remove', '.shopping-item__counting-add', '.shopping-item__counting-number'); // ---------------Модальное окно поиска---------------
+
+  var handleModalSearch = function handleModalSearch() {
+    var popupSearch = document.querySelector('.popup-callback__search');
+    var overlayBlue = document.querySelector('.overlay-blue');
+    var btn = document.querySelector('.header__search');
+
+    if (popupSearch) {
+      btn.addEventListener('click', function () {
+        popupSearch.classList.add('active');
+        overlayBlue.classList.add('active');
+        document.body.classList.add('no-scroll');
+      });
+      overlayBlue.addEventListener('click', function () {
+        popupSearch.classList.remove('active');
+        overlayBlue.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    }
+  };
+
+  handleModalSearch();
 });
 //# sourceMappingURL=main.js.map

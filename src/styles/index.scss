@@ -366,6 +366,9 @@
     @media (max-width: 1330px) {
       top: 45%;
     }
+    @media (max-width: 990px) {
+      z-index: 1;
+    }
   }
 
   .catalog__image-border-1 {

@@ -438,6 +438,11 @@
     top: 45%;
   }
 }
+@media (max-width: 990px) {
+  .catalog .catalog__figure-material {
+    z-index: 1;
+  }
+}
 .catalog .catalog__image-border-1 {
   position: relative;
   z-index: 4;
