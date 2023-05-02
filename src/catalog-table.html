@@ -561,12 +561,15 @@
 
 						<div class="catalog-filter">
 							<div class="catalog-filter__action">
-								<div class="catalog-filter__description">Сортировать</div>
-								<select class="catalog-filter__property" name="select">
-									<option selected value="value1">По цене</option>
-									<option value="value2">Значение 2</option>
-									<option value="value3">Значение 3</option>
-								</select>
+								 <div class="catalog-filter__wrap">
+									 <div class="catalog-filter__box">Сортировать</div>
+									 <div class="catalog-filter__status"></div>
+								 </div>
+								<ul class="catalog-filter__hidden">
+									<li class="catalog-filter__item active"><a class="catalog-filter__link" href="#">По цене</a></li>
+									<li class="catalog-filter__item"><a class="catalog-filter__link" href="#">Значение 2</a></li>
+									<li class="catalog-filter__item"><a class="catalog-filter__link" href="#">Значение 3</a></li>
+								</ul>
 							</div>
 							<div class="catalog-filter__options">
 								<a class="catalog-filter__options-item table active" href="catalog-table.html">
