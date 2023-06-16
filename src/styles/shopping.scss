@@ -62,7 +62,7 @@
       flex: 1 1 auto;
 
       @media (max-width: 767px) {
-       flex-direction: column;
+        flex-direction: column;
         align-items: flex-start;
         padding: 5px 0;
       }
@@ -105,6 +105,69 @@
       }
     }
 
+
+      &__content {
+        max-width: 277px;
+        min-width: 277px;
+        padding-right: 20px;
+      }
+      &__price {
+        max-width: 191px;
+        min-width: 191px;
+        padding-right: 20px;
+        white-space: nowrap;
+      }
+      &__sum {
+        max-width: 199px;
+        min-width: 199px;
+        padding-left: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        white-space: nowrap;
+      }
+    @media (max-width: 1330px) {
+      &__content {
+        max-width: 200px;
+        min-width: 200px;
+        padding-right: 20px;
+      }
+      &__price {
+        max-width: 110px;
+        min-width: 110px;
+        padding-right: 20px;
+        white-space: nowrap;
+      }
+      &__sum {
+        max-width: 116px;
+        min-width: 116px;
+        padding-left: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        white-space: nowrap;
+      }
+    }
+    @media (max-width: 768px) {
+      &__content {
+        max-width: 100%;
+        min-width: 100%;
+      }
+      &__price {
+        max-width: 100%;
+        min-width: 100%;
+      }
+      &__sum {
+        max-width: 100%;
+        min-width: 100%;
+        align-items: flex-start;
+        padding-left: 0;
+      }
+    }
+
+
     &__content-title {
       font-weight: 900;
       font-size: 14px;
@@ -137,11 +200,12 @@
       }
     }
 
-    &__price{
+    &__price {
       @media (max-width: 767px) {
         margin-bottom: 5px;
       }
     }
+
     &__price-description {
       font-weight: 900;
       font-size: 9px;
@@ -225,6 +289,7 @@
       flex: 0 0 91px;
       padding-left: 41px;
     }
+
     &__delete-btn {
       width: 30px;
       height: 30px;
@@ -314,7 +379,7 @@
       }
     }
 
-    &-btn{
+    &-btn {
       padding: 0;
       border: 1px solid var(--gray-color);
       background: #FFFFFF;
@@ -340,7 +405,7 @@
         font-size: 11px;
       }
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 20px;
 
         @media (max-width: 1330px) {
@@ -351,7 +416,7 @@
         }
       }
 
-      &.blue{
+      &.blue {
         background: var(--secondary-color);
         box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.1);
         color: #FFFFFF;
